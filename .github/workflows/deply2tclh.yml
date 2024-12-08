@@ -17,15 +17,19 @@ jobs:
       uses: actions/checkout@v3
 
     # 2. 使用 rsync 将内容上传到服务器
-    - name: Sync 'www' contents to server
+    - name: setup ssh config
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_PRIVATE_KEY" > id_ed25519_github_actions
         chmod 600 id_ed25519_github_actions
-        ssh-keyscan -t ed25519 42.192.134.42 >> ~/.ssh/known_hosts
+        # ssh-keyscan -t ed25519 42.192.134.42 >> ~/.ssh/known_hosts
         # 配置 SSH，确保免密登录你的服务器
-        echo -e "Host tclh\n\tHostName 42.192.134.42\n\tUser ubuntu\n\tPort 22\n\tIdentityFile ~/.ssh/id_ed25519_github_actions\n\tStrictHostKeyChecking no\n\tIdentitiesOnly yes\n" > ~/.ssh/config
+        # echo -e "Host tclh\n\tHostName 42.192.134.42\n\tUser ubuntu\n\tPort 22\n\tIdentityFile ~/.ssh/id_ed25519_github_actions\n\tStrictHostKeyChecking no\n\tIdentitiesOnly yes\n" > ~/.ssh/config
 
-        rsync -avz --delete ./www/ ubuntu@42.192.134.42:~/Sites/adopapacc/www
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Rsync files to server
+      run: |
+        # 使用 rsync 将文件传输到远程服务器
+        rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519_github_actions -o StrictHostKeyChecking=no" ./www/ ubuntu@42.192.134.42:~/Sites/adopapacc/www
