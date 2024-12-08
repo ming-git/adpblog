@@ -18,7 +18,7 @@ jobs:
 
       # Step 2: 执行 SSH Deploy Action
       - name: SSH Deploy to Server
-        uses: easingthemes/ssh-deploy@latest
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-avz --delete" # rsync 的参数，确保文件更新同步
