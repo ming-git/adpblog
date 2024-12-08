@@ -1,1 +1,0 @@
-{"entries":[],"headings":["step-1-创建-github-仓库","step-2-初始化本地-git-仓库并推送到-github","step-3-设置服务器的-ssh-配置","配置服务器上的-ssh-密钥","添加公钥到-github","测试-ssh-连接","step-4-配置-github-actions-自动化部署","在-github-仓库中创建-actions-配置文件","配置服务器访问的私钥","修改-deploy2tclh.yml-引用-secrets-中的私钥","step-5-测试工作流","问题排查","总结"]}
