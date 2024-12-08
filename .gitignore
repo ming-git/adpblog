@@ -66,6 +66,10 @@ Makefile
 *.conf
 *.jpg
 *.css
+*.lock
+*.html
+.Rprofile
+
 
 # 临时与本地开发规则
 _adopapablog.scriv/
@@ -73,7 +77,7 @@ _freeeze/
 posts/
 renv/
 temp/
-template/
+templates/
 scripts/
 css/
 adopapacc/
