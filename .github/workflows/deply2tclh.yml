@@ -12,20 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. 检出最新代码
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # Step 1: 检出代码
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    # 2. 使用 rsync 将内容上传到服务器
-    - name: setup rsync
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$SSH_PRIVATE_KEY" > id_ed25519_github_actions
-        chmod 600 id_ed25519_github_actions
-        ssh-keyscan -t ed25519 42.192.134.42 >> ~/.ssh/known_hosts
-
-        # 配置 SSH，确保免密登录你的服务器
-        echo -e "Host tclh\n\tHostName 42.192.134.42\n\tUser ubuntu\n\tPort 22\n\tIdentityFile ~/.ssh/id_ed25519_github_actions\n\tStrictHostKeyChecking no\n\tIdentitiesOnly yes\n" > ~/.ssh/config
-        rsync -avz --delete ./www/ tclh:~/Sites/adopapacc/www
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      # Step 2: 执行 SSH Deploy Action
+      - name: SSH Deploy to Server
+        uses: easingthemes/ssh-deploy@latest
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-avz --delete" # rsync 的参数，确保文件更新同步
+          SOURCE: "./www/" # 本地需要同步的文件夹
+          REMOTE_HOST: "42.192.134.42" # 目标服务器的 IP 地址
+          REMOTE_USER: "ubuntu" # 用于连接服务器的用户名
+          TARGET: "~/Sites/adopapacc/www" # 服务器上的目标路径
