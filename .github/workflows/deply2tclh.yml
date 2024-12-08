@@ -20,8 +20,8 @@ jobs:
     - name: Sync 'www' contents to server
       run: |
         mkdir -p ~/.ssh/
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa_github
-        chmod 600 ~/.ssh/id_rsa_github
+        echo "$SSH_PRIVATE_KEY" > id_ed25519_github_actions
+        chmod 600 id_ed25519_github_actions
         # 配置 SSH，确保免密登录你的服务器
         echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
