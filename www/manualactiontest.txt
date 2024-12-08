@@ -1,3 +1,4 @@
+2024-12-08 17:27:34 update deply2tclh again in config
 2024-12-08 17:06:09 test after key ssh setup again
 2024-12-08 16:46:01 test again after use regenerate id_ed25591 key and deployment.
 2024-12-08 16:18:03 manual test action after ssh update.
