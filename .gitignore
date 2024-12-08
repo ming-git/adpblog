@@ -83,3 +83,4 @@ scripts/
 /.quarto/
 !/www/
 !/www/**
+.Rproj.user
