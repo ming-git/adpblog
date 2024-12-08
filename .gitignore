@@ -73,11 +73,11 @@ Makefile
 # 临时与本地开发规则
 _adopapablog.scriv/
 _freeze/
-posts/
+/posts/
 renv/
 temp/
 templates/
 scripts/
-css/
-adopapacc/
+/css/
+/adopapacc/
 /.quarto/
