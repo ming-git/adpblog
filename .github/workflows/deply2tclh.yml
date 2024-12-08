@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # 当推送到 main 分支时触发
+    paths:
+      - www/**     # 仅当 www 文件夹及其子目录或文件发生更改时触发
 
 jobs:
   deploy:
