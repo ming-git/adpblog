@@ -23,6 +23,6 @@ jobs:
         # 配置 SSH，确保免密登录你的服务器
         echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-        rsync -avz --delete ./www ubuntu@42.192.134.42:~/Sites/adopapacc
+        rsync -avz --delete ./www/ ubuntu@42.192.134.42:~/Sites/adopapacc/www
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
