@@ -24,7 +24,7 @@ jobs:
         chmod 600 id_ed25519_github_actions
         ssh-keyscan -t ed25519 42.192.134.42 >> ~/.ssh/known_hosts
         # 配置 SSH，确保免密登录你的服务器
-        echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+        echo -e "Host tclh\n\tHostName 42.192.134.42\n\tUser ubuntu\n\tPort 22\n\tIdentityFile ~/.ssh/id_ed25519_github_actions\n\tStrictHostKeyChecking no\n\tIdentitiesOnly yes\n" > ~/.ssh/config
 
         rsync -avz --delete ./www/ ubuntu@42.192.134.42:~/Sites/adopapacc/www
       env:
