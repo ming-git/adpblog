@@ -1,0 +1,8 @@
+::: {style="text-align: center;"}
+![](./images/logo_beian_gongan.png)
+
+<a href="https://beian.mps.gov.cn/#/query/webSearch?code=51012202001877" rel="noreferrer" target="_blank">川公网安备51012202001877</a>
+
+\[蜀ICP备19036069号\](`https://beian.miit.gov.cn`{=html})
+
+:::

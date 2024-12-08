@@ -1,0 +1,92 @@
+{
+  "posts/post-with-code/index.qmd": {
+    "index.html": "72e2fe07"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "20715a4a"
+  },
+  "posts/connect-local-project-with-remote-github-original.qmd": {
+    "connect-local-project-with-remote-github-original.html": "1af9b493"
+  },
+  "index.qmd": {
+    "index.html": "a030f927"
+  },
+  "about.qmd": {
+    "about.html": "26d02b7f"
+  },
+  "posts/code-execution/index.qmd": {
+    "index.html": "a7420af8"
+  },
+  "posts/quarto/rstudio-visual-editor-techincal-writing.qmd": {
+    "rstudio-visual-editor-techincal-writing.html": "62eae2de"
+  },
+  "posts/quarto/yaml-optons.qmd": {
+    "yaml-optons.html": "48119a68"
+  },
+  "posts/backend/how-to-install-docker/index.qmd": {
+    "index.html": "e7f47e61"
+  },
+  "posts/backend/how-to-setup-nginx-with-docker/index.qmd": {
+    "index.html": "5c7c029b"
+  },
+  "posts/backend/how-install-nginx/index.qmd": {
+    "index.html": "4f12054a"
+  },
+  "posts/backend/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.qmd": {
+    "index.html": "7a3ab764"
+  },
+  "posts/backend/how-to-clean-zombie-process/index.qmd": {
+    "index.html": "dc0adb55"
+  },
+  "posts-pre/lookup-vlookup-xlookup/index.qmd": {
+    "index.html": "9bd6b126"
+  },
+  "posts/backend/ubuntu22/how-to-monitor-linux-server-ubuntu/index.qmd": {
+    "index.html": "8cbce4b9"
+  },
+  "posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.qmd": {
+    "index.html": "9579b15e"
+  },
+  "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.qmd": {
+    "index.html": "1dceb664"
+  },
+  "posts/quarto/publish-website-localhost-with-nginx-/index.qmd": {
+    "index.html": "cec9fe86"
+  },
+  "posts/quarto/quarto-yaml-options/index.qmd": {
+    "index.html": "edddf166"
+  },
+  "posts/quarto/rstudio-visual-editor-techincal-writing/index.qmd": {
+    "index.html": "92077ac2"
+  },
+  "posts/quarto/connect-local-project-with-remote-github-original/index.qmd": {
+    "index.html": "5233ddb6"
+  },
+  "posts/backend/how-to-install-docker-in -ubuntu22/index.qmd": {
+    "index.html": "87fc4a95"
+  },
+  "trademark.qmd": {
+    "trademark.html": "ca4a6eb4"
+  },
+  "license.qmd.qmd": {
+    "license.qmd.html": "2504096f"
+  },
+  "footer.qmd": {
+    "footer.html": "1bb78730"
+  },
+  "posts/diary/lastdayofaugust.qmd": {
+    "lastdayofaugust.html": "55da666c"
+  },
+  "404.qmd": {
+    "404.html": "5d47315e"
+  },
+  "posts/rlang/how-to-install-packages-through-cranmirrors/index.qmd": {
+    "index.html": "0b4bed82"
+  },
+  "posts/excel/lookup-vlookup-xlookup/index.qmd": {
+    "index.html": "49bd6e54"
+  },
+  "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.qmd": {
+    "try-github-deploy-action.html": "d4151874"
+  }
+}

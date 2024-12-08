@@ -1,0 +1,25 @@
+name: Deploy to Tencent lighthouse Server
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 检出最新代码
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. 使用 rsync 将内容上传到服务器
+    - name: Sync to server
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa_github
+        chmod 600 ~/.ssh/id_rsa_github
+        rsync -avz --delete ./ ubuntu@42.192.134.42:~/Sites/adopapacc/www/
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_TLCH_PRIVATE_KEY }}

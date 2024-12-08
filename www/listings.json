@@ -1,0 +1,25 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html",
+      "/posts/rlang/how-to-install-packages-through-cranmirrors/index.html",
+      "/posts/diary/lastdayofaugust.html",
+      "/posts/backend/how-to-install-docker-in -ubuntu22/index.html",
+      "/posts/quarto/quarto-yaml-options/index.html",
+      "/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html",
+      "/posts/quarto/publish-website-localhost-with-nginx-/index.html",
+      "/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.html",
+      "/posts/excel/lookup-vlookup-xlookup/index.html",
+      "/posts/backend/how-to-clean-zombie-process/index.html",
+      "/posts/backend/how-to-setup-nginx-with-docker/index.html",
+      "/posts/backend/how-install-nginx/index.html",
+      "/posts/backend/how-to-install-docker/index.html",
+      "/posts/code-execution/index.html",
+      "/posts/quarto/rstudio-visual-editor-techincal-writing/index.html",
+      "/posts/quarto/connect-local-project-with-remote-github-original/index.html",
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+ #!/bin/bash
+ # 设置错误处理和调试选项
+set -e  # 遇到错误时退出脚本
+set -x  # 打印每个脚本命令（用于调试）
+
+# 获取当前脚本所在目录的绝对路径
+MAIN_DIR="$(cd "$(dirname "${BASH_SOURCE[C_0]()}")" && pwd)"
+
+quarto render
+
+source "${MAIN_DIR}/tar_publish.sh"
+source "${MAIN_DIR}/deploy_remote.sh"
+source "${MAIN_DIR}/publish_remote.sh"
+
+# logs
+# 2024-08-30 13:18:29 使用SCRIPT_DIR确认文件位置

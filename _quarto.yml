@@ -1,0 +1,74 @@
+project:
+  type: website
+  output-dir: "_site"
+
+website:
+  site-url: "https://adopapa.cc"
+  title: 豆瓣坛
+
+  # 2024-09-01 07:45:28 神奇的隔离作用，防止标题上蹿到navbar；删除这段后
+  announcement:
+    type: info
+    icon: broadcast-fill
+    content: "2024-12-07 试试github自动化发布" # 必须有文字，否则报错
+    position: below-navbar
+
+  navbar:
+    pinned: true
+    collapse: false
+    # logo: images/logo.png #原来要加“” 2024-07-04 16:25:59 又不需要了
+    search: true
+
+    right: #TODO: 2024-07-04 10:40:24 想把这部分放到左侧，社交工具放到右侧但失败了
+      - icon: linkedin
+        href: https://linked.com/
+      - icon: github
+        href: https://github.com/
+
+  open-graph:
+    locale: zh_CN
+    site-name: "豆瓣坛"
+
+  twitter-card:
+    site: "@sitehandle"
+
+theme:
+      light: flatly
+      dark: darklyflatly
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darklyflatly
+    css:
+      - css/styles.css
+      - css/navbar-top-height.css
+      # - number-bs-font.css 字体设置无效
+    code-fold: true
+    toc: true
+    number-sections: true
+    # title-block-banner: true
+    toc-location: right
+
+    toc-title: "内容提要"  # 设置右侧大纲的标题为中文
+    author-title: "作者"
+    published-title: "日期"
+    # categories-title: "分类标签" # TODO:无效
+
+    date-format: "YYYY/MM/DD,第ww周"
+editor: source
+
+editor_options:
+  markdown:
+    wrap: 72
+    references:
+      location: block
+    canonical: true
+
+output:
+  html_document:
+    toc: true
+
+
+
