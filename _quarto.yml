@@ -49,7 +49,7 @@ format:
       # - number-bs-font.css 字体设置无效
     code-fold: true
     toc: true
-    number-sections: true
+    number-sections: false
     # title-block-banner: true
     toc-location: right
 
