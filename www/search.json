@@ -17,8 +17,8 @@
     "objectID": "about.html#关于博主",
     "href": "about.html#关于博主",
     "title": "博主和博客的那些事",
-    "section": "2 关于博主",
-    "text": "2 关于博主\n一个朱熹的后人\n一个差点嗝屁的农家老四\n一个父亲\n一个写不出什么东西，却也还在折腾的人\n为了消除AI偏见，大抵每个都要奋笔疾书才好"
+    "section": "关于博主",
+    "text": "关于博主\n一个朱熹的后人\n一个差点嗝屁的农家老四\n一个父亲\n一个写不出什么东西，却也还在折腾的人\n为了消除AI偏见，大抵每个都要奋笔疾书才好"
   },
   {
     "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html",
@@ -31,36 +31,36 @@
     "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#如何写公式",
     "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#如何写公式",
     "title": "学习笔记-Rstudio可视化编辑器之技术写作",
-    "section": "1 如何写公式",
-    "text": "1 如何写公式\n技术写作背后的原理和支持技术其实就是LaTex, Pandoc Markdown。 在Quarto 1.4中引入了Typst, 号称比LaTex更好使用，希望可以早点用上去。\n\n1.1 内联的公式\n举例: \\(\\sqrt x=26\\) 的解就是\\(x=676\\)\n写这个公式的时候要注意：\n\nsqrt后是空格后再写x, 而不是\\sqrt(x, 那样的话就变成了 \\(\\sqrt(x)\\)\n其实，在输入美元符号$的时候，连续输入三个$，这样才会进入公式输入模式。如果只输入一个$或两个美元符号，然后在中间加入符号，它不会变成类的公司。"
+    "section": "如何写公式",
+    "text": "如何写公式\n技术写作背后的原理和支持技术其实就是LaTex, Pandoc Markdown。 在Quarto 1.4中引入了Typst, 号称比LaTex更好使用，希望可以早点用上去。\n\n内联的公式\n举例: \\(\\sqrt x=26\\) 的解就是\\(x=676\\)\n写这个公式的时候要注意：\n\nsqrt后是空格后再写x, 而不是\\sqrt(x, 那样的话就变成了 \\(\\sqrt(x)\\)\n其实，在输入美元符号$的时候，连续输入三个$，这样才会进入公式输入模式。如果只输入一个$或两个美元符号，然后在中间加入符号，它不会变成类的公司。"
   },
   {
     "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#正式公式",
     "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#正式公式",
     "title": "学习笔记-Rstudio可视化编辑器之技术写作",
-    "section": "2 正式公式",
-    "text": "2 正式公式\n为什么写不出教程里红色的$$的样子？把公式latex代码直接显示处理啊反而有点难啊.。 TODO, 即使插入raw tex block (上面一个公式其实我是希望显示源代码的啊)\n2024-06-23 如果只是要显示源代码，不运算，请在将代码语言标记从{lang} 改为 {=lang} 即可\n\n\nCode\ninstall.packages(\"test\")\n\n\n\\[\nP(E) = {n \\choose k} p^k (2-p)^{n - k}\n\\]"
+    "section": "正式公式",
+    "text": "正式公式\n为什么写不出教程里红色的$$的样子？把公式latex代码直接显示处理啊反而有点难啊.。 TODO, 即使插入raw tex block (上面一个公式其实我是希望显示源代码的啊)\n2024-06-23 如果只是要显示源代码，不运算，请在将代码语言标记从{lang} 改为 {=lang} 即可\n\n\nCode\ninstall.packages(\"test\")\n\n\n\\[\nP(E) = {n \\choose k} p^k (2-p)^{n - k}\n\\]"
   },
   {
     "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#交叉索引",
     "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#交叉索引",
     "title": "学习笔记-Rstudio可视化编辑器之技术写作",
-    "section": "3 交叉索引",
-    "text": "3 交叉索引\n因为每个需要交叉索引的实体(如图片、公式、表格或者其中的某一段文字)，建立一个标签，给出一个唯一的标记，这样就可以在文章中随便引用了。\n![Elephant](crossref-figure.png){#fig-elephant fig-alt=\"Altnative text\" fig-align=\"center\"}\n\n\n\n\n\n\nFigure 1: Elephant\n\n\n\n在这种情况下，我们只要在其他地方引用@fig-elephant即可连接到这个实体了。\nSee Figure 1 for details"
+    "section": "交叉索引",
+    "text": "交叉索引\n因为每个需要交叉索引的实体(如图片、公式、表格或者其中的某一段文字)，建立一个标签，给出一个唯一的标记，这样就可以在文章中随便引用了。\n![Elephant](crossref-figure.png){#fig-elephant fig-alt=\"Altnative text\" fig-align=\"center\"}\n\n\n\n\n\n\nFigure 1: Elephant\n\n\n\n在这种情况下，我们只要在其他地方引用@fig-elephant即可连接到这个实体了。\nSee Figure 1 for details"
   },
   {
     "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#两种编辑模式",
     "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#两种编辑模式",
     "title": "学习笔记-Rstudio可视化编辑器之技术写作",
-    "section": "4 两种编辑模式",
-    "text": "4 两种编辑模式\n不知道为什么``的使用不知道如何删除，有的时候你会发现，输入错误了，但是不知道如何在可视化编辑器里修改，只能切换到源代码模式里进行。所以两种方式是相辅相成的，需要结合使用才好。\nHere’s some raw inline HTML: html\n实际上你需要在两种模式中来回的切换，尽量使用每一种模式中最熟悉的部分，这样也可以检查文件在两种模式中都显示正常，因为在某些时候你的合作者有的喜欢可视化模式，女的喜欢，源代码模式，无论哪种模式，最终的结果都要确保其正确。"
+    "section": "两种编辑模式",
+    "text": "两种编辑模式\n不知道为什么``的使用不知道如何删除，有的时候你会发现，输入错误了，但是不知道如何在可视化编辑器里修改，只能切换到源代码模式里进行。所以两种方式是相辅相成的，需要结合使用才好。\nHere’s some raw inline HTML: html\n实际上你需要在两种模式中来回的切换，尽量使用每一种模式中最熟悉的部分，这样也可以检查文件在两种模式中都显示正常，因为在某些时候你的合作者有的喜欢可视化模式，女的喜欢，源代码模式，无论哪种模式，最终的结果都要确保其正确。"
   },
   {
     "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#bugs",
     "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#bugs",
     "title": "学习笔记-Rstudio可视化编辑器之技术写作",
-    "section": "5 bugs",
-    "text": "5 bugs\nCMD+S 不能保存文件，，选择关闭文件提醒保存垫子保存后仍然无法保存。重新关闭后打开，恢复了，看来稳定性还是有些问题。"
+    "section": "bugs",
+    "text": "bugs\nCMD+S 不能保存文件，，选择关闭文件提醒保存垫子保存后仍然无法保存。重新关闭后打开，恢复了，看来稳定性还是有些问题。"
   },
   {
     "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html",
@@ -80,29 +80,29 @@
     "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#ai的回复",
     "href": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#ai的回复",
     "title": "文件去哪儿了",
-    "section": "2 AI的回复",
-    "text": "2 AI的回复\n是的！这 个问题很可能是由于你之前选择“为这台电脑上的所有用户安装”，而此次安装选择了“仅为我安装”。两 种安装方式会导致 Quarto 被安装到不同的路径，并且系统的 PATH 环境变量 仍然指向旧版本的 Quarto，可执行文件的位置优先级没有更新，从而导致新版本的 Quarto 没有被正确应用。\n\n\n2.1 理解问题的原因\n\n为所有用户安装\n\n如果之前安装时选择了“为所有用户安装”，Quarto 通常会安装到系统范围的路径中，例如：\n\nWindows: C:\\Program Files\\Quarto\\bin\\quarto.exe\nmacOS/Linux: /usr/local/bin/quarto\n\n系统环境变量（PATH）会被更新，使系统始终可以找到这路径的 Quarto。\n\n仅为我安装\n\n如果本次安装选择 “仅为我安装”，Quarto 可能会安装到用户级别的路径中，例如：\n\nWindows: %LOCALAPPDATA%\\Programs\\Quarto\\bin\\quarto.exe\nmacOS/Linux: ~/.local/bin/quarto （没有这个目录）\n\n用户级别的安装不会覆盖系统范围内的 PATH 路径，导致仍然调用旧版 Quarto。\n\n因此，系统仍然找到的是之前为所有用户安装的旧版本 quarto，而不是你刚刚安装的新版本。\n\n\n\n\n2.2 解决方法\noption 1: 重新全局安装，删除只为我安装的版本 （我的选择）\noption 2: 将只为我安装的版本加入PATH变量。。。"
+    "section": "AI的回复",
+    "text": "AI的回复\n是的！这 个问题很可能是由于你之前选择“为这台电脑上的所有用户安装”，而此次安装选择了“仅为我安装”。两 种安装方式会导致 Quarto 被安装到不同的路径，并且系统的 PATH 环境变量 仍然指向旧版本的 Quarto，可执行文件的位置优先级没有更新，从而导致新版本的 Quarto 没有被正确应用。\n\n\n理解问题的原因\n\n为所有用户安装\n\n如果之前安装时选择了“为所有用户安装”，Quarto 通常会安装到系统范围的路径中，例如：\n\nWindows: C:\\Program Files\\Quarto\\bin\\quarto.exe\nmacOS/Linux: /usr/local/bin/quarto\n\n系统环境变量（PATH）会被更新，使系统始终可以找到这路径的 Quarto。\n\n仅为我安装\n\n如果本次安装选择 “仅为我安装”，Quarto 可能会安装到用户级别的路径中，例如：\n\nWindows: %LOCALAPPDATA%\\Programs\\Quarto\\bin\\quarto.exe\nmacOS/Linux: ~/.local/bin/quarto （没有这个目录）\n\n用户级别的安装不会覆盖系统范围内的 PATH 路径，导致仍然调用旧版 Quarto。\n\n因此，系统仍然找到的是之前为所有用户安装的旧版本 quarto，而不是你刚刚安装的新版本。\n\n\n\n\n解决方法\noption 1: 重新全局安装，删除只为我安装的版本 （我的选择）\noption 2: 将只为我安装的版本加入PATH变量。。。"
   },
   {
     "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#新问题如何删除只为我安装的版本",
     "href": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#新问题如何删除只为我安装的版本",
     "title": "文件去哪儿了",
-    "section": "3 新问题：如何删除只为我安装的版本",
-    "text": "3 新问题：如何删除只为我安装的版本\n\n\n3.1 定位文件的几个方案\n#|label: findfile\nwhereis quarto\n# quarto: /usr/local/bin/quarto\n\nwhich quarto\n#/usr/local/bin/quarto\n# 这两个命令器只显示为所有人安装的路径，不显示只为我安装的路径\n\nfind ~ -name \"quarto\" 2&gt;/dev/null\n\n# ～/Library/Application Support/quarto\n# ~/Library/Application Support/quarto\n# \n# ~/Library/Caches/deno/gen/file/Applications/quarto\n# ~/Library/Caches/quarto\n# ~/Applications/quarto\n# ~/Applications/quarto/bin/quarto\n# ~/Applications/quarto/share/formats/typst/pandoc/quarto\n# ~/Applications/quarto/share/lua-types/quarto\n# ~/Applications/quarto/share/extensions/quarto\n# ~/Documents/writer/adopapablog/posts/quarto\n# ~/Documents/writer/adopapablog/www/posts/quarto\n# ~/Documents/writer/adopapablog/_freeze/posts/quarto\n# ~/Documents/writer/adopapablog/.quarto/idx/posts/quarto\n# ~/Documents/writer/adopapablog/.quarto/_freeze/posts/quarto\n# ~/Documents/coder/rlang/quarto\n# 跳出了一个文件就卡在哪里了，我另外开了窗口使用其它命名.\n# 2024-12-09 07:43:39 终于结束了查找，结果可比locate 简洁了，确实也太慢了。\n\nlocate quarto\n# .....\n# /Applications/quarto\n# /Applications/quarto/bin\n# /Applications/quarto/bin/quarto\n# /Applications/quarto/bin/quarto.js\n# /Applications/quarto/bin/tools\n# /Applications/quarto/bin/tools/aarch64\n# .....\n# 返回也太多了啊哈，确实强大\n折腾到最后发现其实应该先到Application里面去看一下了，所以这是个问题，搜索源用多了传统的方法却丢掉很多，这不于邯郸学步了，这个要警惕，虽然是个小问题则是我们在这个变化中的患得患失。\nfinder里直接删除了/Applications/quarto,出问题了\n#|label: checkafterdelete\nquarto --version\n# zsh: command not found: quarto --version\n# 看来pkg是安装到application，然后关联到/usr/local/bin/quarto\n找回垃圾堆里的安装文件，重新安装pkg\n#|label: checkaftinstl\nquarto --version\n#1.6.39\n\n\n\n3.2 总结\n通过文件到哪里去了？通 过寻找文件的过程，你会发现习惯依赖的微小变动也会导致的很多的麻烦。不 要说AI, 就是一片普通的电脑，对我们来说真的是一个巨大的黑箱.人类从来都是在黑箱的下前形的谁又真正搞懂了火呢？\n就是一个折腾，如果一开始你就选择默认的按钮，哪有这一个多小时的折腾呢？"
+    "section": "新问题：如何删除只为我安装的版本",
+    "text": "新问题：如何删除只为我安装的版本\n\n\n定位文件的几个方案\n#|label: findfile\nwhereis quarto\n# quarto: /usr/local/bin/quarto\n\nwhich quarto\n#/usr/local/bin/quarto\n# 这两个命令器只显示为所有人安装的路径，不显示只为我安装的路径\n\nfind ~ -name \"quarto\" 2&gt;/dev/null\n\n# ～/Library/Application Support/quarto\n# ~/Library/Application Support/quarto\n# \n# ~/Library/Caches/deno/gen/file/Applications/quarto\n# ~/Library/Caches/quarto\n# ~/Applications/quarto\n# ~/Applications/quarto/bin/quarto\n# ~/Applications/quarto/share/formats/typst/pandoc/quarto\n# ~/Applications/quarto/share/lua-types/quarto\n# ~/Applications/quarto/share/extensions/quarto\n# ~/Documents/writer/adopapablog/posts/quarto\n# ~/Documents/writer/adopapablog/www/posts/quarto\n# ~/Documents/writer/adopapablog/_freeze/posts/quarto\n# ~/Documents/writer/adopapablog/.quarto/idx/posts/quarto\n# ~/Documents/writer/adopapablog/.quarto/_freeze/posts/quarto\n# ~/Documents/coder/rlang/quarto\n# 跳出了一个文件就卡在哪里了，我另外开了窗口使用其它命名.\n# 2024-12-09 07:43:39 终于结束了查找，结果可比locate 简洁了，确实也太慢了。\n\nlocate quarto\n# .....\n# /Applications/quarto\n# /Applications/quarto/bin\n# /Applications/quarto/bin/quarto\n# /Applications/quarto/bin/quarto.js\n# /Applications/quarto/bin/tools\n# /Applications/quarto/bin/tools/aarch64\n# .....\n# 返回也太多了啊哈，确实强大\n折腾到最后发现其实应该先到Application里面去看一下了，所以这是个问题，搜索源用多了传统的方法却丢掉很多，这不于邯郸学步了，这个要警惕，虽然是个小问题则是我们在这个变化中的患得患失。\nfinder里直接删除了/Applications/quarto,出问题了\n#|label: checkafterdelete\nquarto --version\n# zsh: command not found: quarto --version\n# 看来pkg是安装到application，然后关联到/usr/local/bin/quarto\n找回垃圾堆里的安装文件，重新安装pkg\n#|label: checkaftinstl\nquarto --version\n#1.6.39\n\n\n\n总结\n通过文件到哪里去了？通 过寻找文件的过程，你会发现习惯依赖的微小变动也会导致的很多的麻烦。不 要说AI, 就是一片普通的电脑，对我们来说真的是一个巨大的黑箱.人类从来都是在黑箱的下前形的谁又真正搞懂了火呢？\n就是一个折腾，如果一开始你就选择默认的按钮，哪有这一个多小时的折腾呢？"
   },
   {
     "objectID": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html",
     "href": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html",
     "title": "搞定博客的自动发布",
     "section": "",
-    "text": "手动发布台辛苦了，今天就在AI的加持下，迈向自动发布吧。\n问: 我已经配置号服务器，只要发布内容放入服务器www文件夹即可正常浏览。我 也配置号了quarto，每次渲染好的发布内容都放在本地项目文件夹publish中。我 已有GitHub账号。现 在请指导我将publish同步到github中，然后让github自动管理和同步内容到我的服务器发布目录www。如 果需要我提供相关的信息和设置，请详细说明。\nAI回答: 好的！以 下是如何将 Quarto 渲染生成的 publish 文件夹内容自动同步到 GitHub，并通过 GitHub 将内容部署到服务器的完整步骤。我 们将逐步指导您完成从 Git 到服务器的自动化流程。\n以下是实现目标的完整流程：\n如果需要任何具体信息（如服务器 SSH 配置等），请根据提示提供相关信息。"
+    "text": "2024-12-09 17:18:00 test\n手动发布台辛苦了，今天就在AI的加持下，迈向自动发布吧。\n问: 我已经配置号服务器，只要发布内容放入服务器www文件夹即可正常浏览。我 也配置号了quarto，每次渲染好的发布内容都放在本地项目文件夹publish中。我 已有GitHub账号。现 在请指导我将publish同步到github中，然后让github自动管理和同步内容到我的服务器发布目录www。如 果需要我提供相关的信息和设置，请详细说明。\nAI回答: 好的！以 下是如何将 Quarto 渲染生成的 publish 文件夹内容自动同步到 GitHub，并通过 GitHub 将内容部署到服务器的完整步骤。我 们将逐步指导您完成从 Git 到服务器的自动化流程。\n以下是实现目标的完整流程：\n如果需要任何具体信息（如服务器 SSH 配置等），请根据提示提供相关信息。"
   },
   {
     "objectID": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html#终于成功了",
     "href": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html#终于成功了",
     "title": "搞定博客的自动发布",
-    "section": "1 终于成功了",
-    "text": "1 终于成功了\n微信里搜索“github action 部署文件到服务器” 看到提到了“easingthemes/ssh-deploy”，感觉这是一个突破点，再看看，是把ssh和rsync打包一起的，看来方向上解决了第一次里直接调用rsync的问题。\n马上让ai指令“github中还有哪些类似 easingthemes/ssh-deploy 的文件部署actions？” 。\n\n再接再厉，给她指令\n\n\n\n\n\n\nai prompt\n\n\n\nhttps://github.com/marketplace/actions/ssh-deploy 请参考，重新编写部署代码\n\n\nname: Deploy to Tencent Lighthouse Server\n\non:\n  push:\n    branches:\n      - main  # 当推送到 main 分支时触发\n    paths:\n      - www/**     # 仅当 www 文件夹及其子目录或文件发生更改时触发\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n\n    steps:\n      # Step 1: 检出代码\n      - name: Checkout Code\n        uses: actions/checkout@v3\n\n      # Step 2: 执行 SSH Deploy Action\n      - name: SSH Deploy to Server\n        uses: easingthemes/ssh-deploy@main\n        env:\n          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}\n          ARGS: ${{ secrets.RSYNC_ARGS }} # rsync 的参数，确保文件更新同步\n          SOURCE: ${{ secrets.SOURCE }} # 本地需要同步的文件夹\n          REMOTE_HOST: ${{ secrets.HOST }} # 目标服务器的 IP 地址\n          REMOTE_USER: ${{ secrets.USER }} # 用于连接服务器的用户名\n          TARGET: ${{ secrets.TARGET }} # 服务器上的目标路径\n\n\n\n\n\n\n补充说明\n\n\n\nAI给吃的hard code - ARGS，SOURCE， REMOTE_HOST， REMOTE_USER， TARGET是直接天上了敏感数据。最 佳实践是在github action的screts里设置再通过${{ secrets.《SECRETS.NAME》 }} 的方式来引用。\n\n\n\n\n1.1 Step 5: 测试工作流\n\n回到本地终端，修改您的 publish 文件夹的内容（比如新建一个文件或修改现有内容）。\n提交新的内容到 GitHub 仓库：\ngit add .\ngit commit -m \"Update content\"\ngit push origin main\n到 GitHub 仓库的 Actions 页面，您应该可以看到 Deploy to Server 工作流被触发。\n如果配置正确，内容将自动同步到您服务器的 www 目录。\n\n\n\n\n1.2 问题排查\n\n如果同步失败，请检查服务器 www 目录的路径是否正确。\n测试 rsync 是否能够在服务器和 GitHub Actions 工作流中正常工作。\n确认 SSH 设置是否正确，id_rsa 可以正常授权访问服务器。\n\n\n\n\n1.3 总结\n通过上述步骤，您可以实现：\n\n本地 Quarto 渲染生成内容到 publish 文件夹。\n使用 Git 将 publish 文件夹内容上传到 GitHub。\n配置 GitHub Actions，让 www 的内容自动部署到服务器的 www 目录，完成发布的自动化。\n关于.gitigore的的设置也费了大力气，总是感觉自己理解和实际的输出不一致，以后再聊聊。"
+    "section": "终于成功了",
+    "text": "终于成功了\n微信里搜索“github action 部署文件到服务器” 看到提到了“easingthemes/ssh-deploy”，感觉这是一个突破点，再看看，是把ssh和rsync打包一起的，看来方向上解决了第一次里直接调用rsync的问题。\n马上让ai指令“github中还有哪些类似 easingthemes/ssh-deploy 的文件部署actions？” 。\n\n再接再厉，给她指令\n\n\n\n\n\n\nai prompt\n\n\n\nhttps://github.com/marketplace/actions/ssh-deploy 请参考，重新编写部署代码\n\n\nname: Deploy to Tencent Lighthouse Server\n\non:\n  push:\n    branches:\n      - main  # 当推送到 main 分支时触发\n    paths:\n      - www/**     # 仅当 www 文件夹及其子目录或文件发生更改时触发\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n\n    steps:\n      # Step 1: 检出代码\n      - name: Checkout Code\n        uses: actions/checkout@v3\n\n      # Step 2: 执行 SSH Deploy Action\n      - name: SSH Deploy to Server\n        uses: easingthemes/ssh-deploy@main\n        env:\n          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}\n          ARGS: ${{ secrets.RSYNC_ARGS }} # rsync 的参数，确保文件更新同步\n          SOURCE: ${{ secrets.SOURCE }} # 本地需要同步的文件夹\n          REMOTE_HOST: ${{ secrets.HOST }} # 目标服务器的 IP 地址\n          REMOTE_USER: ${{ secrets.USER }} # 用于连接服务器的用户名\n          TARGET: ${{ secrets.TARGET }} # 服务器上的目标路径\n\n\n\n\n\n\n补充说明\n\n\n\nAI给吃的hard code - ARGS，SOURCE， REMOTE_HOST， REMOTE_USER， TARGET是直接天上了敏感数据。最 佳实践是在github action的screts里设置再通过${{ secrets.《SECRETS.NAME》 }} 的方式来引用。\n\n\n\n\nStep 5: 测试工作流\n\n回到本地终端，修改您的 publish 文件夹的内容（比如新建一个文件或修改现有内容）。\n提交新的内容到 GitHub 仓库：\ngit add .\ngit commit -m \"Update content\"\ngit push origin main\n到 GitHub 仓库的 Actions 页面，您应该可以看到 Deploy to Server 工作流被触发。\n如果配置正确，内容将自动同步到您服务器的 www 目录。\n\n\n\n\n问题排查\n\n如果同步失败，请检查服务器 www 目录的路径是否正确。\n测试 rsync 是否能够在服务器和 GitHub Actions 工作流中正常工作。\n确认 SSH 设置是否正确，id_rsa 可以正常授权访问服务器。\n\n\n\n\n总结\n通过上述步骤，您可以实现：\n\n本地 Quarto 渲染生成内容到 publish 文件夹。\n使用 Git 将 publish 文件夹内容上传到 GitHub。\n配置 GitHub Actions，让 www 的内容自动部署到服务器的 www 目录，完成发布的自动化。\n关于.gitigore的的设置也费了大力气，总是感觉自己理解和实际的输出不一致，以后再聊聊。"
   },
   {
     "objectID": "posts/code-execution/index.html",
@@ -115,29 +115,29 @@
     "objectID": "posts/code-execution/index.html#标题2",
     "href": "posts/code-execution/index.html#标题2",
     "title": "Code Executioin",
-    "section": "1 标题2",
-    "text": "1 标题2\n\n1.1 标题-3季\n\n\ntable1tab2tab3\n\n\n这个能显示处理啊吗\n\n\n\n\n\n\n\n\n\n\nterm\n\n术语\n\n\n\nthis is div\n\nthis div in the div1\n\n\n\nthis is my first table\n\n\nCol1dd\nCol2dd\nCol3dd\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4"
+    "section": "标题2",
+    "text": "标题2\n\n标题-3季\n\n\ntable1tab2tab3\n\n\n这个能显示处理啊吗\n\n\n\n\n\n\n\n\n\n\nterm\n\n术语\n\n\n\nthis is div\n\nthis div in the div1\n\n\n\nthis is my first table\n\n\nCol1dd\nCol2dd\nCol3dd\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4"
   },
   {
     "objectID": "posts/code-execution/index.html#heading2",
     "href": "posts/code-execution/index.html#heading2",
     "title": "Code Executioin",
-    "section": "2 heading2",
-    "text": "2 heading2\nthis is paragraph\ntoo space 让我透不过气啦\n一个空的shortcode会让给你页面渲染不出来来效果我"
+    "section": "heading2",
+    "text": "heading2\nthis is paragraph\ntoo space 让我透不过气啦\n一个空的shortcode会让给你页面渲染不出来来效果我"
   },
   {
     "objectID": "posts/code-execution/index.html#复制过来的表格",
     "href": "posts/code-execution/index.html#复制过来的表格",
     "title": "Code Executioin",
-    "section": "3 复制过来的表格",
-    "text": "3 复制过来的表格\n下面复制过来的表格，第二行就错位了-safari。2024-06-22 17:52:12 chorme上显示正常，不知道如何在键盘外边加上一圈圆角矩形并设置底色。\n\n\n\nCommand\nKeyboard Shortcut\nMarkdown Shortcut\n\n\n\n\nBold\n⌘ B\n**bold**\n\n\n\n[ X ] LIST CHECK\n[ - ] LIST CHECK\nterm: this is definatoin\n\ntermfkal\n\ndkafld: daja f\n\n\naalafd: dak fa\n\n\n为什么显示不出来呢。\n\n\n\n\n\n\n基于文件的editor设置\n\n\n\n为什么要设置`canonical: true` - 保持协作中的一致性\nWith canonical: true, edits in visual mode and source mode will result in identical markdown output. This is especially useful if you have multiple authors collaborating using version control, with a mixture of source and visual mode editing among the authors."
+    "section": "复制过来的表格",
+    "text": "复制过来的表格\n下面复制过来的表格，第二行就错位了-safari。2024-06-22 17:52:12 chorme上显示正常，不知道如何在键盘外边加上一圈圆角矩形并设置底色。\n\n\n\nCommand\nKeyboard Shortcut\nMarkdown Shortcut\n\n\n\n\nBold\n⌘ B\n**bold**\n\n\n\n[ X ] LIST CHECK\n[ - ] LIST CHECK\nterm: this is definatoin\n\ntermfkal\n\ndkafld: daja f\n\n\naalafd: dak fa\n\n\n为什么显示不出来呢。\n\n\n\n\n\n\n基于文件的editor设置\n\n\n\n为什么要设置`canonical: true` - 保持协作中的一致性\nWith canonical: true, edits in visual mode and source mode will result in identical markdown output. This is especially useful if you have multiple authors collaborating using version control, with a mixture of source and visual mode editing among the authors."
   },
   {
     "objectID": "posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.html",
     "href": "posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.html",
     "title": "如何给服务器起一个简洁好记的名字",
     "section": "",
-    "text": "在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：\n\n0.1 一、临时修改主机名\n临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：\nsudo hostnamectl set-hostname tclh01\n\n\n0.2 二、永久修改主机名\n要确保重启后主机名依然被修改，我们需要修改两个文件：/etc/hostname 和 /etc/hosts。\n\n修改 /etc/hostname 文件\n \n使用文本编辑器（如 nano 或 vi）编辑该文件：\nsudo nano /etc/hostname\n将文件中的内容改为 tclh01，保存并退出。\n修改 /etc/hosts 文件\n \n同样使用文本编辑器修改 /etc/hosts 文件：\nsudo nano /etc/hosts\n找到包含旧主机名的行，并将其修改为新主机名 tclh01，类似如下：\n127.0.0.1   localhost\n127.0.1.1   tclh01\n请确保没有多余的空白行或格式错误，保存并退出。\n\n\n\n0.3 三、重启系统\n为了确保所有更改生效，建议重启系统：\nsudo reboot\n\n\n0.4 小结\n总结以上步骤，你可以按照如下命令序列操作：\n# 临时修改主机名\nsudo hostnamectl set-hostname tclh01\n\n# 编辑 /etc/hostname 文件\nsudo nano /etc/hostname\n# 将内容改为 tclh01，保存退出\n\n# 编辑 /etc/hosts 文件\nsudo nano /etc/hosts\n# 将相关行修改为 127.0.1.1   tclh01，保存退出\n\n# 重启系统\nsudo reboot\n完成这些步骤后，你的服务器主机名应已修改为 tclh01，并能在重启后保持不变。"
+    "text": "在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：\n\n一、临时修改主机名\n临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：\nsudo hostnamectl set-hostname tclh01\n\n\n二、永久修改主机名\n要确保重启后主机名依然被修改，我们需要修改两个文件：/etc/hostname 和 /etc/hosts。\n\n修改 /etc/hostname 文件\n \n使用文本编辑器（如 nano 或 vi）编辑该文件：\nsudo nano /etc/hostname\n将文件中的内容改为 tclh01，保存并退出。\n修改 /etc/hosts 文件\n \n同样使用文本编辑器修改 /etc/hosts 文件：\nsudo nano /etc/hosts\n找到包含旧主机名的行，并将其修改为新主机名 tclh01，类似如下：\n127.0.0.1   localhost\n127.0.1.1   tclh01\n请确保没有多余的空白行或格式错误，保存并退出。\n\n\n\n三、重启系统\n为了确保所有更改生效，建议重启系统：\nsudo reboot\n\n\n小结\n总结以上步骤，你可以按照如下命令序列操作：\n# 临时修改主机名\nsudo hostnamectl set-hostname tclh01\n\n# 编辑 /etc/hostname 文件\nsudo nano /etc/hostname\n# 将内容改为 tclh01，保存退出\n\n# 编辑 /etc/hosts 文件\nsudo nano /etc/hosts\n# 将相关行修改为 127.0.1.1   tclh01，保存退出\n\n# 重启系统\nsudo reboot\n完成这些步骤后，你的服务器主机名应已修改为 tclh01，并能在重启后保持不变。"
   },
   {
     "objectID": "posts/backend/how-install-nginx/index.html",
@@ -157,22 +157,22 @@
     "objectID": "posts/backend/how-install-nginx/index.html#本地拉取-以nginx为例",
     "href": "posts/backend/how-install-nginx/index.html#本地拉取-以nginx为例",
     "title": "docker image的曲线安装法",
-    "section": "2 本地拉取-以nginx为例",
-    "text": "2 本地拉取-以nginx为例\ndocker pull nginx\ndocker save nginx -o nginx.tar\nscp nginx.tar ubuntu@remote-ip:~"
+    "section": "本地拉取-以nginx为例",
+    "text": "本地拉取-以nginx为例\ndocker pull nginx\ndocker save nginx -o nginx.tar\nscp nginx.tar ubuntu@remote-ip:~"
   },
   {
     "objectID": "posts/backend/how-install-nginx/index.html#服务器",
     "href": "posts/backend/how-install-nginx/index.html#服务器",
     "title": "docker image的曲线安装法",
-    "section": "3 服务器",
-    "text": "3 服务器\nssh servername\nsudo docker load -i nginx.tar\n顺利完成转运工作。"
+    "section": "服务器",
+    "text": "服务器\nssh servername\nsudo docker load -i nginx.tar\n顺利完成转运工作。"
   },
   {
     "objectID": "posts/backend/how-install-nginx/index.html#更新镜像源",
     "href": "posts/backend/how-install-nginx/index.html#更新镜像源",
     "title": "docker image的曲线安装法",
-    "section": "4 更新镜像源",
-    "text": "4 更新镜像源\necho ’\n{\n“registry-mirrors”: [\n“https://docker.m.daocloud.io”,\n“https://huecker.io”,\n“https://dockerhub.timeweb.cloud”,\n“https://noohub.ru” ]\n}’ &gt;\n/etc/docker/daemon.json\nsudo systemctl daemon-reload && sudo systemctl restart docker\n\n\n\n更新镜像源后的表现"
+    "section": "更新镜像源",
+    "text": "更新镜像源\necho ’\n{\n“registry-mirrors”: [\n“https://docker.m.daocloud.io”,\n“https://huecker.io”,\n“https://dockerhub.timeweb.cloud”,\n“https://noohub.ru” ]\n}’ &gt;\n/etc/docker/daemon.json\nsudo systemctl daemon-reload && sudo systemctl restart docker\n\n\n\n更新镜像源后的表现"
   },
   {
     "objectID": "posts/backend/how-to-setup-nginx-with-docker/index.html",
@@ -192,8 +192,8 @@
     "objectID": "posts/backend/how-to-setup-nginx-with-docker/index.html#本地测试一下",
     "href": "posts/backend/how-to-setup-nginx-with-docker/index.html#本地测试一下",
     "title": "nginx docker 初体验",
-    "section": "2 本地测试一下",
-    "text": "2 本地测试一下\n文本内容都在本地，刚后docker也不得不安装了，就测试一下好了。\nlocalwww &lt;- “~/Projects/adopapablog/_site”\ndocker run –name myblodg -v /~/Projects/adopapablog/_site:/usr/share/nginx/html:ro -d nginx\n\n1a91bd54593599aadb15ae8c04ce4446e151ba930da365eea338e07a06618d22 docker: Error response from daemon: Mounts denied: The path /~/Projects/adopapablog/_site is not shared from the host and is not known to Docker. You can configure shared paths from Docker -&gt; Preferences… -&gt; Resources -&gt; File Sharing. See https://docs.docker.com/desktop/mac for more info.\n\n看来没有设置共享文件夹，按提示设置吧。\n\n\n\n设置页面\n\n\n居然把这个目录都设置为共享了，太过了，删除掉，但是不明白为什么这个设置了还是无法访问，可能是出在～上，\n节外生枝的发现\nquarto render 必须在项目目录下运行才有效\n文件必须保存了才会被render否则还是上一版内容 图片的文件路径为什么要放在一起\n扯得太远了，赶紧收回来，继续命令，不过把～替换掉\ndocker run –name myblodg -v /Users/yourname/Projects/myblogsite/_site:/usr/share/nginx/html:ro -d nginx\n新的问题继续出现了\n\ndocker: Error response from daemon: Conflict. The container name “/myblodg” is already in use by container “1a91bd54593599aadb15ae8c04ce4446e151ba930da365eea338e07a06618d22”. You have to remove (or rename) that container to be able to reuse that name. See ‘docker run –help’.\n\n在docker里删除即可，继续，还是上面的老问题，可能`_site`这个文件夹太诡异了，于是把它复制到～/public/myblog下\ndocker.app却像抽风了，怎么也打不开了。原来\n\n\n\ndocker-shortcuts-menu\n\n\n 图片也可以直接拖入，然后被设置到images文件夹里了。\n修正了文件名的大小写users -&gt; Users, public -&gt; Public\n如何去访问呢？\nhttp://localhost:8080/ 显示无法访问。\ndocker exec -it myblog sh\ncd /usr/share/nginx/html\nls\n\n看来文件确实别正确地挂载上去了哈。\n再翻回来试试\ndocker run –name myblodg -v /Users/yourname/Projects/myblogsite/_site:/usr/share/nginx/html:ro -d nginx\n结果ok，file sharing的折腾搞一段路了。\nd ## Dockerfiles\n这个文件夹该放哪里呢，项目文件夹下，终于又回到了项目里了\n在项目文件夹下运行\ndocker build -t myblog-nginx .\n出现了一堆问题，扔给ai，它认为是Dockerfile里使用了绝对路径导致的。Docker 构建过程中，COPY 指令只能访问构建上下文中的相对路径。\n\ndocker build -t myblog-nginx .` 继续构建自己的第一个订制nginx docker image，果然OK了。\n成功构建镜像后，运行容器：\n\ndocker run –name myblog -d myblog-nginx\n\n\n虽然什么都没有，还是感觉尽头十足啊。\n接下来该暴露端口了，\ndocker run --name myblogsite -d -p 8080:80 myblog-nginx\nopen http://localhost:8080\n网站如约出现了，怎么刚写的文字没有出现呢，赶紧保存后用quarto render一下，看看页面还是没有更新，看来要在docker里重启一下myblogsite？ 重启后还是依然故我，看来这个不像quarto preview那么有及时预览的功能。真正的原因是之前的版本被固化到了镜像里，它完全不知道我的开发目录里发生的新变化。\n明天继续吧，通过实战把一些长久以来都比较混淆的概念夯实了一下，当人没有ai帮助，确实是无法实现这个目标的。"
+    "section": "本地测试一下",
+    "text": "本地测试一下\n文本内容都在本地，刚后docker也不得不安装了，就测试一下好了。\nlocalwww &lt;- “~/Projects/adopapablog/_site”\ndocker run –name myblodg -v /~/Projects/adopapablog/_site:/usr/share/nginx/html:ro -d nginx\n\n1a91bd54593599aadb15ae8c04ce4446e151ba930da365eea338e07a06618d22 docker: Error response from daemon: Mounts denied: The path /~/Projects/adopapablog/_site is not shared from the host and is not known to Docker. You can configure shared paths from Docker -&gt; Preferences… -&gt; Resources -&gt; File Sharing. See https://docs.docker.com/desktop/mac for more info.\n\n看来没有设置共享文件夹，按提示设置吧。\n\n\n\n设置页面\n\n\n居然把这个目录都设置为共享了，太过了，删除掉，但是不明白为什么这个设置了还是无法访问，可能是出在～上，\n节外生枝的发现\nquarto render 必须在项目目录下运行才有效\n文件必须保存了才会被render否则还是上一版内容 图片的文件路径为什么要放在一起\n扯得太远了，赶紧收回来，继续命令，不过把～替换掉\ndocker run –name myblodg -v /Users/yourname/Projects/myblogsite/_site:/usr/share/nginx/html:ro -d nginx\n新的问题继续出现了\n\ndocker: Error response from daemon: Conflict. The container name “/myblodg” is already in use by container “1a91bd54593599aadb15ae8c04ce4446e151ba930da365eea338e07a06618d22”. You have to remove (or rename) that container to be able to reuse that name. See ‘docker run –help’.\n\n在docker里删除即可，继续，还是上面的老问题，可能`_site`这个文件夹太诡异了，于是把它复制到～/public/myblog下\ndocker.app却像抽风了，怎么也打不开了。原来\n\n\n\ndocker-shortcuts-menu\n\n\n 图片也可以直接拖入，然后被设置到images文件夹里了。\n修正了文件名的大小写users -&gt; Users, public -&gt; Public\n如何去访问呢？\nhttp://localhost:8080/ 显示无法访问。\ndocker exec -it myblog sh\ncd /usr/share/nginx/html\nls\n\n看来文件确实别正确地挂载上去了哈。\n再翻回来试试\ndocker run –name myblodg -v /Users/yourname/Projects/myblogsite/_site:/usr/share/nginx/html:ro -d nginx\n结果ok，file sharing的折腾搞一段路了。\nd ## Dockerfiles\n这个文件夹该放哪里呢，项目文件夹下，终于又回到了项目里了\n在项目文件夹下运行\ndocker build -t myblog-nginx .\n出现了一堆问题，扔给ai，它认为是Dockerfile里使用了绝对路径导致的。Docker 构建过程中，COPY 指令只能访问构建上下文中的相对路径。\n\ndocker build -t myblog-nginx .` 继续构建自己的第一个订制nginx docker image，果然OK了。\n成功构建镜像后，运行容器：\n\ndocker run –name myblog -d myblog-nginx\n\n\n虽然什么都没有，还是感觉尽头十足啊。\n接下来该暴露端口了，\ndocker run --name myblogsite -d -p 8080:80 myblog-nginx\nopen http://localhost:8080\n网站如约出现了，怎么刚写的文字没有出现呢，赶紧保存后用quarto render一下，看看页面还是没有更新，看来要在docker里重启一下myblogsite？ 重启后还是依然故我，看来这个不像quarto preview那么有及时预览的功能。真正的原因是之前的版本被固化到了镜像里，它完全不知道我的开发目录里发生的新变化。\n明天继续吧，通过实战把一些长久以来都比较混淆的概念夯实了一下，当人没有ai帮助，确实是无法实现这个目标的。"
   },
   {
     "objectID": "posts/backend/how-to-install-docker/index.html",
@@ -213,15 +213,15 @@
     "objectID": "posts/backend/how-to-install-docker/index.html#本地安装docker",
     "href": "posts/backend/how-to-install-docker/index.html#本地安装docker",
     "title": "Docker安装",
-    "section": "2 本地安装docker",
-    "text": "2 本地安装docker\n为什么要安装呢？d ocker pull nginx 无法连接 及时设置了镜像也无法\n改为本地科学拉取法\nbrew install docker\nopen /Applications/Docker.app\ndocker –version Docker version 27.0.2, build 912c1ddf8a\n以下方法没有测试过，以后有机会试试 方法四：检查防火墙设置\n有时候防火墙设置可能会阻止 Docker 的网络连接。确 保服务器的防火墙允许 Docker 使用必要的网络端口。你 可以临时禁用防火墙以进行测试（请谨慎操作），或添加规则允许 Docker 的网络流量。\nsudo ufw allow 2375/tcp sudo ufw reload"
+    "section": "本地安装docker",
+    "text": "本地安装docker\n为什么要安装呢？d ocker pull nginx 无法连接 及时设置了镜像也无法\n改为本地科学拉取法\nbrew install docker\nopen /Applications/Docker.app\ndocker –version Docker version 27.0.2, build 912c1ddf8a\n以下方法没有测试过，以后有机会试试 方法四：检查防火墙设置\n有时候防火墙设置可能会阻止 Docker 的网络连接。确 保服务器的防火墙允许 Docker 使用必要的网络端口。你 可以临时禁用防火墙以进行测试（请谨慎操作），或添加规则允许 Docker 的网络流量。\nsudo ufw allow 2375/tcp sudo ufw reload"
   },
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\n\n\nCode\n1 + 1\n\n\n[1] 2"
+    "text": "This is a post with executable code.\n\n\nCode\n1 + 1"
   },
   {
     "objectID": "posts/excel/lookup-vlookup-xlookup/index.html",
@@ -248,15 +248,15 @@
     "objectID": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#docker-desktop-or-docker-engine",
     "href": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#docker-desktop-or-docker-engine",
     "title": "Ubuntu上的Docker",
-    "section": "2 docker-desktop or docker engine",
-    "text": "2 docker-desktop or docker engine\ndocker-enginge，所以docker-desktop并不需要"
+    "section": "docker-desktop or docker engine",
+    "text": "docker-desktop or docker engine\ndocker-enginge，所以docker-desktop并不需要"
   },
   {
     "objectID": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#kimi-ref",
     "href": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#kimi-ref",
     "title": "Ubuntu上的Docker",
-    "section": "3 kimi ref",
-    "text": "3 kimi ref\n在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：\n\n更新系统包：首先，确保你的Ubuntu系统是最新的。可以通过执行以下命令来更新： sudo apt update sudo apt upgrade[^1]\n卸载旧版本的Docker（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可以使用以下命令： sudo apt-get remove docker docker-engine docker.io containerd runc[^2] :::{tips} 提示：无docker-engine :::\n安装依赖项：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release[^3]\n添加Docker的官方GPG密钥：这将确保你能够从Docker的官方源安装Docker。 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg[^4]\n设置Docker的APT源：添加Docker的官方APT源，以便安装最新版本的Docker。 echo \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null[^5]\n再次更新APT源：更新本地APT源列表，确保可以安装最新版本的Docker。 sudo apt update[^6]\n安装Docker Engine和Docker Compose：安装Docker Engine和Docker Compose。从Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin[^7]\n验证安装：验证Docker和Docker Compose是否正确安装并运行： sudo docker version docker-compose --version[^8]\n配置镜像加速（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可以编辑/etc/docker/daemon.json文件，添加以下内容：\n{\n  \"registry-mirrors\": [\"https://registry.docker-cn.com\"]\n}\n然后重启Docker服务： sudo systemctl daemon-reload sudo systemctl restart docker[^9]\n运行Docker Hello World测试：运行Docker的Hello World测试，以确保Docker正确安装并运行： sudo docker run hello-world[^10]\n\n这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。"
+    "section": "kimi ref",
+    "text": "kimi ref\n在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：\n\n更新系统包：首先，确保你的Ubuntu系统是最新的。可 以通过执行以下命令来更新： sudo apt update sudo apt upgrade\n卸载旧版本的Docker（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可 以使用以下命令： sudo apt-get remove docker docker-engine docker.io containerd runc\n安装依赖项：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release\n添加Docker的官方GPG密钥：这将确保你能够从Docker的官方源安装Docker。 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg\n设置Docker的APT源：添加Docker的官方APT源，以便安装最新版本的Docker。 echo \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null\n再次更新APT源：更新本地APT源列表，确保可以安装最新版本的Docker。 sudo apt update\n安装Docker Engine和Docker Compose：安装Docker Engine和Docker Compose。从 Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin\n验证安装：验证Docker和Docker Compose是否正确安装并运行： sudo docker version docker-compose --version\n配置镜像加速（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可 以编辑/etc/docker/daemon.json文件，添加以下内容：\n{\n  \"registry-mirrors\": [\"https://registry.docker-cn.com\"]\n}\n然后重启Docker服务： sudo systemctl daemon-reload sudo systemctl restart docker[^9]\n运行Docker Hello World测试：运行Docker的Hello World测试，以确保Docker正确安装并运行： sudo docker run hello-world\n\n这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记 得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。"
   },
   {
     "objectID": "posts/backend/how-to-clean-zombie-process/index.html",
@@ -269,29 +269,29 @@
     "objectID": "posts/backend/how-to-clean-zombie-process/index.html#什么是僵尸进程",
     "href": "posts/backend/how-to-clean-zombie-process/index.html#什么是僵尸进程",
     "title": "一不留神，僵尸就这么跳将进来了",
-    "section": "1 什么是僵尸进程？",
-    "text": "1 什么是僵尸进程？\n僵尸进程是在其执行完成后仍保留在进程表中的进程。这些进程已经终止，但其父进程还没有读取其退出状态，因此这些进程的资源尚未完全释放。它们占用的系统资源非常少，但积累太多的僵尸进程可能会耗尽系统可用的进程表条目。"
+    "section": "什么是僵尸进程？",
+    "text": "什么是僵尸进程？\n僵尸进程是在其执行完成后仍保留在进程表中的进程。这些进程已经终止，但其父进程还没有读取其退出状态，因此这些进程的资源尚未完全释放。它们占用的系统资源非常少，但积累太多的僵尸进程可能会耗尽系统可用的进程表条目。"
   },
   {
     "objectID": "posts/backend/how-to-clean-zombie-process/index.html#如何查找僵尸进程",
     "href": "posts/backend/how-to-clean-zombie-process/index.html#如何查找僵尸进程",
     "title": "一不留神，僵尸就这么跳将进来了",
-    "section": "2 如何查找僵尸进程？",
-    "text": "2 如何查找僵尸进程？\n你可以使用 ps 命令来查找系统中的僵尸进程：\nps aux | grep Z\n\n在输出中，你会看到带有 Z 状态码的进程，这些就是僵尸进程。"
+    "section": "如何查找僵尸进程？",
+    "text": "如何查找僵尸进程？\n你可以使用 ps 命令来查找系统中的僵尸进程：\nps aux | grep Z\n\n在输出中，你会看到带有 Z 状态码的进程，这些就是僵尸进程。"
   },
   {
     "objectID": "posts/backend/how-to-clean-zombie-process/index.html#处理僵尸进程的方法",
     "href": "posts/backend/how-to-clean-zombie-process/index.html#处理僵尸进程的方法",
     "title": "一不留神，僵尸就这么跳将进来了",
-    "section": "3 处理僵尸进程的方法",
-    "text": "3 处理僵尸进程的方法\n\n3.1 手动即时清理\n\n手动杀掉父进程： 找到僵尸进程的父进程ID (PPID)。你可以使用 ps 或 top 命令来查找其父进程。\nps -o ppid= -p &lt;zombie_pid&gt;\n使用 kill 命令来结束该父进程：\nsudo kill -HUP &lt;parent_pid&gt;\n这会告诉父进程重新读取子进程的退出状态并释放僵尸进程。\n\n重启服务或系统： 如果僵尸进程是由某个服务引起的，重启该服务可能会解决问题。如果这个方法无效，重启系统通常会清理所有僵尸进程。\nsudo systemctl restart your_service\n# 或者\nsudo reboot\n3.2 周期性监控和自动处理\n对于需要持续监控并处理僵尸进程的系统，可以编写脚本定期检查并处理这些进程。\n\n示例脚本：\n\n#!/bin/bash\nzombies=$(ps aux | awk '{if ($8 ~ /Z/) print $2}')\nif [ -n \"$zombies\" ]; then\n    for pid in $zombies; do\n        parent_pid=$(ps -o ppid= -p $pid)\n        [ \"$parent_pid\" ] && sudo kill -HUP $parent_pid\n    done\nfi\n\n设置定时任务: 将这个脚本设为定时任务，例如通过 crontab 设置定期运行。\n\ncrontab -e\n# 添加以下行每小时运行一次脚本\n0 * * * * /path/to/your/script.sh"
+    "section": "处理僵尸进程的方法",
+    "text": "处理僵尸进程的方法\n\n手动即时清理\n\n手动杀掉父进程： 找到僵尸进程的父进程ID (PPID)。你可以使用 ps 或 top 命令来查找其父进程。\nps -o ppid= -p &lt;zombie_pid&gt;\n使用 kill 命令来结束该父进程：\nsudo kill -HUP &lt;parent_pid&gt;\n这会告诉父进程重新读取子进程的退出状态并释放僵尸进程。\n\n重启服务或系统： 如果僵尸进程是由某个服务引起的，重启该服务可能会解决问题。如果这个方法无效，重启系统通常会清理所有僵尸进程。\nsudo systemctl restart your_service\n# 或者\nsudo reboot\n周期性监控和自动处理\n对于需要持续监控并处理僵尸进程的系统，可以编写脚本定期检查并处理这些进程。\n\n示例脚本：\n\n#!/bin/bash\nzombies=$(ps aux | awk '{if ($8 ~ /Z/) print $2}')\nif [ -n \"$zombies\" ]; then\n    for pid in $zombies; do\n        parent_pid=$(ps -o ppid= -p $pid)\n        [ \"$parent_pid\" ] && sudo kill -HUP $parent_pid\n    done\nfi\n\n设置定时任务: 将这个脚本设为定时任务，例如通过 crontab 设置定期运行。\n\ncrontab -e\n# 添加以下行每小时运行一次脚本\n0 * * * * /path/to/your/script.sh"
   },
   {
     "objectID": "posts/backend/how-to-clean-zombie-process/index.html#小结",
     "href": "posts/backend/how-to-clean-zombie-process/index.html#小结",
     "title": "一不留神，僵尸就这么跳将进来了",
-    "section": "4 小结",
-    "text": "4 小结\n虽然僵尸进程本身并不会消耗大量资源，但它们积累过多可能会影响系统的稳健性。通过上面的步骤，你可以识别并处理僵尸进程，确保系统保持健康的运行状态。通常，出现一个僵尸进程并不危险，但在生产环境中应尽早处理以保持系统的清洁和高效运行。"
+    "section": "小结",
+    "text": "小结\n虽然僵尸进程本身并不会消耗大量资源，但它们积累过多可能会影响系统的稳健性。通过上面的步骤，你可以识别并处理僵尸进程，确保系统保持健康的运行状态。通常，出现一个僵尸进程并不危险，但在生产环境中应尽早处理以保持系统的清洁和高效运行。"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -318,22 +318,15 @@
     "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#先来一个-neofetch",
     "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#先来一个-neofetch",
     "title": "自己的地盘，自己看着点",
-    "section": "2 先来一个 neofetch",
-    "text": "2 先来一个 neofetch\n有事问AI, 尽管其会胡说八道，但是确实一个线索的重要提供者，在于计算机类的信息还是以个蛮不错的开始。爱"
+    "section": "先来一个 neofetch",
+    "text": "先来一个 neofetch\n有事问AI, 尽管其会胡说八道，但是确实一个线索的重要提供者，在于计算机类的信息还是以个蛮不错的开始。爱"
   },
   {
     "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#ai的推荐-存档",
     "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#ai的推荐-存档",
     "title": "自己的地盘，自己看着点",
-    "section": "3 AI的推荐-存档",
-    "text": "3 AI的推荐-存档\n在 Ubuntu 服务器上，通过 SSH 登录后显示更多的健康监控指标，可以帮助管理员快速了解系统状态。以下是几种配置方法和工具，可用于增强服务器健康监控：\n\n3.1 方法一：修改 MOTD（Message of the Day）\nUbuntu 在用户登录时显示 MOTD（消息每日通告），可以通过配置 MOTD 来显示系统健康监控指标。\n\n3.1.1 配置 MOTD\n\n通过 Landscape 提供的 MOTD（默认）：\n默认情况下，Ubuntu 服务器使用 landscape-sysinfo 生成 MOTD 信息。你可以通过编辑/etc/update-motd.d中的文件来自定义登录信息。\nsudo nano /etc/update-motd.d/00-header  # 添加定制的 header\nsudo nano /etc/update-motd.d/10-sysinfo  # 定制系统信息\n添加自定义脚本：\n你可以创建和添加自定义脚本来显示系统健康信息。在/etc/update-motd.d/目录中添加一个新的脚本文件，如：\nsudo nano /etc/update-motd.d/20-healthcheck\n在这个脚本中添加你希望显示的信息。例如，下面是一个示例脚本，用于显示系统负载、磁盘使用情况和内存使用情况：\n#!/bin/bash\necho \"System Load: $(uptime)\"\necho \"Disk Usage:\"\ndf -h | grep '^/dev/'\necho \"Memory Usage:\"\nfree -h\n确保脚本具有执行权限：\nsudo chmod +x /etc/update-motd.d/20-healthcheck\n更新并查看效果：\n断开 SSH 会话并重新登录，查看新的 MOTD 信息。\n\n\n\n\n3.2 方法二：使用 screenfetch 或 neofetch\nscreenfetch 和 neofetch 是两个广受欢迎的工具，用于在登录时显示系统信息。\n\n3.2.1 安装 neofetch\n\n安装 neofetch：\nsudo apt update\nsudo apt install neofetch\n配置 Shell 配置文件：\n编辑对应的 shell 配置文件（如 .bashrc 或 .zshrc），使其在登录时自动运行 neofetch：\necho \"neofetch\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n3.2.2 安装 screenfetch\n\n安装 screenfetch：\nsudo apt update\nsudo apt install screenfetch\n配置 Shell 配置文件：\n编辑对应的 shell 配置文件（如 .bashrc 或 .zshrc），使其在登录时自动运行 screenfetch：\necho \"screenfetch\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n\n3.3 方法三：使用 glances 实时监控\nglances 是一个多功能系统监控工具，支持查看多种系统性能指标。\n\n3.3.1 安装 glances\nsudo apt update\nsudo apt install glances\n\n\n3.3.2 使用 glances\n安装完成后，可以通过以下命令启动 glances，实时显示系统状态：\nglances\n\n\n3.3.3 配置自动启动\n可以在shell配置文件中添加命令来运行 glances，例如在 .bashrc 中：\necho \"glances\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n3.4 高级监控工具\n\nPrometheus + Grafana：\n\n如果需要更强大的监控解决方案，可以考虑使用 Prometheus 和 Grafana。这两个工具组合可以提供实时系统监控、告警和丰富的仪表盘功能。\n- 安装 Prometheus 和 Grafana 的详细步骤可以参考官方文档。\n\n- 配置节点导出器（Node Exporter）来收集系统指标。\n\nNetdata：\nNetdata 也是一个强大的实时监控工具，支持详细的系统性能指标和告警功能。\n# 安装 netdata（需要在官方文档中确认推荐的安装方式）\nbash &lt;(curl -Ss https://my-netdata.io/kickstart.sh)\n\n安装后的 Netdata 可以通过 Web 界面访问实时监控信息。"
-  },
-  {
-    "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#section",
-    "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#section",
-    "title": "自己的地盘，自己看着点",
-    "section": "4 ",
-    "text": "4"
+    "section": "AI的推荐-存档",
+    "text": "AI的推荐-存档\n在 Ubuntu 服务器上，通过 SSH 登录后显示更多的健康监控指标，可以帮助管理员快速了解系统状态。以下是几种配置方法和工具，可用于增强服务器健康监控：\n\n方法一：修改 MOTD（Message of the Day）\nUbuntu 在用户登录时显示 MOTD（消息每日通告），可以通过配置 MOTD 来显示系统健康监控指标。\n\n配置 MOTD\n\n通过 Landscape 提供的 MOTD（默认）：\n默认情况下，Ubuntu 服务器使用 landscape-sysinfo 生成 MOTD 信息。你可以通过编辑/etc/update-motd.d中的文件来自定义登录信息。\nsudo nano /etc/update-motd.d/00-header  # 添加定制的 header\nsudo nano /etc/update-motd.d/10-sysinfo  # 定制系统信息\n添加自定义脚本：\n你可以创建和添加自定义脚本来显示系统健康信息。在/etc/update-motd.d/目录中添加一个新的脚本文件，如：\nsudo nano /etc/update-motd.d/20-healthcheck\n在这个脚本中添加你希望显示的信息。例如，下面是一个示例脚本，用于显示系统负载、磁盘使用情况和内存使用情况：\n#!/bin/bash\necho \"System Load: $(uptime)\"\necho \"Disk Usage:\"\ndf -h | grep '^/dev/'\necho \"Memory Usage:\"\nfree -h\n确保脚本具有执行权限：\nsudo chmod +x /etc/update-motd.d/20-healthcheck\n更新并查看效果：\n断开 SSH 会话并重新登录，查看新的 MOTD 信息。\n\n\n\n\n方法二：使用 screenfetch 或 neofetch\nscreenfetch 和 neofetch 是两个广受欢迎的工具，用于在登录时显示系统信息。\n\n安装 neofetch\n\n安装 neofetch：\nsudo apt update\nsudo apt install neofetch\n配置 Shell 配置文件：\n编辑对应的 shell 配置文件（如 .bashrc 或 .zshrc），使其在登录时自动运行 neofetch：\necho \"neofetch\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n安装 screenfetch\n\n安装 screenfetch：\nsudo apt update\nsudo apt install screenfetch\n配置 Shell 配置文件：\n编辑对应的 shell 配置文件（如 .bashrc 或 .zshrc），使其在登录时自动运行 screenfetch：\necho \"screenfetch\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n\n方法三：使用 glances 实时监控\nglances 是一个多功能系统监控工具，支持查看多种系统性能指标。\n\n安装 glances\nsudo apt update\nsudo apt install glances\n\n\n使用 glances\n安装完成后，可以通过以下命令启动 glances，实时显示系统状态：\nglances\n\n\n配置自动启动\n可以在shell配置文件中添加命令来运行 glances，例如在 .bashrc 中：\necho \"glances\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n高级监控工具\n\nPrometheus + Grafana：\n\n如果需要更强大的监控解决方案，可以考虑使用 Prometheus 和 Grafana。这两个工具组合可以提供实时系统监控、告警和丰富的仪表盘功能。\n- 安装 Prometheus 和 Grafana 的详细步骤可以参考官方文档。\n\n- 配置节点导出器（Node Exporter）来收集系统指标。\n\nNetdata：\nNetdata 也是一个强大的实时监控工具，支持详细的系统性能指标和告警功能。\n# 安装 netdata（需要在官方文档中确认推荐的安装方式）\nbash &lt;(curl -Ss https://my-netdata.io/kickstart.sh)\n\n安装后的 Netdata 可以通过 Web 界面访问实时监控信息。"
   },
   {
     "objectID": "posts/diary/lastdayofaugust.html",
@@ -360,42 +353,42 @@
     "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#我的选型",
     "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#我的选型",
     "title": "自动化发布的初体验-本地发布",
-    "section": "2 我的选型",
-    "text": "2 我的选型\n写作工具: Quarto 编辑器: Rstudio 部署工具: Docker，Ngnix，Ubuntu"
+    "section": "我的选型",
+    "text": "我的选型\n写作工具: Quarto 编辑器: Rstudio 部署工具: Docker，Ngnix，Ubuntu"
   },
   {
     "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2",
     "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2",
     "title": "自动化发布的初体验-本地发布",
-    "section": "3 head2",
-    "text": "3 head2"
+    "section": "head2",
+    "text": "head2"
   },
   {
     "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2-1",
     "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2-1",
     "title": "自动化发布的初体验-本地发布",
-    "section": "4 head2",
-    "text": "4 head2"
+    "section": "head2",
+    "text": "head2"
   },
   {
     "objectID": "posts/quarto/connect-local-project-with-remote-github-original/index.html",
     "href": "posts/quarto/connect-local-project-with-remote-github-original/index.html",
     "title": "Connect Local Project with Remote GitHub",
     "section": "",
-    "text": "如何把一个本地projcet同步到github里新建项目里？\n要将本地项目同步到GitHub中的新建项目，可以按照下面的步骤操作：\n\n0.1 步骤 1: 创建GitHub仓库\n\n登录到你的GitHub账户。\n点击页面右上角的“+”图标，然后选择“New repository”。\n填写仓库名称、描述（可选）和其它设置，然后点击“Create repository”。\n\n\n\n0.2 步骤 2: 初始化本地仓库\n如果你还没有在本地项目中初始化Git仓库，打开终端并导航到你的\n\n\n\ngithub"
+    "text": "如何把一个本地projcet同步到github里新建项目里？\n要将本地项目同步到GitHub中的新建项目，可以按照下面的步骤操作：\n\n步骤 1: 创建GitHub仓库\n\n登录到你的GitHub账户。\n点击页面右上角的“+”图标，然后选择“New repository”。\n填写仓库名称、描述（可选）和其它设置，然后点击“Create repository”。\n\n\n\n步骤 2: 初始化本地仓库\n如果你还没有在本地项目中初始化Git仓库，打开终端并导航到你的\n\n\n\ngithub"
   },
   {
     "objectID": "posts/quarto/quarto-yaml-options/index.html#节外生枝",
     "href": "posts/quarto/quarto-yaml-options/index.html#节外生枝",
     "title": "豆瓣坛",
-    "section": "2 节外生枝",
-    "text": "2 节外生枝\nquarto render 报错已大堆\n\n\n\nrender时的一大堆报错\n\n\n仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个 的 贴到了yaml设置里了。\n\n\n\n哪里来的的"
+    "section": "节外生枝",
+    "text": "节外生枝\nquarto render 报错已大堆\n\n\n\nrender时的一大堆报错\n\n\n仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个 的 贴到了yaml设置里了。\n\n\n\n哪里来的的"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "留下些许还未遗忘的时光碎片",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\ntbd\n\n\n\ntbd\n\n\ntbd\n\n\ntbd\n\n\ntbd\n\n\n\ntbd\n\n\n\nAdopapa\n\n\n2024/12/09,第50周\n\n\n\n\n\n\n\n\n\n\n\n\n文件去哪儿了\n\n\n\nit\n\n\nthinking\n\n\n\n总会新问题，人生的意义在不不搞懂什么😄\n\n\n\nAdopapa\n\n\n2024/12/09,第50周\n\n\n\n\n\n\n\n\n\n\n\n\n搞定博客的自动发布\n\n\n\ngithub\n\n\ndeploy\n\n\naction\n\n\n\n自己突破一下\n\n\n\nadp\n\n\n2024/12/07,第49周\n\n\n\n\n\n\n\n\n\n\n\n\ntbd\n\n\n\ntbd\n\n\ntbd\n\n\ntbd\n\n\ntbd\n\n\n\ntbd\n\n\n\nAdopapa\n\n\n2024/09/30,第40周\n\n\n\n\n\n\n\n\n\n\n\n\n海棠果热成了红苹果\n\n\n\n随记\n\n\n气候\n\n\n植物\n\n\n\n今年的海棠果很特别吧，以前小小青青的可爱样，今年却是情非得…\n\n\n\nAdopapa\n\n\n2024/08/30,第35周\n\n\n\n\n\n\n\n\n\n\n\n\nUbuntu上的Docker\n\n\n\nIT\n\n\nDocker\n\n\n\nit基本工具\n\n\n\naiit\n\n\n2024/07/01,第27周\n\n\n\n\n\n\n\n\n\n\n\n\nkeywords和category有何不同？\n\n\n\nQuarto YAML\n\n\n\n想让内容。如你所愿？这些魔法石你不得不了解\n\n\n\nadopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n自己的地盘，自己看着点\n\n\n\nLinux\n\n\nServer\n\n\nMonitor\n\n\n\n大厂的监控重视让人眼花缭乱，无处入手，何不自己慢慢地搜罗一…\n\n\n\nAdopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n自动化发布的初体验-本地发布\n\n\n\npublish\n\n\nQuarto\n\n\nnginx\n\n\ndocker\n\n\n\n手动发布实在太累，以至于丧失了写作的乐趣，必须搞定自动发布\n\n\n\nAdopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n如何给服务器起一个简洁好记的名字\n\n\n\nlinux\n\n\nubuntu\n\n\n\n看到随机分配的服务器名字，总是很不爽，干脆自己改改吧\n\n\n\nAdopapa\n\n\n2024/06/29,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nExcel函数之lookup, vlookup, xlookup\n\n\n\nlinux\n\n\nubuntu\n\n\n\nlookup看起来更简单啊，为什么要用vlookup呢？有…\n\n\n\nadopapa\n\n\n2024/06/28,第26周\n\n\n\n\n\n\n\n\n\n\n\n\n一不留神，僵尸就这么跳将进来了\n\n\n\nlinux ubuntu process zombie\n\n\n\n远程登录服务器，突然看到一个信息，你有一个僵尸进程，吓坏了…\n\n\n\nadopapa\n\n\n2024/06/28,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nnginx docker 初体验\n\n\n\nlinux\n\n\nubuntu\n\n\ndocker\n\n\n\n直接在服务器上拉取docker image总是超时怎么办？\n\n\n\nmetacell\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\ndocker image的曲线安装法\n\n\n\nlinux\n\n\nubuntu\n\n\ndocker\n\n\n\n直接在服务器上拉取docker image总是超时怎么办？\n\n\n\nmetacell\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nDocker安装\n\n\n\nit\n\n\ndocker\n\n\n\nDocker作为最重要的部署工具，不可不安装，不可不更新啊\n\n\n\niti\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nCode Executioin\n\n\n\nquarto\n\n\nwebsite\n\n\nguide\n\n\n\n\n\n\n\nZHU QUANMING\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\n学习笔记-Rstudio可视化编辑器之技术写作\n\n\n\nquarto\n\n\nrstudio\n\n\n学习笔记\n\n\n\n理工男逃不开的技术写作，就从这里开始\n\n\n\nZHU QUANMING\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\nConnect Local Project with Remote GitHub\n\n\n\nTutorial\n\n\nGitHub\n\n\nQuarto\n\n\n\nA guide on connecting a…\n\n\n\nZHU Quanming\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nHarlow Malloc\n\n\n2024/06/21,第25周\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\nTristan O’Malley\n\n\n2024/06/18,第25周\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n文件去哪儿了\n\n\n\nit\n\n\nthinking\n\n\n\n总会新问题，人生的意义在不不搞懂什么😄\n\n\n\nAdopapa\n\n\n2024/12/09,第50周\n\n\n\n\n\n\n\n\n\n\n\n\n搞定博客的自动发布\n\n\n\ngithub\n\n\ndeploy\n\n\naction\n\n\n\n自己突破一下\n\n\n\nadp\n\n\n2024/12/07,第49周\n\n\n\n\n\n\n\n\n\n\n\n\n海棠果热成了红苹果\n\n\n\n随记\n\n\n气候\n\n\n植物\n\n\n\n今年的海棠果很特别吧，以前小小青青的可爱样，今年却是情非得…\n\n\n\nAdopapa\n\n\n2024/08/30,第35周\n\n\n\n\n\n\n\n\n\n\n\n\nUbuntu上的Docker\n\n\n\nIT\n\n\nDocker\n\n\n\nit基本工具\n\n\n\naiit\n\n\n2024/07/01,第27周\n\n\n\n\n\n\n\n\n\n\n\n\nkeywords和category有何不同？\n\n\n\nQuarto YAML\n\n\n\n想让内容。如你所愿？这些魔法石你不得不了解\n\n\n\nadopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n自己的地盘，自己看着点\n\n\n\nLinux\n\n\nServer\n\n\nMonitor\n\n\n\n大厂的监控重视让人眼花缭乱，无处入手，何不自己慢慢地搜罗一…\n\n\n\nAdopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n自动化发布的初体验-本地发布\n\n\n\npublish\n\n\nQuarto\n\n\nnginx\n\n\ndocker\n\n\n\n手动发布实在太累，以至于丧失了写作的乐趣，必须搞定自动发布\n\n\n\nAdopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n如何给服务器起一个简洁好记的名字\n\n\n\nlinux\n\n\nubuntu\n\n\n\n看到随机分配的服务器名字，总是很不爽，干脆自己改改吧\n\n\n\nAdopapa\n\n\n2024/06/29,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nExcel函数之lookup, vlookup, xlookup\n\n\n\nlinux\n\n\nubuntu\n\n\n\nlookup看起来更简单啊，为什么要用vlookup呢？有…\n\n\n\nadopapa\n\n\n2024/06/28,第26周\n\n\n\n\n\n\n\n\n\n\n\n\n一不留神，僵尸就这么跳将进来了\n\n\n\nlinux ubuntu process zombie\n\n\n\n远程登录服务器，突然看到一个信息，你有一个僵尸进程，吓坏了…\n\n\n\nadopapa\n\n\n2024/06/28,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nnginx docker 初体验\n\n\n\nlinux\n\n\nubuntu\n\n\ndocker\n\n\n\n直接在服务器上拉取docker image总是超时怎么办？\n\n\n\nmetacell\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\ndocker image的曲线安装法\n\n\n\nlinux\n\n\nubuntu\n\n\ndocker\n\n\n\n直接在服务器上拉取docker image总是超时怎么办？\n\n\n\nmetacell\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nDocker安装\n\n\n\nit\n\n\ndocker\n\n\n\nDocker作为最重要的部署工具，不可不安装，不可不更新啊\n\n\n\niti\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nCode Executioin\n\n\n\nquarto\n\n\nwebsite\n\n\nguide\n\n\n\n\n\n\n\nZHU QUANMING\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\n学习笔记-Rstudio可视化编辑器之技术写作\n\n\n\nquarto\n\n\nrstudio\n\n\n学习笔记\n\n\n\n理工男逃不开的技术写作，就从这里开始\n\n\n\nZHU QUANMING\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\nConnect Local Project with Remote GitHub\n\n\n\nTutorial\n\n\nGitHub\n\n\nQuarto\n\n\n\nA guide on connecting a…\n\n\n\nZHU Quanming\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nHarlow Malloc\n\n\n2024/06/21,第25周\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\nTristan O’Malley\n\n\n2024/06/18,第25周\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

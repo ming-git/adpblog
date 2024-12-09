@@ -125,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">内容提要</h2>
    
-  <ul>
-  <li><a href="#一临时修改主机名" id="toc-一临时修改主机名" class="nav-link active" data-scroll-target="#一临时修改主机名"><span class="header-section-number">0.1</span> <strong>一、临时修改主机名</strong></a></li>
-  <li><a href="#二永久修改主机名" id="toc-二永久修改主机名" class="nav-link" data-scroll-target="#二永久修改主机名"><span class="header-section-number">0.2</span> <strong>二、永久修改主机名</strong></a></li>
-  <li><a href="#三重启系统" id="toc-三重启系统" class="nav-link" data-scroll-target="#三重启系统"><span class="header-section-number">0.3</span> <strong>三、重启系统</strong></a></li>
-  <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><span class="header-section-number">0.4</span> <strong>小结</strong></a></li>
+  <ul class="incremental">
+  <li><a href="#一临时修改主机名" id="toc-一临时修改主机名" class="nav-link active" data-scroll-target="#一临时修改主机名"><strong>一、临时修改主机名</strong></a></li>
+  <li><a href="#二永久修改主机名" id="toc-二永久修改主机名" class="nav-link" data-scroll-target="#二永久修改主机名"><strong>二、永久修改主机名</strong></a></li>
+  <li><a href="#三重启系统" id="toc-三重启系统" class="nav-link" data-scroll-target="#三重启系统"><strong>三、重启系统</strong></a></li>
+  <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><strong>小结</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -184,15 +184,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：</p>
-<section id="一临时修改主机名" class="level3" data-number="0.1">
-<h3 data-number="0.1" class="anchored" data-anchor-id="一临时修改主机名"><span class="header-section-number">0.1</span> <strong>一、临时修改主机名</strong></h3>
+<section id="一临时修改主机名" class="level3">
+<h3 class="anchored" data-anchor-id="一临时修改主机名"><strong>一、临时修改主机名</strong></h3>
 <p>临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：</p>
 <pre><code>sudo hostnamectl set-hostname tclh01</code></pre>
 </section>
-<section id="二永久修改主机名" class="level3" data-number="0.2">
-<h3 data-number="0.2" class="anchored" data-anchor-id="二永久修改主机名"><span class="header-section-number">0.2</span> <strong>二、永久修改主机名</strong></h3>
+<section id="二永久修改主机名" class="level3">
+<h3 class="anchored" data-anchor-id="二永久修改主机名"><strong>二、永久修改主机名</strong></h3>
 <p>要确保重启后主机名依然被修改，我们需要修改两个文件：<code>/etc/hostname</code>&nbsp;和&nbsp;<code>/etc/hosts</code>。</p>
-<ol type="1">
+<ol class="incremental" type="1">
 <li><p><strong>修改&nbsp;<code>/etc/hostname</code>&nbsp;文件</strong></p>
 <p>&nbsp;</p>
 <p>使用文本编辑器（如&nbsp;<code>nano</code>&nbsp;或&nbsp;<code>vi</code>）编辑该文件：</p>
@@ -208,13 +208,13 @@ ul.task-list li input[type="checkbox"] {
 <p>请确保没有多余的空白行或格式错误，保存并退出。</p></li>
 </ol>
 </section>
-<section id="三重启系统" class="level3" data-number="0.3">
-<h3 data-number="0.3" class="anchored" data-anchor-id="三重启系统"><span class="header-section-number">0.3</span> <strong>三、重启系统</strong></h3>
+<section id="三重启系统" class="level3">
+<h3 class="anchored" data-anchor-id="三重启系统"><strong>三、重启系统</strong></h3>
 <p>为了确保所有更改生效，建议重启系统：</p>
 <pre><code>sudo reboot</code></pre>
 </section>
-<section id="小结" class="level3" data-number="0.4">
-<h3 data-number="0.4" class="anchored" data-anchor-id="小结"><span class="header-section-number">0.4</span> <strong>小结</strong></h3>
+<section id="小结" class="level3">
+<h3 class="anchored" data-anchor-id="小结"><strong>小结</strong></h3>
 <p>总结以上步骤，你可以按照如下命令序列操作：</p>
 <pre><code># 临时修改主机名
 sudo hostnamectl set-hostname tclh01

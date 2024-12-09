@@ -125,10 +125,10 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">内容提要</h2>
    
-  <ul>
-  <li><a href="#缘起" id="toc-缘起" class="nav-link active" data-scroll-target="#缘起"><span class="header-section-number">1</span> 缘起</a></li>
-  <li><a href="#docker-desktop-or-docker-engine" id="toc-docker-desktop-or-docker-engine" class="nav-link" data-scroll-target="#docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</a></li>
-  <li><a href="#kimi-ref" id="toc-kimi-ref" class="nav-link" data-scroll-target="#kimi-ref"><span class="header-section-number">3</span> kimi ref</a></li>
+  <ul class="incremental">
+  <li><a href="#缘起" id="toc-缘起" class="nav-link active" data-scroll-target="#缘起">缘起</a></li>
+  <li><a href="#docker-desktop-or-docker-engine" id="toc-docker-desktop-or-docker-engine" class="nav-link" data-scroll-target="#docker-desktop-or-docker-engine">docker-desktop or docker engine</a></li>
+  <li><a href="#kimi-ref" id="toc-kimi-ref" class="nav-link" data-scroll-target="#kimi-ref">kimi ref</a></li>
   </ul>
 </nav>
     </div>
@@ -182,35 +182,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="缘起" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="缘起"><span class="header-section-number">1</span> 缘起</h2>
+<section id="缘起" class="level2">
+<h2 class="anchored" data-anchor-id="缘起">缘起</h2>
 <p>博客通过docker+nginx部署上了，但是只能内网访问，ufw检查了没问题，于是怀疑ubuntu上的docker可能版本不对</p>
 <p>kimi看了十篇网文，于是给我提供了docker安装的最佳实践</p>
 </section>
-<section id="docker-desktop-or-docker-engine" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</h2>
+<section id="docker-desktop-or-docker-engine" class="level2">
+<h2 class="anchored" data-anchor-id="docker-desktop-or-docker-engine">docker-desktop or docker engine</h2>
 <p>docker-enginge，所以docker-desktop并不需要</p>
 </section>
-<section id="kimi-ref" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="kimi-ref"><span class="header-section-number">3</span> kimi ref</h2>
+<section id="kimi-ref" class="level2">
+<h2 class="anchored" data-anchor-id="kimi-ref">kimi ref</h2>
 <p>在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：</p>
-<ol type="1">
-<li><p><strong>更新系统包</strong>：首先，确保你的Ubuntu系统是最新的。可以通过执行以下命令来更新： <code>sudo apt update sudo apt upgrade</code>[^1]</p></li>
-<li><p><strong>卸载旧版本的Docker</strong>（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可以使用以下命令： <code>sudo apt-get remove docker docker-engine docker.io containerd runc</code>[^2] :::{tips} 提示：无docker-engine :::</p></li>
-<li><p><strong>安装依赖项</strong>：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</code>[^3]</p></li>
-<li><p><strong>添加Docker的官方GPG密钥</strong>：这将确保你能够从Docker的官方源安装Docker。 <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>[^4]</p></li>
-<li><p><strong>设置Docker的APT源</strong>：添加Docker的官方APT源，以便安装最新版本的Docker。 <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>[^5]</p></li>
-<li><p><strong>再次更新APT源</strong>：更新本地APT源列表，确保可以安装最新版本的Docker。 <code>sudo apt update</code>[^6]</p></li>
-<li><p><strong>安装Docker Engine和Docker Compose</strong>：安装Docker Engine和Docker Compose。从Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 <code>sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code>[^7]</p></li>
-<li><p><strong>验证安装</strong>：验证Docker和Docker Compose是否正确安装并运行： <code>sudo docker version docker-compose --version</code>[^8]</p></li>
-<li><p><strong>配置镜像加速</strong>（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可以编辑<code>/etc/docker/daemon.json</code>文件，添加以下内容：</p>
+<ol class="incremental" type="1">
+<li><p><strong>更新系统包</strong>：首先，确保你的Ubuntu系统是最新的。可 以通过执行以下命令来更新： <code>sudo apt update sudo apt upgrade</code></p></li>
+<li><p><strong>卸载旧版本的Docker</strong>（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可 以使用以下命令： <code>sudo apt-get remove docker docker-engine docker.io containerd runc</code></p></li>
+<li><p><strong>安装依赖项</strong>：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</code></p></li>
+<li><p><strong>添加Docker的官方GPG密钥</strong>：这将确保你能够从Docker的官方源安装Docker。 <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code></p></li>
+<li><p><strong>设置Docker的APT源</strong>：添加Docker的官方APT源，以便安装最新版本的Docker。 <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></p></li>
+<li><p><strong>再次更新APT源</strong>：更新本地APT源列表，确保可以安装最新版本的Docker。 <code>sudo apt update</code></p></li>
+<li><p><strong>安装Docker Engine和Docker Compose</strong>：安装Docker Engine和Docker Compose。从 Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 <code>sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code></p></li>
+<li><p><strong>验证安装</strong>：验证Docker和Docker Compose是否正确安装并运行： <code>sudo docker version docker-compose --version</code></p></li>
+<li><p><strong>配置镜像加速</strong>（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可 以编辑<code>/etc/docker/daemon.json</code>文件，添加以下内容：</p>
 <pre><code>{
   "registry-mirrors": ["https://registry.docker-cn.com"]
 }</code></pre>
 <p>然后重启Docker服务： <code>sudo systemctl daemon-reload sudo systemctl restart docker</code>[^9]</p></li>
-<li><p><strong>运行Docker Hello World测试</strong>：运行Docker的Hello World测试，以确保Docker正确安装并运行： <code>sudo docker run hello-world</code>[^10]</p></li>
+<li><p><strong>运行Docker Hello World测试</strong>：运行Docker的Hello World测试，以确保Docker正确安装并运行： <code>sudo docker run hello-world</code></p></li>
 </ol>
-<p>这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。</p>
+<p>这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记 得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。</p>
 
 
 </section>

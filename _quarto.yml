@@ -1,8 +1,9 @@
 project:
   type: website
   output-dir: "www"
-publish:
-  method: gh-pages
+
+execute:
+  cache: true        # 启用代码缓存以配合增量渲染
 
 website:
   site-url: "https://adopapa.cc"
@@ -71,3 +72,5 @@ editor_options:
 output:
   html_document:
     toc: true
+
+

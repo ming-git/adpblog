@@ -10,6 +10,8 @@ keywords: [Github, Deploy, Action]
 tags: [Github, Deploy, Action]
 ---
 
+2024-12-09 17:18:00 test
+
 手动发布台辛苦了，今天就在AI的加持下，迈向自动发布吧。
 
 问: 我已经配置号服务器，只要发布内容放入服务器www文件夹即可正常浏览。我

@@ -15,6 +15,7 @@ editor:
 ---
 
 ```{r}
+#| eval: false
 install.packages("magick")
 ```
 
@@ -82,4 +83,3 @@ Mirrors"页面以查看完整的镜像列表：
 
 CRAN Mirrors List
 此页面将包含最新的和完整的镜像列表，确保提供最准确和及时的信息。
-

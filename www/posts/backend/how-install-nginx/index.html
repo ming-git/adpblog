@@ -130,11 +130,11 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">内容提要</h2>
    
-  <ul>
-  <li><a href="#远端服务器安装nginx-image" id="toc-远端服务器安装nginx-image" class="nav-link active" data-scroll-target="#远端服务器安装nginx-image"><span class="header-section-number">1</span> 远端服务器安装nginx image</a></li>
-  <li><a href="#本地拉取-以nginx为例" id="toc-本地拉取-以nginx为例" class="nav-link" data-scroll-target="#本地拉取-以nginx为例"><span class="header-section-number">2</span> 本地拉取-以nginx为例</a></li>
-  <li><a href="#服务器" id="toc-服务器" class="nav-link" data-scroll-target="#服务器"><span class="header-section-number">3</span> 服务器</a></li>
-  <li><a href="#更新镜像源" id="toc-更新镜像源" class="nav-link" data-scroll-target="#更新镜像源"><span class="header-section-number">4</span> 更新镜像源</a></li>
+  <ul class="incremental">
+  <li><a href="#远端服务器安装nginx-image" id="toc-远端服务器安装nginx-image" class="nav-link active" data-scroll-target="#远端服务器安装nginx-image">远端服务器安装nginx image</a></li>
+  <li><a href="#本地拉取-以nginx为例" id="toc-本地拉取-以nginx为例" class="nav-link" data-scroll-target="#本地拉取-以nginx为例">本地拉取-以nginx为例</a></li>
+  <li><a href="#服务器" id="toc-服务器" class="nav-link" data-scroll-target="#服务器">服务器</a></li>
+  <li><a href="#更新镜像源" id="toc-更新镜像源" class="nav-link" data-scroll-target="#更新镜像源">更新镜像源</a></li>
   </ul>
 </nav>
     </div>
@@ -182,24 +182,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="远端服务器安装nginx-image" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="远端服务器安装nginx-image"><span class="header-section-number">1</span> 远端服务器安装nginx image</h2>
+<section id="远端服务器安装nginx-image" class="level2">
+<h2 class="anchored" data-anchor-id="远端服务器安装nginx-image">远端服务器安装nginx image</h2>
 <p>docker pull nginx 超时 2024-07-02 22:36:39 今天有重新开始拉取，已经忘记了，试了试不成功，才想起这个</p>
 </section>
-<section id="本地拉取-以nginx为例" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="本地拉取-以nginx为例"><span class="header-section-number">2</span> 本地拉取-以nginx为例</h2>
+<section id="本地拉取-以nginx为例" class="level2">
+<h2 class="anchored" data-anchor-id="本地拉取-以nginx为例">本地拉取-以nginx为例</h2>
 <p>docker pull nginx</p>
 <p>docker save nginx -o nginx.tar</p>
 <p>scp nginx.tar ubuntu@remote-ip:~</p>
 </section>
-<section id="服务器" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="服务器"><span class="header-section-number">3</span> 服务器</h2>
+<section id="服务器" class="level2">
+<h2 class="anchored" data-anchor-id="服务器">服务器</h2>
 <p>ssh servername</p>
 <p>sudo docker load -i nginx.tar</p>
 <p>顺利完成转运工作。</p>
 </section>
-<section id="更新镜像源" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="更新镜像源"><span class="header-section-number">4</span> 更新镜像源</h2>
+<section id="更新镜像源" class="level2">
+<h2 class="anchored" data-anchor-id="更新镜像源">更新镜像源</h2>
 <p>echo ’</p>
 <p>{</p>
 <p>“registry-mirrors”: [</p>
