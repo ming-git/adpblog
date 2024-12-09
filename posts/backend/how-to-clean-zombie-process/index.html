@@ -132,13 +132,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">内容提要</h2>
    
   <ul>
-  <li><a href="#什么是僵尸进程" id="toc-什么是僵尸进程" class="nav-link active" data-scroll-target="#什么是僵尸进程"><span class="header-section-number">1</span> <strong>什么是僵尸进程？</strong></a></li>
-  <li><a href="#如何查找僵尸进程" id="toc-如何查找僵尸进程" class="nav-link" data-scroll-target="#如何查找僵尸进程"><span class="header-section-number">2</span> <strong>如何查找僵尸进程？</strong></a></li>
-  <li><a href="#处理僵尸进程的方法" id="toc-处理僵尸进程的方法" class="nav-link" data-scroll-target="#处理僵尸进程的方法"><span class="header-section-number">3</span> <strong>处理僵尸进程的方法</strong></a>
+  <li><a href="#什么是僵尸进程" id="toc-什么是僵尸进程" class="nav-link active" data-scroll-target="#什么是僵尸进程"><strong>什么是僵尸进程？</strong></a></li>
+  <li><a href="#如何查找僵尸进程" id="toc-如何查找僵尸进程" class="nav-link" data-scroll-target="#如何查找僵尸进程"><strong>如何查找僵尸进程？</strong></a></li>
+  <li><a href="#处理僵尸进程的方法" id="toc-处理僵尸进程的方法" class="nav-link" data-scroll-target="#处理僵尸进程的方法"><strong>处理僵尸进程的方法</strong></a>
   <ul class="collapse">
-  <li><a href="#手动即时清理" id="toc-手动即时清理" class="nav-link" data-scroll-target="#手动即时清理"><span class="header-section-number">3.1</span> 手动即时清理</a></li>
+  <li><a href="#手动即时清理" id="toc-手动即时清理" class="nav-link" data-scroll-target="#手动即时清理">手动即时清理</a></li>
   </ul></li>
-  <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><span class="header-section-number">4</span> <strong>小结</strong></a></li>
+  <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><strong>小结</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -193,21 +193,21 @@ ul.task-list li input[type="checkbox"] {
 
 <p>看到系统信息中提到的僵尸进程（zombie process），尽管听起来可能有些令人担忧，但它并不一定意味着系统存在危险。不过，了解什么是僵尸进程以及如何处理它们是很重要的。</p>
 <p><img src="images/Screenshot 2024-06-28 at 08.17.31.png" class="img-fluid"></p>
-<section id="什么是僵尸进程" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="什么是僵尸进程"><span class="header-section-number">1</span> <strong>什么是僵尸进程？</strong></h2>
+<section id="什么是僵尸进程" class="level2">
+<h2 class="anchored" data-anchor-id="什么是僵尸进程"><strong>什么是僵尸进程？</strong></h2>
 <p>僵尸进程是在其执行完成后仍保留在进程表中的进程。这些进程已经终止，但其父进程还没有读取其退出状态，因此这些进程的资源尚未完全释放。它们占用的系统资源非常少，但积累太多的僵尸进程可能会耗尽系统可用的进程表条目。</p>
 </section>
-<section id="如何查找僵尸进程" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="如何查找僵尸进程"><span class="header-section-number">2</span> <strong>如何查找僵尸进程？</strong></h2>
+<section id="如何查找僵尸进程" class="level2">
+<h2 class="anchored" data-anchor-id="如何查找僵尸进程"><strong>如何查找僵尸进程？</strong></h2>
 <p>你可以使用&nbsp;<code>ps</code>&nbsp;命令来查找系统中的僵尸进程：</p>
 <pre><code>ps aux | grep Z</code></pre>
 <p><img src="images/Screenshot 2024-06-28 at 08.21.22.png" class="img-fluid"></p>
 <p>在输出中，你会看到带有&nbsp;<code>Z</code>&nbsp;状态码的进程，这些就是僵尸进程。</p>
 </section>
-<section id="处理僵尸进程的方法" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="处理僵尸进程的方法"><span class="header-section-number">3</span> <strong>处理僵尸进程的方法</strong></h2>
-<section id="手动即时清理" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="手动即时清理"><span class="header-section-number">3.1</span> 手动即时清理</h3>
+<section id="处理僵尸进程的方法" class="level2">
+<h2 class="anchored" data-anchor-id="处理僵尸进程的方法"><strong>处理僵尸进程的方法</strong></h2>
+<section id="手动即时清理" class="level3">
+<h3 class="anchored" data-anchor-id="手动即时清理">手动即时清理</h3>
 <ol type="1">
 <li><p><strong>手动杀掉父进程</strong>： 找到僵尸进程的父进程ID (PPID)。你可以使用&nbsp;<code>ps</code>&nbsp;或&nbsp;<code>top</code>&nbsp;命令来查找其父进程。</p>
 <pre><code>ps -o ppid= -p &lt;zombie_pid&gt;</code></pre>
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 <pre><code>sudo systemctl restart your_service
 # 或者
 sudo reboot</code></pre>
-<h3 id="周期性监控和自动处理" data-number="3.2" class="anchored"><span class="header-section-number">3.2</span> <strong>周期性监控和自动处理</strong></h3>
+<h3 id="周期性监控和自动处理" class="anchored"><strong>周期性监控和自动处理</strong></h3>
 <p>对于需要持续监控并处理僵尸进程的系统，可以编写脚本定期检查并处理这些进程。</p>
 <ol type="1">
 <li><strong>示例脚本：</strong></li>
@@ -241,8 +241,8 @@ fi</code></pre>
 </ol>
 </section>
 </section>
-<section id="小结" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="小结"><span class="header-section-number">4</span> <strong>小结</strong></h2>
+<section id="小结" class="level2">
+<h2 class="anchored" data-anchor-id="小结"><strong>小结</strong></h2>
 <p>虽然僵尸进程本身并不会消耗大量资源，但它们积累过多可能会影响系统的稳健性。通过上面的步骤，你可以识别并处理僵尸进程，确保系统保持健康的运行状态。通常，出现一个僵尸进程并不危险，但在生产环境中应尽早处理以保持系统的清洁和高效运行。</p>
 
 
