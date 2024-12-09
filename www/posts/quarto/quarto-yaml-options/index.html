@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="aiit">
-<meta name="keywords" content="ubuntu, Docker">
-<meta name="description" content="it基本工具">
+<meta name="author" content="adopapa">
+<meta name="keywords" content="Quarto YAML">
+<meta name="description" content="想让内容。如你所愿？这些魔法石你不得不了解">
 
-<title>Ubuntu上的Docker – 豆瓣坛</title>
+<title>index – 豆瓣坛</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,14 +74,20 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../../css/styles.css">
 <link rel="stylesheet" href="../../../css/navbar-top-height.css">
-<meta property="og:title" content="Ubuntu上的Docker – 豆瓣坛">
-<meta property="og:description" content="it基本工具">
+<meta property="og:title" content="豆瓣坛">
+<meta property="og:description" content="想让内容。如你所愿？这些魔法石你不得不了解">
+<meta property="og:image" content="https://adopapa.cc/posts/quarto/quarto-yaml-options/images/render-erro.png">
 <meta property="og:site_name" content="豆瓣坛">
 <meta property="og:locale" content="zh_CN">
-<meta name="twitter:title" content="Ubuntu上的Docker – 豆瓣坛">
-<meta name="twitter:description" content="it基本工具">
+<meta property="og:image:height" content="704">
+<meta property="og:image:width" content="1734">
+<meta name="twitter:title" content="豆瓣坛">
+<meta name="twitter:description" content="想让内容。如你所愿？这些魔法石你不得不了解">
+<meta name="twitter:image" content="https://adopapa.cc/posts/quarto/quarto-yaml-options/images/render-erro.png">
 <meta name="twitter:site" content="@sitehandle">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="704">
+<meta name="twitter:image-width" content="1734">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -126,9 +132,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">内容提要</h2>
    
   <ul>
-  <li><a href="#缘起" id="toc-缘起" class="nav-link active" data-scroll-target="#缘起"><span class="header-section-number">1</span> 缘起</a></li>
-  <li><a href="#docker-desktop-or-docker-engine" id="toc-docker-desktop-or-docker-engine" class="nav-link" data-scroll-target="#docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</a></li>
-  <li><a href="#kimi-ref" id="toc-kimi-ref" class="nav-link" data-scroll-target="#kimi-ref"><span class="header-section-number">3</span> kimi ref</a></li>
+  <li><a href="#keywords和category有何不同" id="toc-keywords和category有何不同" class="nav-link active" data-scroll-target="#keywords和category有何不同"><span class="header-section-number">1</span> keywords和category有何不同？</a></li>
+  <li><a href="#节外生枝" id="toc-节外生枝" class="nav-link" data-scroll-target="#节外生枝"><span class="header-section-number">2</span> 节外生枝</a></li>
   </ul>
 </nav>
     </div>
@@ -137,17 +142,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ubuntu上的Docker</h1>
-<p class="subtitle lead">折腾就是折腾，完了也没折腾明白</p>
+<p class="subtitle lead">How to select the correct options in Quarto Yaml setup</p>
   <div class="quarto-categories">
-    <div class="quarto-category">IT</div>
-    <div class="quarto-category">Docker</div>
+    <div class="quarto-category">Quarto YAML</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    it基本工具
+    想让内容。如你所愿？这些魔法石你不得不了解
   </div>
 </div>
 
@@ -157,14 +160,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">作者</div>
     <div class="quarto-title-meta-contents">
-             <p>aiit </p>
+             <p>adopapa </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024/07/01,第27周</p>
+      <p class="date">2024/06/30,第27周</p>
     </div>
   </div>
   
@@ -175,42 +178,32 @@ ul.task-list li input[type="checkbox"] {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>ubuntu, Docker</p>
+    <p>Quarto YAML</p>
   </div>
 </div>
 
 </header>
 
 
-<section id="缘起" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="缘起"><span class="header-section-number">1</span> 缘起</h2>
-<p>博客通过docker+nginx部署上了，但是只能内网访问，ufw检查了没问题，于是怀疑ubuntu上的docker可能版本不对</p>
-<p>kimi看了十篇网文，于是给我提供了docker安装的最佳实践</p>
+<section id="keywords和category有何不同" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="keywords和category有何不同"><span class="header-section-number">1</span> keywords和category有何不同？</h2>
 </section>
-<section id="docker-desktop-or-docker-engine" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</h2>
-<p>docker-enginge，所以docker-desktop并不需要</p>
-</section>
-<section id="kimi-ref" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="kimi-ref"><span class="header-section-number">3</span> kimi ref</h2>
-<p>在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：</p>
-<ol type="1">
-<li><p><strong>更新系统包</strong>：首先，确保你的Ubuntu系统是最新的。可以通过执行以下命令来更新： <code>sudo apt update sudo apt upgrade</code>[^1]</p></li>
-<li><p><strong>卸载旧版本的Docker</strong>（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可以使用以下命令： <code>sudo apt-get remove docker docker-engine docker.io containerd runc</code>[^2] :::{tips} 提示：无docker-engine :::</p></li>
-<li><p><strong>安装依赖项</strong>：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</code>[^3]</p></li>
-<li><p><strong>添加Docker的官方GPG密钥</strong>：这将确保你能够从Docker的官方源安装Docker。 <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>[^4]</p></li>
-<li><p><strong>设置Docker的APT源</strong>：添加Docker的官方APT源，以便安装最新版本的Docker。 <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>[^5]</p></li>
-<li><p><strong>再次更新APT源</strong>：更新本地APT源列表，确保可以安装最新版本的Docker。 <code>sudo apt update</code>[^6]</p></li>
-<li><p><strong>安装Docker Engine和Docker Compose</strong>：安装Docker Engine和Docker Compose。从Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 <code>sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code>[^7]</p></li>
-<li><p><strong>验证安装</strong>：验证Docker和Docker Compose是否正确安装并运行： <code>sudo docker version docker-compose --version</code>[^8]</p></li>
-<li><p><strong>配置镜像加速</strong>（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可以编辑<code>/etc/docker/daemon.json</code>文件，添加以下内容：</p>
-<pre><code>{
-  "registry-mirrors": ["https://registry.docker-cn.com"]
-}</code></pre>
-<p>然后重启Docker服务： <code>sudo systemctl daemon-reload sudo systemctl restart docker</code>[^9]</p></li>
-<li><p><strong>运行Docker Hello World测试</strong>：运行Docker的Hello World测试，以确保Docker正确安装并运行： <code>sudo docker run hello-world</code>[^10]</p></li>
-</ol>
-<p>这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。</p>
+<section id="节外生枝" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="节外生枝"><span class="header-section-number">2</span> 节外生枝</h2>
+<p><code>quarto render</code> 报错已大堆</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/render-erro.png" class="img-fluid figure-img"></p>
+<figcaption>render时的一大堆报错</figcaption>
+</figure>
+</div>
+<p>仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个 <code>的</code> 贴到了yaml设置里了。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/why-error.png" class="img-fluid figure-img"></p>
+<figcaption>哪里来的的</figcaption>
+</figure>
+</div>
 
 
 </section>

@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adopapa">
-<meta name="dcterms.date" content="2024-06-30">
 <meta name="keywords" content="publish, Quarto, nginx, docker">
 <meta name="description" content="手动发布实在太累，以至于丧失了写作的乐趣，必须搞定自动发布">
 
@@ -28,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
@@ -39,10 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d1b12f2568ecbe55642fee6aa00bd082.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-6929ef306f8368541b88b84b9af1333d.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,47 +72,50 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="../../../css/styles.css">
+<link rel="stylesheet" href="../../../css/navbar-top-height.css">
+<meta property="og:title" content="自动化发布的初体验-本地发布 – 豆瓣坛">
+<meta property="og:description" content="手动发布实在太累，以至于丧失了写作的乐趣，必须搞定自动发布">
+<meta property="og:site_name" content="豆瓣坛">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:title" content="自动化发布的初体验-本地发布 – 豆瓣坛">
+<meta name="twitter:description" content="手动发布实在太累，以至于丧失了写作的乐趣，必须搞定自动发布">
+<meta name="twitter:site" content="@sitehandle">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">豆瓣坛</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../../index.qmd"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../about.qmd"> 
-<span class="menu-text">About</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ming-git"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://linked.com/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
+  <div id="quarto-announcement" data-announcement-id="50ac2b18d248afb3663d182d4848bb97" class="alert alert-info hidden"><i class="bi bi-broadcast-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>2024-12-07 试试github自动化发布</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -120,13 +123,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">内容提要</h2>
    
   <ul>
-  <li><a href="#互联网平台的心思" id="toc-互联网平台的心思" class="nav-link active" data-scroll-target="#互联网平台的心思">互联网平台的心思</a></li>
-  <li><a href="#我的选型" id="toc-我的选型" class="nav-link" data-scroll-target="#我的选型">我的选型</a></li>
-  <li><a href="#head2" id="toc-head2" class="nav-link" data-scroll-target="#head2">head2</a></li>
-  <li><a href="#head2-1" id="toc-head2-1" class="nav-link" data-scroll-target="#head2-1">head2</a></li>
+  <li><a href="#互联网平台的心思" id="toc-互联网平台的心思" class="nav-link active" data-scroll-target="#互联网平台的心思"><span class="header-section-number">1</span> 互联网平台的心思</a></li>
+  <li><a href="#我的选型" id="toc-我的选型" class="nav-link" data-scroll-target="#我的选型"><span class="header-section-number">2</span> 我的选型</a></li>
+  <li><a href="#head2" id="toc-head2" class="nav-link" data-scroll-target="#head2"><span class="header-section-number">3</span> head2</a></li>
+  <li><a href="#head2-1" id="toc-head2-1" class="nav-link" data-scroll-target="#head2-1"><span class="header-section-number">4</span> head2</a></li>
   </ul>
 </nav>
     </div>
@@ -155,16 +158,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">作者</div>
     <div class="quarto-title-meta-contents">
              <p>Adopapa </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 30, 2024</p>
+      <p class="date">2024/06/30,第27周</p>
     </div>
   </div>
   
@@ -182,21 +185,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="互联网平台的心思" class="level2">
-<h2 class="anchored" data-anchor-id="互联网平台的心思">互联网平台的心思</h2>
+<section id="互联网平台的心思" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="互联网平台的心思"><span class="header-section-number">1</span> 互联网平台的心思</h2>
 <p>像微信公众号这样的大平台居然没有一个像样的自动发布工具，我只能如此狭隘地以小人度之了。看来看去的平台供应商大抵是是恨不得把你的整个身心都圈禁到他们的平台，所有每天劳苦工作到喘息，让你根本没有思考的机会。自动化发布这种工具大概是与这种相违背的 - 岂不是给你it’s 16 hours更多兼职的机会吗？自动化是有有的，那是给大佬们收割打工人的，打工人人只能被眼前的自动诱惑，手动模式满心欢喜地冲向这个永远到达不了的圣地。</p>
 <p>写公众号时断时续究竟还是自己的毛病，本就没有自己的内容，但是不能这样说啊，只能说每次枯燥的手动更新就让自己有一种作做奴隶的凄凉感，完全没有了新时代的自由人的感觉，要是你放弃了，就是自己自己的文章要拿回来也时间挺费事的事情，感觉比抄家还难受。</p>
 <p>搬过过几次家，那种感觉确实是太难受了，搬一次就是要扔掉好多东西。写作也是如此，东西还是要放在自己的地盘上，然后是想发哪里就发哪里，而且还是能自动的就不要手动了。于是编程这事就是要成了必须要解决的问题了。</p>
 </section>
-<section id="我的选型" class="level2">
-<h2 class="anchored" data-anchor-id="我的选型">我的选型</h2>
+<section id="我的选型" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="我的选型"><span class="header-section-number">2</span> 我的选型</h2>
 <p>写作工具: Quarto 编辑器: Rstudio 部署工具: Docker，Ngnix，Ubuntu</p>
 </section>
-<section id="head2" class="level2">
-<h2 class="anchored" data-anchor-id="head2">head2</h2>
+<section id="head2" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="head2"><span class="header-section-number">3</span> head2</h2>
 </section>
-<section id="head2-1" class="level2">
-<h2 class="anchored" data-anchor-id="head2-1">head2</h2>
+<section id="head2-1" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="head2-1"><span class="header-section-number">4</span> head2</h2>
 
 
 </section>
@@ -222,6 +225,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -292,7 +439,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/adopapa\.cc");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

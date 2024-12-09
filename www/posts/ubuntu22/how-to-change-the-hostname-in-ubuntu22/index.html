@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adopapa">
-<meta name="dcterms.date" content="2024-06-29">
 <meta name="keywords" content="server, linux, unbuntu, howto hostname">
 <meta name="description" content="看到随机分配的服务器名字，总是很不爽，干脆自己改改吧">
 
@@ -28,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
@@ -39,10 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d1b12f2568ecbe55642fee6aa00bd082.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-6929ef306f8368541b88b84b9af1333d.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,47 +72,50 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="../../../css/styles.css">
+<link rel="stylesheet" href="../../../css/navbar-top-height.css">
+<meta property="og:title" content="如何给服务器起一个简洁好记的名字 – 豆瓣坛">
+<meta property="og:description" content="看到随机分配的服务器名字，总是很不爽，干脆自己改改吧">
+<meta property="og:site_name" content="豆瓣坛">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:title" content="如何给服务器起一个简洁好记的名字 – 豆瓣坛">
+<meta name="twitter:description" content="看到随机分配的服务器名字，总是很不爽，干脆自己改改吧">
+<meta name="twitter:site" content="@sitehandle">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">豆瓣坛</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../../index.qmd"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../about.qmd"> 
-<span class="menu-text">About</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/ming-git"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://linked.com/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
+  <div id="quarto-announcement" data-announcement-id="50ac2b18d248afb3663d182d4848bb97" class="alert alert-info hidden"><i class="bi bi-broadcast-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>2024-12-07 试试github自动化发布</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -120,13 +123,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">内容提要</h2>
    
   <ul>
-  <li><a href="#一临时修改主机名" id="toc-一临时修改主机名" class="nav-link active" data-scroll-target="#一临时修改主机名"><strong>一、临时修改主机名</strong></a></li>
-  <li><a href="#二永久修改主机名" id="toc-二永久修改主机名" class="nav-link" data-scroll-target="#二永久修改主机名"><strong>二、永久修改主机名</strong></a></li>
-  <li><a href="#三重启系统" id="toc-三重启系统" class="nav-link" data-scroll-target="#三重启系统"><strong>三、重启系统</strong></a></li>
-  <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><strong>小结</strong></a></li>
+  <li><a href="#一临时修改主机名" id="toc-一临时修改主机名" class="nav-link active" data-scroll-target="#一临时修改主机名"><span class="header-section-number">0.1</span> <strong>一、临时修改主机名</strong></a></li>
+  <li><a href="#二永久修改主机名" id="toc-二永久修改主机名" class="nav-link" data-scroll-target="#二永久修改主机名"><span class="header-section-number">0.2</span> <strong>二、永久修改主机名</strong></a></li>
+  <li><a href="#三重启系统" id="toc-三重启系统" class="nav-link" data-scroll-target="#三重启系统"><span class="header-section-number">0.3</span> <strong>三、重启系统</strong></a></li>
+  <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><span class="header-section-number">0.4</span> <strong>小结</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -153,16 +156,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">作者</div>
     <div class="quarto-title-meta-contents">
              <p>Adopapa </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 29, 2024</p>
+      <p class="date">2024/06/29,第26周</p>
     </div>
   </div>
   
@@ -181,13 +184,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：</p>
-<section id="一临时修改主机名" class="level3">
-<h3 class="anchored" data-anchor-id="一临时修改主机名"><strong>一、临时修改主机名</strong></h3>
+<section id="一临时修改主机名" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="一临时修改主机名"><span class="header-section-number">0.1</span> <strong>一、临时修改主机名</strong></h3>
 <p>临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：</p>
 <pre><code>sudo hostnamectl set-hostname tclh01</code></pre>
 </section>
-<section id="二永久修改主机名" class="level3">
-<h3 class="anchored" data-anchor-id="二永久修改主机名"><strong>二、永久修改主机名</strong></h3>
+<section id="二永久修改主机名" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="二永久修改主机名"><span class="header-section-number">0.2</span> <strong>二、永久修改主机名</strong></h3>
 <p>要确保重启后主机名依然被修改，我们需要修改两个文件：<code>/etc/hostname</code>&nbsp;和&nbsp;<code>/etc/hosts</code>。</p>
 <ol type="1">
 <li><p><strong>修改&nbsp;<code>/etc/hostname</code>&nbsp;文件</strong></p>
@@ -205,13 +208,13 @@ ul.task-list li input[type="checkbox"] {
 <p>请确保没有多余的空白行或格式错误，保存并退出。</p></li>
 </ol>
 </section>
-<section id="三重启系统" class="level3">
-<h3 class="anchored" data-anchor-id="三重启系统"><strong>三、重启系统</strong></h3>
+<section id="三重启系统" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="三重启系统"><span class="header-section-number">0.3</span> <strong>三、重启系统</strong></h3>
 <p>为了确保所有更改生效，建议重启系统：</p>
 <pre><code>sudo reboot</code></pre>
 </section>
-<section id="小结" class="level3">
-<h3 class="anchored" data-anchor-id="小结"><strong>小结</strong></h3>
+<section id="小结" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="小结"><span class="header-section-number">0.4</span> <strong>小结</strong></h3>
 <p>总结以上步骤，你可以按照如下命令序列操作：</p>
 <pre><code># 临时修改主机名
 sudo hostnamectl set-hostname tclh01
@@ -252,6 +255,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -322,7 +469,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/adopapa\.cc");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

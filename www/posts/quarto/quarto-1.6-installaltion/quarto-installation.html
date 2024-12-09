@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="aiit">
-<meta name="keywords" content="ubuntu, Docker">
-<meta name="description" content="it基本工具">
+<meta name="author" content="Adopapa">
+<meta name="keywords" content="quarto, installation, finder, 黑箱">
+<meta name="description" content="总会新问题，人生的意义在不不搞懂什么😄">
 
-<title>Ubuntu上的Docker – 豆瓣坛</title>
+<title>文件去哪儿了 – 豆瓣坛</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,14 +74,20 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../../css/styles.css">
 <link rel="stylesheet" href="../../../css/navbar-top-height.css">
-<meta property="og:title" content="Ubuntu上的Docker – 豆瓣坛">
-<meta property="og:description" content="it基本工具">
+<meta property="og:title" content="文件去哪儿了 – 豆瓣坛">
+<meta property="og:description" content="总会新问题，人生的意义在不不搞懂什么😄">
+<meta property="og:image" content="https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/images/clipboard-3892075654.png">
 <meta property="og:site_name" content="豆瓣坛">
 <meta property="og:locale" content="zh_CN">
-<meta name="twitter:title" content="Ubuntu上的Docker – 豆瓣坛">
-<meta name="twitter:description" content="it基本工具">
+<meta property="og:image:height" content="269">
+<meta property="og:image:width" content="532">
+<meta name="twitter:title" content="文件去哪儿了 – 豆瓣坛">
+<meta name="twitter:description" content="总会新问题，人生的意义在不不搞懂什么😄">
+<meta name="twitter:image" content="https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/images/clipboard-3892075654.png">
 <meta name="twitter:site" content="@sitehandle">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="269">
+<meta name="twitter:image-width" content="532">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -126,9 +132,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">内容提要</h2>
    
   <ul>
-  <li><a href="#缘起" id="toc-缘起" class="nav-link active" data-scroll-target="#缘起"><span class="header-section-number">1</span> 缘起</a></li>
-  <li><a href="#docker-desktop-or-docker-engine" id="toc-docker-desktop-or-docker-engine" class="nav-link" data-scroll-target="#docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</a></li>
-  <li><a href="#kimi-ref" id="toc-kimi-ref" class="nav-link" data-scroll-target="#kimi-ref"><span class="header-section-number">3</span> kimi ref</a></li>
+  <li><a href="#问题来了安装完成版本未变" id="toc-问题来了安装完成版本未变" class="nav-link active" data-scroll-target="#问题来了安装完成版本未变"><span class="header-section-number">1</span> 问题来了：安装完成版本未变</a></li>
+  <li><a href="#ai的回复" id="toc-ai的回复" class="nav-link" data-scroll-target="#ai的回复"><span class="header-section-number">2</span> AI的回复</a>
+  <ul class="collapse">
+  <li><a href="#理解问题的原因" id="toc-理解问题的原因" class="nav-link" data-scroll-target="#理解问题的原因"><span class="header-section-number">2.1</span> <strong>理解问题的原因</strong></a></li>
+  <li><a href="#解决方法" id="toc-解决方法" class="nav-link" data-scroll-target="#解决方法"><span class="header-section-number">2.2</span> <strong>解决方法</strong></a></li>
+  </ul></li>
+  <li><a href="#新问题如何删除只为我安装的版本" id="toc-新问题如何删除只为我安装的版本" class="nav-link" data-scroll-target="#新问题如何删除只为我安装的版本"><span class="header-section-number">3</span> 新问题：如何删除只为我安装的版本</a>
+  <ul class="collapse">
+  <li><a href="#定位文件的几个方案" id="toc-定位文件的几个方案" class="nav-link" data-scroll-target="#定位文件的几个方案"><span class="header-section-number">3.1</span> <strong>定位文件的几个方案</strong></a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><span class="header-section-number">3.2</span> <strong>总结</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -137,17 +151,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ubuntu上的Docker</h1>
-<p class="subtitle lead">折腾就是折腾，完了也没折腾明白</p>
+<h1 class="title">文件去哪儿了</h1>
+<p class="subtitle lead">黑箱、黑箱、无数的黑箱</p>
   <div class="quarto-categories">
-    <div class="quarto-category">IT</div>
-    <div class="quarto-category">Docker</div>
+    <div class="quarto-category">it</div>
+    <div class="quarto-category">thinking</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    it基本工具
+    总会新问题，人生的意义在不不搞懂什么😄
   </div>
 </div>
 
@@ -157,17 +171,23 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">作者</div>
     <div class="quarto-title-meta-contents">
-             <p>aiit </p>
+             <p>Adopapa </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024/07/01,第27周</p>
+      <p class="date">2024/12/09,第50周</p>
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024/12/09,第50周</p>
+    </div>
+  </div>
     
   </div>
   
@@ -175,44 +195,131 @@ ul.task-list li input[type="checkbox"] {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>ubuntu, Docker</p>
+    <p>quarto, installation, finder, 黑箱</p>
   </div>
 </div>
 
 </header>
 
 
-<section id="缘起" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="缘起"><span class="header-section-number">1</span> 缘起</h2>
-<p>博客通过docker+nginx部署上了，但是只能内网访问，ufw检查了没问题，于是怀疑ubuntu上的docker可能版本不对</p>
-<p>kimi看了十篇网文，于是给我提供了docker安装的最佳实践</p>
+<section id="问题来了安装完成版本未变" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="问题来了安装完成版本未变"><span class="header-section-number">1</span> 问题来了：安装完成版本未变</h2>
+<p><img src="images/clipboard-3892075654.png" class="img-fluid"></p>
+<p>过来一下刚才的安装过程，以前选择的都是为这个电脑的所有用反转用，其实自己就是这台电脑的唯一用户，所以选择了仅为自己安全这句话平时装的不同之处吧。</p>
+<p><img src="images/clipboard-1917237752.png" class="img-fluid"></p>
+<p>在AI求证一下如何？</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+问题
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>quarto安装前版本1.5.57， 在quarto下载安装1.6.39后，quarto —version显示的版本仍然是1.5.57.。之 前的quarto安装，我选择了 为这台电脑上的所有用户安装，本次安装选择仅为我安装，这是问题所在吗？</p>
+</div>
+</div>
 </section>
-<section id="docker-desktop-or-docker-engine" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</h2>
-<p>docker-enginge，所以docker-desktop并不需要</p>
-</section>
-<section id="kimi-ref" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="kimi-ref"><span class="header-section-number">3</span> kimi ref</h2>
-<p>在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：</p>
+<section id="ai的回复" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ai的回复"><span class="header-section-number">2</span> AI的回复</h2>
+<p>是的！这 个问题很可能是由于你之前选择“<strong>为这台电脑上的所有用户安装</strong>”，而此次安装选择了“<strong>仅为我安装</strong>”。两 种安装方式会导致 Quarto 被安装到不同的路径，并且系统的&nbsp;<strong>PATH 环境变量</strong>&nbsp;仍然指向旧版本的 Quarto，可执行文件的位置优先级没有更新，从而导致新版本的 Quarto 没有被正确应用。</p>
+<hr>
+<section id="理解问题的原因" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="理解问题的原因"><span class="header-section-number">2.1</span> <strong>理解问题的原因</strong></h3>
 <ol type="1">
-<li><p><strong>更新系统包</strong>：首先，确保你的Ubuntu系统是最新的。可以通过执行以下命令来更新： <code>sudo apt update sudo apt upgrade</code>[^1]</p></li>
-<li><p><strong>卸载旧版本的Docker</strong>（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可以使用以下命令： <code>sudo apt-get remove docker docker-engine docker.io containerd runc</code>[^2] :::{tips} 提示：无docker-engine :::</p></li>
-<li><p><strong>安装依赖项</strong>：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</code>[^3]</p></li>
-<li><p><strong>添加Docker的官方GPG密钥</strong>：这将确保你能够从Docker的官方源安装Docker。 <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>[^4]</p></li>
-<li><p><strong>设置Docker的APT源</strong>：添加Docker的官方APT源，以便安装最新版本的Docker。 <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>[^5]</p></li>
-<li><p><strong>再次更新APT源</strong>：更新本地APT源列表，确保可以安装最新版本的Docker。 <code>sudo apt update</code>[^6]</p></li>
-<li><p><strong>安装Docker Engine和Docker Compose</strong>：安装Docker Engine和Docker Compose。从Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 <code>sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code>[^7]</p></li>
-<li><p><strong>验证安装</strong>：验证Docker和Docker Compose是否正确安装并运行： <code>sudo docker version docker-compose --version</code>[^8]</p></li>
-<li><p><strong>配置镜像加速</strong>（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可以编辑<code>/etc/docker/daemon.json</code>文件，添加以下内容：</p>
-<pre><code>{
-  "registry-mirrors": ["https://registry.docker-cn.com"]
-}</code></pre>
-<p>然后重启Docker服务： <code>sudo systemctl daemon-reload sudo systemctl restart docker</code>[^9]</p></li>
-<li><p><strong>运行Docker Hello World测试</strong>：运行Docker的Hello World测试，以确保Docker正确安装并运行： <code>sudo docker run hello-world</code>[^10]</p></li>
+<li><p><strong>为所有用户安装</strong></p>
+<ul>
+<li><p>如果之前安装时选择了“为所有用户安装”，Quarto 通常会安装到系统范围的路径中，例如：</p>
+<ul>
+<li><p>Windows:&nbsp;<code>C:\Program Files\Quarto\bin\quarto.exe</code></p></li>
+<li><p>macOS/Linux:&nbsp;<code>/usr/local/bin/quarto</code></p></li>
+</ul></li>
+<li><p>系统环境变量（PATH）会被更新，使系统始终可以找到这路径的 Quarto。</p></li>
+</ul></li>
+<li><p><strong>仅为我安装</strong></p>
+<ul>
+<li><p>如果本次安装选择 “仅为我安装”，Quarto 可能会安装到用户级别的路径中，例如：</p>
+<ul>
+<li><p>Windows:&nbsp;<code>%LOCALAPPDATA%\Programs\Quarto\bin\quarto.exe</code></p></li>
+<li><p>macOS/Linux:&nbsp;<code>~/.local/bin/quarto （没有这个目录）</code></p></li>
+</ul></li>
+<li><p>用户级别的安装不会覆盖系统范围内的&nbsp;<code>PATH</code>&nbsp;路径，导致仍然调用旧版 Quarto。</p></li>
+</ul>
+<p><strong>因此，系统仍然找到的是之前为所有用户安装的旧版本&nbsp;<code>quarto</code>，而不是你刚刚安装的新版本。</strong></p></li>
 </ol>
-<p>这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。</p>
+<hr>
+</section>
+<section id="解决方法" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="解决方法"><span class="header-section-number">2.2</span> <strong>解决方法</strong></h3>
+<p>option 1: 重新全局安装，删除只为我安装的版本 （我的选择）</p>
+<p>option 2: 将只为我安装的版本加入PATH变量。。。</p>
+</section>
+</section>
+<section id="新问题如何删除只为我安装的版本" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="新问题如何删除只为我安装的版本"><span class="header-section-number">3</span> 新问题：如何删除只为我安装的版本</h2>
+<hr>
+<section id="定位文件的几个方案" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="定位文件的几个方案"><span class="header-section-number">3.1</span> <strong>定位文件的几个方案</strong></h3>
+<pre class="{bash}"><code>#|label: findfile
+whereis quarto
+# quarto: /usr/local/bin/quarto
+
+which quarto
+#/usr/local/bin/quarto
+# 这两个命令器只显示为所有人安装的路径，不显示只为我安装的路径
+
+find ~ -name "quarto" 2&gt;/dev/null
+
+# ～/Library/Application Support/quarto
+# ~/Library/Application Support/quarto
+# 
+# ~/Library/Caches/deno/gen/file/Applications/quarto
+# ~/Library/Caches/quarto
+# ~/Applications/quarto
+# ~/Applications/quarto/bin/quarto
+# ~/Applications/quarto/share/formats/typst/pandoc/quarto
+# ~/Applications/quarto/share/lua-types/quarto
+# ~/Applications/quarto/share/extensions/quarto
+# ~/Documents/writer/adopapablog/posts/quarto
+# ~/Documents/writer/adopapablog/www/posts/quarto
+# ~/Documents/writer/adopapablog/_freeze/posts/quarto
+# ~/Documents/writer/adopapablog/.quarto/idx/posts/quarto
+# ~/Documents/writer/adopapablog/.quarto/_freeze/posts/quarto
+# ~/Documents/coder/rlang/quarto
+# 跳出了一个文件就卡在哪里了，我另外开了窗口使用其它命名.
+# 2024-12-09 07:43:39 终于结束了查找，结果可比locate 简洁了，确实也太慢了。
+
+locate quarto
+# .....
+# /Applications/quarto
+# /Applications/quarto/bin
+# /Applications/quarto/bin/quarto
+# /Applications/quarto/bin/quarto.js
+# /Applications/quarto/bin/tools
+# /Applications/quarto/bin/tools/aarch64
+# .....
+# 返回也太多了啊哈，确实强大</code></pre>
+<p>折腾到最后发现其实应该先到Application里面去看一下了，所以这是个问题，搜索源用多了传统的方法却丢掉很多，这不于邯郸学步了，这个要警惕，虽然是个小问题则是我们在这个变化中的患得患失。</p>
+<p>finder里直接删除了/Applications/quarto,出问题了</p>
+<pre class="{bash}"><code>#|label: checkafterdelete
+quarto --version
+# zsh: command not found: quarto --version
+# 看来pkg是安装到application，然后关联到/usr/local/bin/quarto</code></pre>
+<p>找回垃圾堆里的安装文件，重新安装pkg</p>
+<pre class="{bash}"><code>#|label: checkaftinstl
+quarto --version
+#1.6.39</code></pre>
+<hr>
+</section>
+<section id="总结" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="总结"><span class="header-section-number">3.2</span> <strong>总结</strong></h3>
+<p>通过文件到哪里去了？通 过寻找文件的过程，你会发现习惯依赖的微小变动也会导致的很多的麻烦。不 要说AI, 就是一片普通的电脑，对我们来说真的是一个巨大的黑箱.人类从来都是在黑箱的下前形的谁又真正搞懂了火呢？</p>
+<p>就是一个折腾，如果一开始你就选择默认的按钮，哪有这一个多小时的折腾呢？</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

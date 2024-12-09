@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="aiit">
-<meta name="keywords" content="ubuntu, Docker">
-<meta name="description" content="it基本工具">
+<meta name="author" content="ZHU QUANMING">
+<meta name="keywords" content="Quarto, Rstudio, Tips, Notes">
+<meta name="description" content="理工男逃不开的技术写作，就从这里开始">
 
-<title>Ubuntu上的Docker – 豆瓣坛</title>
+<title>学习笔记-Rstudio可视化编辑器之技术写作 – 豆瓣坛</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,17 +105,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../css/styles.css">
 <link rel="stylesheet" href="../../../css/navbar-top-height.css">
-<meta property="og:title" content="Ubuntu上的Docker – 豆瓣坛">
-<meta property="og:description" content="it基本工具">
+<meta property="og:title" content="学习笔记-Rstudio可视化编辑器之技术写作 – 豆瓣坛">
+<meta property="og:description" content="理工男逃不开的技术写作，就从这里开始">
+<meta property="og:image" content="https://adopapa.cc/posts/quarto/rstudio-visual-editor-techincal-writing/crossref-figure.png">
 <meta property="og:site_name" content="豆瓣坛">
 <meta property="og:locale" content="zh_CN">
-<meta name="twitter:title" content="Ubuntu上的Docker – 豆瓣坛">
-<meta name="twitter:description" content="it基本工具">
+<meta property="og:image:alt" content="Altnative text">
+<meta property="og:image:height" content="821">
+<meta property="og:image:width" content="1110">
+<meta name="twitter:title" content="学习笔记-Rstudio可视化编辑器之技术写作 – 豆瓣坛">
+<meta name="twitter:description" content="理工男逃不开的技术写作，就从这里开始">
+<meta name="twitter:image" content="https://adopapa.cc/posts/quarto/rstudio-visual-editor-techincal-writing/crossref-figure.png">
 <meta name="twitter:site" content="@sitehandle">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image:alt" content="Altnative text">
+<meta name="twitter:image-height" content="821">
+<meta name="twitter:image-width" content="1110">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -126,9 +197,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">内容提要</h2>
    
   <ul>
-  <li><a href="#缘起" id="toc-缘起" class="nav-link active" data-scroll-target="#缘起"><span class="header-section-number">1</span> 缘起</a></li>
-  <li><a href="#docker-desktop-or-docker-engine" id="toc-docker-desktop-or-docker-engine" class="nav-link" data-scroll-target="#docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</a></li>
-  <li><a href="#kimi-ref" id="toc-kimi-ref" class="nav-link" data-scroll-target="#kimi-ref"><span class="header-section-number">3</span> kimi ref</a></li>
+  <li><a href="#如何写公式" id="toc-如何写公式" class="nav-link active" data-scroll-target="#如何写公式"><span class="header-section-number">1</span> 如何写公式</a>
+  <ul class="collapse">
+  <li><a href="#内联的公式" id="toc-内联的公式" class="nav-link" data-scroll-target="#内联的公式"><span class="header-section-number">1.1</span> 内联的公式</a></li>
+  </ul></li>
+  <li><a href="#正式公式" id="toc-正式公式" class="nav-link" data-scroll-target="#正式公式"><span class="header-section-number">2</span> 正式公式</a></li>
+  <li><a href="#交叉索引" id="toc-交叉索引" class="nav-link" data-scroll-target="#交叉索引"><span class="header-section-number">3</span> 交叉索引</a></li>
+  <li><a href="#两种编辑模式" id="toc-两种编辑模式" class="nav-link" data-scroll-target="#两种编辑模式"><span class="header-section-number">4</span> 两种编辑模式</a></li>
+  <li><a href="#bugs" id="toc-bugs" class="nav-link" data-scroll-target="#bugs"><span class="header-section-number">5</span> bugs</a></li>
   </ul>
 </nav>
     </div>
@@ -137,17 +213,18 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ubuntu上的Docker</h1>
-<p class="subtitle lead">折腾就是折腾，完了也没折腾明白</p>
+<h1 class="title">学习笔记-Rstudio可视化编辑器之技术写作</h1>
+<p class="subtitle lead">Rstudio - Visual Editor</p>
   <div class="quarto-categories">
-    <div class="quarto-category">IT</div>
-    <div class="quarto-category">Docker</div>
+    <div class="quarto-category">quarto</div>
+    <div class="quarto-category">rstudio</div>
+    <div class="quarto-category">学习笔记</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    it基本工具
+    理工男逃不开的技术写作，就从这里开始
   </div>
 </div>
 
@@ -157,14 +234,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">作者</div>
     <div class="quarto-title-meta-contents">
-             <p>aiit </p>
+             <p>ZHU QUANMING </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024/07/01,第27周</p>
+      <p class="date">2024/06/22,第25周</p>
     </div>
   </div>
   
@@ -175,42 +252,67 @@ ul.task-list li input[type="checkbox"] {
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>ubuntu, Docker</p>
+    <p>Quarto, Rstudio, Tips, Notes</p>
   </div>
 </div>
 
 </header>
 
 
-<section id="缘起" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="缘起"><span class="header-section-number">1</span> 缘起</h2>
-<p>博客通过docker+nginx部署上了，但是只能内网访问，ufw检查了没问题，于是怀疑ubuntu上的docker可能版本不对</p>
-<p>kimi看了十篇网文，于是给我提供了docker安装的最佳实践</p>
-</section>
-<section id="docker-desktop-or-docker-engine" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</h2>
-<p>docker-enginge，所以docker-desktop并不需要</p>
-</section>
-<section id="kimi-ref" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="kimi-ref"><span class="header-section-number">3</span> kimi ref</h2>
-<p>在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：</p>
+<p><code>公式</code>、<code>引用</code>、<code>交叉索引</code>、<code>脚注</code>、<code>内嵌代码</code>总是技术写作逃不过的东西。好好的理解以为写</p>
+<section id="如何写公式" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="如何写公式"><span class="header-section-number">1</span> 如何写公式</h2>
+<p>技术写作背后的原理和支持技术其实就是<code>LaTex</code>, <code>Pandoc</code> <code>Markdown</code>。 在<code>Quarto 1.4</code>中引入了<code>Typst</code>, 号称比<code>LaTex</code>更好使用，希望可以早点用上去。</p>
+<section id="内联的公式" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="内联的公式"><span class="header-section-number">1.1</span> 内联的公式</h3>
+<p>举例: <span class="math inline">\(\sqrt x=26\)</span> 的解就是<span class="math inline">\(x=676\)</span></p>
+<p>写这个公式的时候要注意：</p>
 <ol type="1">
-<li><p><strong>更新系统包</strong>：首先，确保你的Ubuntu系统是最新的。可以通过执行以下命令来更新： <code>sudo apt update sudo apt upgrade</code>[^1]</p></li>
-<li><p><strong>卸载旧版本的Docker</strong>（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可以使用以下命令： <code>sudo apt-get remove docker docker-engine docker.io containerd runc</code>[^2] :::{tips} 提示：无docker-engine :::</p></li>
-<li><p><strong>安装依赖项</strong>：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</code>[^3]</p></li>
-<li><p><strong>添加Docker的官方GPG密钥</strong>：这将确保你能够从Docker的官方源安装Docker。 <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>[^4]</p></li>
-<li><p><strong>设置Docker的APT源</strong>：添加Docker的官方APT源，以便安装最新版本的Docker。 <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>[^5]</p></li>
-<li><p><strong>再次更新APT源</strong>：更新本地APT源列表，确保可以安装最新版本的Docker。 <code>sudo apt update</code>[^6]</p></li>
-<li><p><strong>安装Docker Engine和Docker Compose</strong>：安装Docker Engine和Docker Compose。从Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 <code>sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code>[^7]</p></li>
-<li><p><strong>验证安装</strong>：验证Docker和Docker Compose是否正确安装并运行： <code>sudo docker version docker-compose --version</code>[^8]</p></li>
-<li><p><strong>配置镜像加速</strong>（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可以编辑<code>/etc/docker/daemon.json</code>文件，添加以下内容：</p>
-<pre><code>{
-  "registry-mirrors": ["https://registry.docker-cn.com"]
-}</code></pre>
-<p>然后重启Docker服务： <code>sudo systemctl daemon-reload sudo systemctl restart docker</code>[^9]</p></li>
-<li><p><strong>运行Docker Hello World测试</strong>：运行Docker的Hello World测试，以确保Docker正确安装并运行： <code>sudo docker run hello-world</code>[^10]</p></li>
+<li>sqrt后是空格后再写x, 而不是<code>\sqrt(x</code>, 那样的话就变成了 <span class="math inline">\(\sqrt(x)\)</span></li>
+<li>其实，在输入美元符号$的时候，连续输入三个$，这样才会进入公式输入模式。如果只输入一个$或两个美元符号，然后在中间加入符号，它不会变成类的公司。</li>
 </ol>
-<p>这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。</p>
+</section>
+</section>
+<section id="正式公式" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="正式公式"><span class="header-section-number">2</span> 正式公式</h2>
+<p>为什么写不出教程里红色的$$的样子？把公式latex代码直接显示处理啊反而有点难啊.。 TODO, 即使插入raw tex block (上面一个公式其实我是希望显示源代码的啊)</p>
+<p>2024-06-23 如果只是要显示源代码，不运算，请在将代码语言标记从<code>{lang}</code> 改为 <code>{=lang}</code> 即可</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"test"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><span class="math display">\[
+P(E) = {n \choose k} p^k (2-p)^{n - k}
+\]</span></p>
+</section>
+<section id="交叉索引" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="交叉索引"><span class="header-section-number">3</span> 交叉索引</h2>
+<p>因为每个需要交叉索引的实体(如图片、公式、表格或者其中的某一段文字)，建立一个标签，给出一个唯一的标记，这样就可以在文章中随便引用了。</p>
+<p><code>![Elephant](crossref-figure.png){#fig-elephant fig-alt="Altnative text" fig-align="center"}</code></p>
+<div id="fig-elephant" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Altnative text">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="crossref-figure.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Altnative text">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Elephant
+</figcaption>
+</figure>
+</div>
+<p>在这种情况下，我们只要在其他地方引用<code>@fig-elephant</code>即可连接到这个实体了。</p>
+<p>See <a href="#fig-elephant" class="quarto-xref">Figure&nbsp;1</a> for details</p>
+</section>
+<section id="两种编辑模式" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="两种编辑模式"><span class="header-section-number">4</span> 两种编辑模式</h2>
+<p>不知道为什么``的使用不知道如何删除，有的时候你会发现，输入错误了，但是不知道如何在可视化编辑器里修改，只能切换到源代码模式里进行。所以两种方式是相辅相成的，需要结合使用才好。</p>
+<p>Here’s some raw inline HTML: <a>html</a></p>
+<p>实际上你需要在两种模式中来回的切换，尽量使用每一种模式中最熟悉的部分，这样也可以检查文件在两种模式中都显示正常，因为在某些时候你的合作者有的喜欢可视化模式，女的喜欢，源代码模式，无论哪种模式，最终的结果都要确保其正确。</p>
+</section>
+<section id="bugs" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="bugs"><span class="header-section-number">5</span> bugs</h2>
+<p><code>CMD+S</code> 不能保存文件，，选择关闭文件提醒保存垫子保存后仍然无法保存。重新关闭后打开，恢复了，看来稳定性还是有些问题。</p>
 
 
 </section>

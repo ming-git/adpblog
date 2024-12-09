@@ -15,6 +15,7 @@
 
 # 系统特有文件
 .DS_Store         # 忽略 macOS 的临时文件
+**/.DS_Store
 
 # Docker文件 (HEAD 中存在，保留 Dockerfile)
 Dockerfile        # 如果需要版本控制，需从忽略列表移除
@@ -96,3 +97,5 @@ adopapacc/
 !/www/**
 !/www/**/*.*
 
+
+/.quarto/

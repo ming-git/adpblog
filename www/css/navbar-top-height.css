@@ -1,0 +1,16 @@
+/* custom.css */
+
+/* 定义导航栏的高度 */
+.navbar {
+  height: 40px; /* 设置导航栏的高度，根据需求调整这个值 */
+  min-height: 40px;
+  line-height: 40px; /* 确保导航栏内容垂直居中 */
+}
+
+/* 确保导航栏中的元素正确对齐 */
+.navbar-brand,
+.navbar-nav .nav-link {
+  line-height: 40px; /* 与导航栏高度匹配 */
+}
+
+/* 可选：调整导航栏中任何其他需要修改的元素 */
