@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: "www"
+publish:
+  method: gh-pages
 
 website:
   site-url: "https://adopapa.cc"
