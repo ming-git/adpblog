@@ -53,9 +53,18 @@ po/*~
 rsconnect/
 
 # 以下为你的项目自定义规则
-**/config/          # 配置目录
-**/nginx/          # Nginx 配置文件目录建议忽略 (通常包含敏感信息)
-**/ssl/            # SSL 证书建议忽略 (私钥与证书信息避免泄露)
+config/
+**/config/
+
+nginx/
+**/nginx/
+
+ssl/
+**/ssl/
+# 如果需要特定文件不被忽略，可以用 ! 反向匹配，例如：
+# !ssl/example.csr
+# !ssl/example.key
+
 Makefile
 
 # 忽略 Quarto 配置目录和临时文件
