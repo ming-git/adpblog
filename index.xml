@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>豆瓣坛</title>
+<link>https://adopapa.cc/</link>
+<atom:link href="https://adopapa.cc/index.xml" rel="self" type="application/rss+xml"/>
+<description>唯有写字可以解忧</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Sun, 08 Dec 2024 23:04:15 GMT</lastBuildDate>
+<item>
+  <title>文件去哪儿了</title>
+  <dc:creator>Adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/quarto-installation.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="问题来了安装完成版本未变" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="问题来了安装完成版本未变"><span class="header-section-number">1</span> 问题来了：安装完成版本未变</h2>
+<p><img src="https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/images/clipboard-3892075654.png" class="img-fluid"></p>
+<p>过来一下刚才的安装过程，以前选择的都是为这个电脑的所有用反转用，其实自己就是这台电脑的唯一用户，所以选择了仅为自己安全这句话平时装的不同之处吧。</p>
+<p><img src="https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/images/clipboard-1917237752.png" class="img-fluid"></p>
+<p>在AI求证一下如何？</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+问题
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>quarto安装前版本1.5.57， 在quarto下载安装1.6.39后，quarto —version显示的版本仍然是1.5.57.。之 前的quarto安装，我选择了 为这台电脑上的所有用户安装，本次安装选择仅为我安装，这是问题所在吗？</p>
+</div>
+</div>
+</section>
+<section id="ai的回复" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ai的回复"><span class="header-section-number">2</span> AI的回复</h2>
+<p>是的！这 个问题很可能是由于你之前选择“<strong>为这台电脑上的所有用户安装</strong>”，而此次安装选择了“<strong>仅为我安装</strong>”。两 种安装方式会导致 Quarto 被安装到不同的路径，并且系统的&nbsp;<strong>PATH 环境变量</strong>&nbsp;仍然指向旧版本的 Quarto，可执行文件的位置优先级没有更新，从而导致新版本的 Quarto 没有被正确应用。</p>
+<hr>
+<section id="理解问题的原因" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="理解问题的原因"><span class="header-section-number">2.1</span> <strong>理解问题的原因</strong></h3>
+<ol type="1">
+<li><p><strong>为所有用户安装</strong></p>
+<ul>
+<li><p>如果之前安装时选择了“为所有用户安装”，Quarto 通常会安装到系统范围的路径中，例如：</p>
+<ul>
+<li><p>Windows:&nbsp;<code>C:\Program Files\Quarto\bin\quarto.exe</code></p></li>
+<li><p>macOS/Linux:&nbsp;<code>/usr/local/bin/quarto</code></p></li>
+</ul></li>
+<li><p>系统环境变量（PATH）会被更新，使系统始终可以找到这路径的 Quarto。</p></li>
+</ul></li>
+<li><p><strong>仅为我安装</strong></p>
+<ul>
+<li><p>如果本次安装选择 “仅为我安装”，Quarto 可能会安装到用户级别的路径中，例如：</p>
+<ul>
+<li><p>Windows:&nbsp;<code>%LOCALAPPDATA%\Programs\Quarto\bin\quarto.exe</code></p></li>
+<li><p>macOS/Linux:&nbsp;<code>~/.local/bin/quarto （没有这个目录）</code></p></li>
+</ul></li>
+<li><p>用户级别的安装不会覆盖系统范围内的&nbsp;<code>PATH</code>&nbsp;路径，导致仍然调用旧版 Quarto。</p></li>
+</ul>
+<p><strong>因此，系统仍然找到的是之前为所有用户安装的旧版本&nbsp;<code>quarto</code>，而不是你刚刚安装的新版本。</strong></p></li>
+</ol>
+<hr>
+</section>
+<section id="解决方法" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="解决方法"><span class="header-section-number">2.2</span> <strong>解决方法</strong></h3>
+<p>option 1: 重新全局安装，删除只为我安装的版本 （我的选择）</p>
+<p>option 2: 将只为我安装的版本加入PATH变量。。。</p>
+</section>
+</section>
+<section id="新问题如何删除只为我安装的版本" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="新问题如何删除只为我安装的版本"><span class="header-section-number">3</span> 新问题：如何删除只为我安装的版本</h2>
+<hr>
+<section id="定位文件的几个方案" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="定位文件的几个方案"><span class="header-section-number">3.1</span> <strong>定位文件的几个方案</strong></h3>
+<pre class="{bash}"><code>#|label: findfile
+whereis quarto
+# quarto: /usr/local/bin/quarto
+
+which quarto
+#/usr/local/bin/quarto
+# 这两个命令器只显示为所有人安装的路径，不显示只为我安装的路径
+
+find ~ -name "quarto" 2&gt;/dev/null
+
+# ～/Library/Application Support/quarto
+# ~/Library/Application Support/quarto
+# 
+# ~/Library/Caches/deno/gen/file/Applications/quarto
+# ~/Library/Caches/quarto
+# ~/Applications/quarto
+# ~/Applications/quarto/bin/quarto
+# ~/Applications/quarto/share/formats/typst/pandoc/quarto
+# ~/Applications/quarto/share/lua-types/quarto
+# ~/Applications/quarto/share/extensions/quarto
+# ~/Documents/writer/adopapablog/posts/quarto
+# ~/Documents/writer/adopapablog/www/posts/quarto
+# ~/Documents/writer/adopapablog/_freeze/posts/quarto
+# ~/Documents/writer/adopapablog/.quarto/idx/posts/quarto
+# ~/Documents/writer/adopapablog/.quarto/_freeze/posts/quarto
+# ~/Documents/coder/rlang/quarto
+# 跳出了一个文件就卡在哪里了，我另外开了窗口使用其它命名.
+# 2024-12-09 07:43:39 终于结束了查找，结果可比locate 简洁了，确实也太慢了。
+
+locate quarto
+# .....
+# /Applications/quarto
+# /Applications/quarto/bin
+# /Applications/quarto/bin/quarto
+# /Applications/quarto/bin/quarto.js
+# /Applications/quarto/bin/tools
+# /Applications/quarto/bin/tools/aarch64
+# .....
+# 返回也太多了啊哈，确实强大</code></pre>
+<p>折腾到最后发现其实应该先到Application里面去看一下了，所以这是个问题，搜索源用多了传统的方法却丢掉很多，这不于邯郸学步了，这个要警惕，虽然是个小问题则是我们在这个变化中的患得患失。</p>
+<p>finder里直接删除了/Applications/quarto,出问题了</p>
+<pre class="{bash}"><code>#|label: checkafterdelete
+quarto --version
+# zsh: command not found: quarto --version
+# 看来pkg是安装到application，然后关联到/usr/local/bin/quarto</code></pre>
+<p>找回垃圾堆里的安装文件，重新安装pkg</p>
+<pre class="{bash}"><code>#|label: checkaftinstl
+quarto --version
+#1.6.39</code></pre>
+<hr>
+</section>
+<section id="总结" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="总结"><span class="header-section-number">3.2</span> <strong>总结</strong></h3>
+<p>通过文件到哪里去了？通 过寻找文件的过程，你会发现习惯依赖的微小变动也会导致的很多的麻烦。不 要说AI, 就是一片普通的电脑，对我们来说真的是一个巨大的黑箱.人类从来都是在黑箱的下前形的谁又真正搞懂了火呢？</p>
+<p>就是一个折腾，如果一开始你就选择默认的按钮，哪有这一个多小时的折腾呢？</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>it</category>
+  <category>thinking</category>
+  <guid>https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/quarto-installation.html</guid>
+  <pubDate>Sun, 08 Dec 2024 23:04:15 GMT</pubDate>
+</item>
+<item>
+  <title>搞定博客的自动发布</title>
+  <dc:creator>adp </dc:creator>
+  <link>https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>手动发布台辛苦了，今天就在AI的加持下，迈向自动发布吧。</p>
+<p>问: 我已经配置号服务器，只要发布内容放入服务器www文件夹即可正常浏览。我 也配置号了quarto，每次渲染好的发布内容都放在本地项目文件夹publish中。我 已有GitHub账号。现 在请指导我将publish同步到github中，然后让github自动管理和同步内容到我的服务器发布目录www。如 果需要我提供相关的信息和设置，请详细说明。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+提问的技巧
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>你做了什么，需要ai给你什么？输 入，输出，算法（基本步骤），这样ai可以给你更好的回答。所 以你知道的越多，ai越能帮助你，把需要的概念加以命名，ai就更好第引用回复了。</p>
+</div>
+</div>
+<p>AI回答: 好的！以 下是如何将 Quarto 渲染生成的 publish 文件夹内容自动同步到 GitHub，并通过 GitHub 将内容部署到服务器的完整步骤。我 们将逐步指导您完成从 Git 到服务器的自动化流程。</p>
+<p>以下是实现目标的完整流程：</p>
+<ol type="1">
+<li><p><strong>创建 GitHub 仓库并上传 <code>publish</code> 文件夹的内容</strong>。</p></li>
+<li><p><strong>本地初始化 Git 仓库并推送到 GitHub</strong>。</p></li>
+<li><p><strong>在服务器上设置 SSH 私钥/公钥，允许 GitHub 访问服务器。</strong></p></li>
+<li><p><strong>配置 GitHub Actions 自动同步内容到服务器的 <code>www</code> 目录</strong>。</p></li>
+</ol>
+<p>如果需要任何具体信息（如服务器 SSH 配置等），请根据提示提供相关信息。</p>
+<hr>
+<section id="step-1-创建-github-仓库" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="step-1-创建-github-仓库"><span class="header-section-number">0.1</span> <strong>Step 1: 创建 GitHub 仓库</strong></h3>
+<ol type="1">
+<li><p>登陆 <a href="https://github.com/">GitHub</a>，在右上角点击 <strong>“+”</strong>，选择 <strong>“New repository”</strong>。</p></li>
+<li><p>创建一个新的仓库：</p>
+<ul>
+<li><p><strong>Repository name</strong>: 输入仓库名称（例如 <code>my-quarto-site</code>）。</p></li>
+<li><p>确保仓库的 <strong>Visibility</strong> 选择为 Public 或 Private（根据需求）。</p></li>
+<li><p>不要初始化 <code>README</code> 文件或添加 <code>.gitignore</code> 文件。</p></li>
+</ul></li>
+<li><p>创建成功后，记下仓库的 Clone 地址（通常是 <code>https://github.com/yourusername/my-quarto-site.git</code> 或用 SSH 格式）。</p>
+<p>结果: 顺利完成 <strong>git@github.com:ming-git/adp.git</strong></p></li>
+</ol>
+<hr>
+</section>
+<section id="step-2-初始化本地-git-仓库并推送到-github" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="step-2-初始化本地-git-仓库并推送到-github"><span class="header-section-number">0.2</span> <strong>Step 2: 初始化本地 Git 仓库并推送到 GitHub</strong></h3>
+<p>现在需要将您的 Quarto 项目的 <code>publish</code> 文件夹同步到 GitHub 仓库。</p>
+<ol type="1">
+<li><p>打开您的终端或 RStudio 的终端面板，并进入 Quarto 项目目录：</p>
+<pre><code>cd /path/to/your/project</code></pre></li>
+<li><p>进入渲染生成的 <code>publish</code> 文件夹：</p>
+<pre><code>cd publish</code></pre></li>
+<li><p>初始化一个 Git 仓库：</p>
+<pre><code>git init</code></pre></li>
+<li><p>添加所有内容到 Git 仓库并提交：</p>
+<pre><code>git add .
+git commit -m "Initial commit of Quarto publish content"</code></pre></li>
+<li><p>添加远程仓库地址： <strong>使用 HTTPS</strong>：</p>
+<pre><code>git remote add origin https://github.com/yourusername/my-quarto-site.git</code></pre>
+<p><strong>或者使用 SSH（如配置了 SSH 密钥）：</strong>2024-12-07 17:25:55 使用该方式</p>
+<pre><code>git remote add origin git@github.com:yourusername/my-quarto-site.git</code></pre></li>
+<li><p>推送到 GitHub 仓库的 <code>main</code> 分支：</p>
+<pre><code>git branch -M main
+git push -u origin main</code></pre></li>
+</ol>
+<p>此时，您的 <code>publish</code> 文件夹中的所有内容应该已经成功推送到 GitHub 仓库。</p>
+<p>2024-12-07 17:29:23 check ok</p>
+<hr>
+</section>
+<section id="step-3-设置服务器的-ssh-配置" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="step-3-设置服务器的-ssh-配置"><span class="header-section-number">0.3</span> <strong>Step 3: 设置服务器的 SSH 配置</strong></h3>
+<p>为了让 GitHub 可以自动将内容同步到您的服务器，需要设置 GitHub 的访问权限，通过 <strong>SSH 密钥</strong> 将 GitHub 和服务器连接。</p>
+<section id="配置服务器上的-ssh-密钥" class="level4" data-number="0.3.1">
+<h4 data-number="0.3.1" class="anchored" data-anchor-id="配置服务器上的-ssh-密钥"><span class="header-section-number">0.3.1</span> <strong>1. 配置服务器上的 SSH 密钥：</strong></h4>
+<ol type="1">
+<li><p>登陆服务器（通过 SSH 登录）。在 服务器终端执行以下命令，检查是否已存在 SSH 密钥：</p>
+<pre><code>ls ~/.ssh/id_rsa</code></pre></li>
+<li><p>如果不存在，创建一个新的单独的 SSH 密钥对：</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C "zhuquanming@gmail.com" -f ~/.ssh/id_rsa_github</code></pre>
+<p><img src="https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/images/ssh-keygen.png" class="img-fluid"></p>
+<p>按要求输入路径（或按 ENTER 直接使用默认路径），设置密码可选。</p></li>
+<li><p>将生成的公钥复制到剪贴板：</p>
+<pre><code>cat ~/.ssh/id_rsa_github.pub</code></pre>
+<p>复制终端输出的内容。</p></li>
+</ol>
+</section>
+<section id="添加公钥到-github" class="level4" data-number="0.3.2">
+<h4 data-number="0.3.2" class="anchored" data-anchor-id="添加公钥到-github"><span class="header-section-number">0.3.2</span> <strong>2. 添加公钥到 GitHub：</strong></h4>
+<ol type="1">
+<li><p>登陆 GitHub，点击右上角头像，进入 <strong>Settings(账号settings)</strong>。</p></li>
+<li><p>找到左侧的 <strong>SSH and GPG keys</strong>，点击 <strong>New SSH key</strong>。</p></li>
+<li><p>添加 <code>.ssh/id_rsa_github.pub</code> 的内容到 GitHub，并点击保存。</p></li>
+<li><p>修改服务器ssh config file</p>
+<p>编辑或创建 SSH 配置文件，告诉 SSH 使用正确的密钥文件。</p>
+<ol type="1">
+<li><p>打开或创建文件&nbsp;<code>~/.ssh/config</code>：</p>
+<pre><code>vi ~/.ssh/config</code></pre></li>
+<li><p>添加以下内容（将&nbsp;<code>~/.ssh/id_rsa</code>&nbsp;替换为你添加到 GitHub 的密钥路径，例如&nbsp;<code>~/.ssh/id_rsa_github</code>）：</p>
+<pre><code>Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_github
+    IdentitiesOnly yes</code></pre></li>
+<li><p>保存退出 (：wq)。</p></li>
+</ol></li>
+</ol>
+</section>
+<section id="测试-ssh-连接" class="level4" data-number="0.3.3">
+<h4 data-number="0.3.3" class="anchored" data-anchor-id="测试-ssh-连接"><span class="header-section-number">0.3.3</span> <strong>3. 测试 SSH 连接：</strong></h4>
+<p>回到服务器，测试 GitHub 是否可以访问：</p>
+<pre><code>ssh -T git@github.com</code></pre>
+<p>如果显示如下内容，表示连接成功：</p>
+<pre><code>Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+<hr>
+</section>
+</section>
+<section id="step-4-配置-github-actions-自动化部署" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="step-4-配置-github-actions-自动化部署"><span class="header-section-number">0.4</span> <strong>Step 4: 配置 GitHub Actions 自动化部署</strong></h3>
+<p>GitHub Actions 是 GitHub 内置的一种工具，用来自动化工作流。在 我们配置后，GitHub 会在每次您推送内容到 <code>main</code> 分支时，自动将 <code>publish</code> 文件夹的内容同步到服务器的 <code>www</code> 目录。</p>
+<section id="在-github-仓库中创建-actions-配置文件" class="level4" data-number="0.4.1">
+<h4 data-number="0.4.1" class="anchored" data-anchor-id="在-github-仓库中创建-actions-配置文件"><span class="header-section-number">0.4.1</span> <strong>1. 在 GitHub 仓库中创建 Actions 配置文件：</strong></h4>
+<ol type="1">
+<li><p>在项目中创建一个 <code>.github/workflows</code> 文件夹（如果不存在）。</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+不是在渲染输出目录下喔
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>犯了一个错误，建立在了渲染输出目录下，结果直接被删除了哈, 对于git还是有点陌生，好久不用，之前学习的mosh git教程又完全忘记了。</p>
+</div>
+</div></li>
+<li><p>在文件夹下新建文件 <code>deploy2tclh.yml</code>，并配置以下内容：</p></li>
+</ol>
+<pre><code>name: Deploy to Tencent Lighthouse Server
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 检出最新代码
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. 使用 rsync 将内容上传到服务器
+    - name: Sync to server
+      run: |
+        rsync -avz --delete ./ user@your-server-ip:/path/to/your/www/
+      env:
+        RSYNC_RSH: "ssh -i ~/.ssh/id_rsa"</code></pre>
+</section>
+<section id="配置服务器访问的私钥" class="level4" data-number="0.4.2">
+<h4 data-number="0.4.2" class="anchored" data-anchor-id="配置服务器访问的私钥"><span class="header-section-number">0.4.2</span> <strong>2. 配置服务器访问的私钥：</strong></h4>
+<p>为了让 GitHub Actions 在服务器上使用 SSH，还需将服务器的 <strong>私钥</strong> 添加到 GitHub 仓库的 Secrets。</p>
+<ol type="1">
+<li><p>登录 GitHub 仓库，进入 <strong>Settings &gt; Secrets and variables &gt; Actions</strong>。</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+账号Setting和项目Setting要区分
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>注意：是在<a href="https://github.com/ming-git/adp/settings">https://github.com/ming-git/adpblog/settings</a> 项目的setting中修改；而不是个人账户的setting （<a href="https://github.com/settings/profile" class="uri">https://github.com/settings/profile</a>）中。浪 费了点时间。</p>
+</div>
+</div></li>
+<li><p>点击 <strong>New repository secret</strong>，命名为 <code>SSH_PRIVATE_KEY</code>，并将服务器私钥（<code>~/.ssh/id_rsa_github</code> 的内容）粘贴进去。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+将错就错吧
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本来是tclh，麻烦了就不改写了哈</p>
+<p>2024-12-08 07:55:15 恢复到原始的命名</p>
+</div>
+</div></li>
+</ol>
+</section>
+<section id="修改-deploy2tclh.yml-引用-secrets-中的私钥" class="level4" data-number="0.4.3">
+<h4 data-number="0.4.3" class="anchored" data-anchor-id="修改-deploy2tclh.yml-引用-secrets-中的私钥"><span class="header-section-number">0.4.3</span> <strong>3. 修改 <code>deploy2tclh.yml</code> 引用 Secrets 中的私钥：</strong></h4>
+<p>更新 <code>deploy2tclh.yml</code> 文件：</p>
+<pre><code>- name: Sync to server
+  run: |
+    mkdir -p ~/.ssh/ 
+    echo "$SSH_PRIVATE_KEY" &gt; ~/.ssh/id_rsa_github
+    chmod 600 ~/.ssh/id_rsa_github
+    rsync -avz --delete ./ user@your-server-ip:/path/to/your/www/
+  env:
+    SSH_PRIVATE_KEY: ${{ secrets.SSH_TLCH_PRIVATE_KEY }}</code></pre>
+</section>
+</section>
+<section id="最大的坑就在这里-ai的拐点" class="level3" data-number="0.5">
+<h3 data-number="0.5" class="anchored" data-anchor-id="最大的坑就在这里-ai的拐点"><span class="header-section-number">0.5</span> 最大的坑就在这里-AI的拐点</h3>
+<p>今天以为早上起来就可以搞定，结果无论怎么折腾，都会一堆的错误集中就反映在rsync上，花费了很多的时间去确认ssh的设置是否正确，其实最后发现ssh设置没有问题。</p>
+<p>这就是在使用AI中最大的坑，一旦AI没在正确的路上，那么后来很难改出来来，经验告诉我，如果三次他都无法给出正确答案，这时候你就要需要去改变思路了-AI已经在一条不归路上了。在 利用AI编写auotomator的自动化流程中，也有这个感觉-如果AI接连三次给不出正确方案，那多半它后面也就无法自己改出螺旋，这是就是人的价值了，需要人类改变方式，通一个全新的角度给出一个提示，所以这里面人的重要性大概就在这儿吧，我们的价值在于思考，确定方向，而AI完成简单重复，查阅数据补全工艺的工作。</p>
+</section>
+<section id="终于成功了" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="终于成功了"><span class="header-section-number">1</span> 终于成功了</h2>
+<p>微信里搜索“github action 部署文件到服务器” 看到提到了“easingthemes/ssh-deploy”，感觉这是一个突破点，再看看，是把ssh和rsync打包一起的，看来方向上解决了第一次里直接调用rsync的问题。</p>
+<p>马上让ai指令“github中还有哪些类似 easingthemes/ssh-deploy 的文件部署actions？” 。</p>
+<p><img src="https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/images/ai-lookuop-easingthemes:ssh-deploy.jpeg" class="img-fluid"></p>
+<p>再接再厉，给她指令</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ai prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>https://github.com/marketplace/actions/ssh-deploy 请参考，重新编写部署代码</p>
+</div>
+</div>
+<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Deploy to Tencent Lighthouse Server</span></span>
+<span id="cb17-2"></span>
+<span id="cb17-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">push</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">branches</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> main</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">  # 当推送到 main 分支时触发</span></span>
+<span id="cb17-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paths</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> www/**</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">     # 仅当 www 文件夹及其子目录或文件发生更改时触发</span></span>
+<span id="cb17-9"></span>
+<span id="cb17-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">jobs</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">deploy</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ubuntu-latest</span></span>
+<span id="cb17-13"></span>
+<span id="cb17-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">      # Step 1: 检出代码</span></span>
+<span id="cb17-16"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Checkout Code</span></span>
+<span id="cb17-17"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/checkout@v3</span></span>
+<span id="cb17-18"></span>
+<span id="cb17-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">      # Step 2: 执行 SSH Deploy Action</span></span>
+<span id="cb17-20"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> SSH Deploy to Server</span></span>
+<span id="cb17-21"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> easingthemes/ssh-deploy@main</span></span>
+<span id="cb17-22"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">env</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb17-23"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">SSH_PRIVATE_KEY</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.SSH_PRIVATE_KEY }}</span></span>
+<span id="cb17-24"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ARGS</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.RSYNC_ARGS }}</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> # rsync 的参数，确保文件更新同步</span></span>
+<span id="cb17-25"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">SOURCE</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.SOURCE }}</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> # 本地需要同步的文件夹</span></span>
+<span id="cb17-26"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">REMOTE_HOST</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.HOST }}</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> # 目标服务器的 IP 地址</span></span>
+<span id="cb17-27"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">REMOTE_USER</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.USER }}</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> # 用于连接服务器的用户名</span></span>
+<span id="cb17-28"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">TARGET</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ secrets.TARGET }}</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> # 服务器上的目标路径</span></span></code></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+补充说明
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>AI给吃的hard code - ARGS，SOURCE， REMOTE_HOST， REMOTE_USER， TARGET是直接天上了敏感数据。最 佳实践是在github action的screts里设置再通过${{ secrets.《SECRETS.NAME》 }} 的方式来引用。</p>
+</div>
+</div>
+<hr>
+<section id="step-5-测试工作流" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="step-5-测试工作流"><span class="header-section-number">1.1</span> <strong>Step 5: 测试工作流</strong></h3>
+<ol type="1">
+<li><p>回到本地终端，修改您的 <code>publish</code> 文件夹的内容（比如新建一个文件或修改现有内容）。</p></li>
+<li><p>提交新的内容到 GitHub 仓库：</p>
+<pre><code>git add .
+git commit -m "Update content"
+git push origin main</code></pre></li>
+<li><p>到 GitHub 仓库的 <strong>Actions</strong> 页面，您应该可以看到 <code>Deploy to Server</code> 工作流被触发。</p></li>
+<li><p>如果配置正确，内容将自动同步到您服务器的 <code>www</code> 目录。</p></li>
+</ol>
+<hr>
+</section>
+<section id="问题排查" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="问题排查"><span class="header-section-number">1.2</span> <strong>问题排查</strong></h3>
+<ol type="1">
+<li><p>如果同步失败，请检查服务器 <code>www</code> 目录的路径是否正确。</p></li>
+<li><p>测试 <code>rsync</code> 是否能够在服务器和 GitHub Actions 工作流中正常工作。</p></li>
+<li><p>确认 SSH 设置是否正确，<code>id_rsa</code> 可以正常授权访问服务器。</p></li>
+</ol>
+<hr>
+</section>
+<section id="总结" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="总结"><span class="header-section-number">1.3</span> <strong>总结</strong></h3>
+<p>通过上述步骤，您可以实现：</p>
+<ol type="1">
+<li><p>本地 Quarto 渲染生成内容到 <code>publish</code> 文件夹。</p></li>
+<li><p>使用 Git 将 <code>publish</code> 文件夹内容上传到 GitHub。</p></li>
+<li><p>配置 GitHub Actions，让 <code>www</code> 的内容自动部署到服务器的 <code>www</code> 目录，完成发布的自动化。</p></li>
+<li><p>关于.gitigore的的设置也费了大力气，总是感觉自己理解和实际的输出不一致，以后再聊聊。</p></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>github</category>
+  <category>deploy</category>
+  <category>action</category>
+  <guid>https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html</guid>
+  <pubDate>Sat, 07 Dec 2024 08:46:55 GMT</pubDate>
+</item>
+<item>
+  <title>海棠果热成了红苹果</title>
+  <dc:creator>Adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/diary/lastdayofaugust.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>红扑扑的，如果不说，你会以为是苹果吧。</p>
+<p>这只是公司园区里的海棠果。三十多年了，其实我很难注意到他们，其一，它们往年的身材较小，比大枣也大不了多少，其二，每年他们都是被浓密的绿叶遮挡住了，不仔细看，很容易只见绿叶不见绿果。今年带劲的天气(42.4度)给了他们疯狂生长的信号，叶子也脱落殆尽，让你没法忽略那个庞大的果子存在。</p>
+<p><img src="https://adopapa.cc/posts/diary/images/IMG_4537.png" class="img-fluid"></p>
+<p>想起在新加坡的滨海花园(Garden by the Bay)的云雾森林(Clouds Forest)里一起看全球气候变化的电影(看样子是2010年拍的)。电影预测2100年全球的平均温度会上升5度左右。这是基于继续高排放情况下的预测，但我估计这是比较可能的结果，甚至是比较乐观的结果，毕竟人类的天性你懂的)。</p>
+<p>出了门，我半沉重半开玩笑地对儿子说，祝你2114的百岁身躯可以抵挡得住那股热浪吧，儿子大笑。</p>
+<p><img src="https://adopapa.cc/posts/diary/images/FA64D6FA-273E-48D8-B137-AA1AA8DDF3D0_1_105_c.jpeg" class="img-fluid"></p>
+<p>2024-08-30 12:49:36</p>
+
+
+
+ ]]></description>
+  <category>随记</category>
+  <category>气候</category>
+  <category>植物</category>
+  <guid>https://adopapa.cc/posts/diary/lastdayofaugust.html</guid>
+  <pubDate>Fri, 30 Aug 2024 04:25:25 GMT</pubDate>
+</item>
+<item>
+  <title>Ubuntu上的Docker</title>
+  <dc:creator>aiit </dc:creator>
+  <link>https://adopapa.cc/posts/backend/how-to-install-docker-in -ubuntu22/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="缘起" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="缘起"><span class="header-section-number">1</span> 缘起</h2>
+<p>博客通过docker+nginx部署上了，但是只能内网访问，ufw检查了没问题，于是怀疑ubuntu上的docker可能版本不对</p>
+<p>kimi看了十篇网文，于是给我提供了docker安装的最佳实践</p>
+</section>
+<section id="docker-desktop-or-docker-engine" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="docker-desktop-or-docker-engine"><span class="header-section-number">2</span> docker-desktop or docker engine</h2>
+<p>docker-enginge，所以docker-desktop并不需要</p>
+</section>
+<section id="kimi-ref" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="kimi-ref"><span class="header-section-number">3</span> kimi ref</h2>
+<p>在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：</p>
+<ol type="1">
+<li><p><strong>更新系统包</strong>：首先，确保你的Ubuntu系统是最新的。可以通过执行以下命令来更新： <code>sudo apt update sudo apt upgrade</code>[^1]</p></li>
+<li><p><strong>卸载旧版本的Docker</strong>（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可以使用以下命令： <code>sudo apt-get remove docker docker-engine docker.io containerd runc</code>[^2] :::{tips} 提示：无docker-engine :::</p></li>
+<li><p><strong>安装依赖项</strong>：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</code>[^3]</p></li>
+<li><p><strong>添加Docker的官方GPG密钥</strong>：这将确保你能够从Docker的官方源安装Docker。 <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>[^4]</p></li>
+<li><p><strong>设置Docker的APT源</strong>：添加Docker的官方APT源，以便安装最新版本的Docker。 <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>[^5]</p></li>
+<li><p><strong>再次更新APT源</strong>：更新本地APT源列表，确保可以安装最新版本的Docker。 <code>sudo apt update</code>[^6]</p></li>
+<li><p><strong>安装Docker Engine和Docker Compose</strong>：安装Docker Engine和Docker Compose。从Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 <code>sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code>[^7]</p></li>
+<li><p><strong>验证安装</strong>：验证Docker和Docker Compose是否正确安装并运行： <code>sudo docker version docker-compose --version</code>[^8]</p></li>
+<li><p><strong>配置镜像加速</strong>（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可以编辑<code>/etc/docker/daemon.json</code>文件，添加以下内容：</p>
+<pre><code>{
+  "registry-mirrors": ["https://registry.docker-cn.com"]
+}</code></pre>
+<p>然后重启Docker服务： <code>sudo systemctl daemon-reload sudo systemctl restart docker</code>[^9]</p></li>
+<li><p><strong>运行Docker Hello World测试</strong>：运行Docker的Hello World测试，以确保Docker正确安装并运行： <code>sudo docker run hello-world</code>[^10]</p></li>
+</ol>
+<p>这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>IT</category>
+  <category>Docker</category>
+  <guid>https://adopapa.cc/posts/backend/how-to-install-docker-in -ubuntu22/</guid>
+  <pubDate>Mon, 01 Jul 2024 13:38:46 GMT</pubDate>
+</item>
+<item>
+  <title></title>
+  <dc:creator>adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/quarto/quarto-yaml-options/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="keywords和category有何不同" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="keywords和category有何不同"><span class="header-section-number">1</span> keywords和category有何不同？</h2>
+</section>
+<section id="节外生枝" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="节外生枝"><span class="header-section-number">2</span> 节外生枝</h2>
+<p><code>quarto render</code> 报错已大堆</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://adopapa.cc/posts/quarto/quarto-yaml-options/images/render-erro.png" class="img-fluid figure-img"></p>
+<figcaption>render时的一大堆报错</figcaption>
+</figure>
+</div>
+<p>仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个 <code>的</code> 贴到了yaml设置里了。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://adopapa.cc/posts/quarto/quarto-yaml-options/images/why-error.png" class="img-fluid figure-img"></p>
+<figcaption>哪里来的的</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Quarto YAML</category>
+  <guid>https://adopapa.cc/posts/quarto/quarto-yaml-options/</guid>
+  <pubDate>Sun, 30 Jun 2024 08:45:28 GMT</pubDate>
+</item>
+<item>
+  <title>自己的地盘，自己看着点</title>
+  <dc:creator>Adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="起子" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="起子"><span class="header-section-number">1</span> 起子</h2>
+<p>习惯登录之后看一下系统显示提醒信息，这不前两天的一个僵尸进程可吓了我一跳(参见<a href="../../../posts/backend/how-to-clean-zombie-process/index.html">僵尸进程的处理</a>。于是觉得提升一点监控级别还是有必要的。大厂让人眼花缭乱的监控，可不还是各种开源软件的组合吗？自己也可以动起来。</p>
+</section>
+<section id="先来一个-neofetch" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="先来一个-neofetch"><span class="header-section-number">2</span> 先来一个 neofetch</h2>
+<p>有事问AI, 尽管其会胡说八道，但是确实一个线索的重要提供者，在于计算机类的信息还是以个蛮不错的开始。爱</p>
+<p><img src="https://adopapa.cc/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/images/neofetch.png" class="img-fluid"></p>
+</section>
+<section id="ai的推荐-存档" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="ai的推荐-存档"><span class="header-section-number">3</span> AI的推荐-存档</h2>
+<p>在 Ubuntu 服务器上，通过 SSH 登录后显示更多的健康监控指标，可以帮助管理员快速了解系统状态。以下是几种配置方法和工具，可用于增强服务器健康监控：</p>
+<section id="方法一修改-motdmessage-of-the-day" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="方法一修改-motdmessage-of-the-day"><span class="header-section-number">3.1</span> <strong>方法一：修改 MOTD（Message of the Day）</strong></h3>
+<p>Ubuntu 在用户登录时显示 MOTD（消息每日通告），可以通过配置 MOTD 来显示系统健康监控指标。</p>
+<section id="配置-motd" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="配置-motd"><span class="header-section-number">3.1.1</span> 配置 MOTD</h4>
+<ol type="1">
+<li><p><strong>通过 Landscape 提供的 MOTD（默认）</strong>：</p>
+<p>默认情况下，Ubuntu 服务器使用 <code>landscape-sysinfo</code> 生成 MOTD 信息。你可以通过编辑<code>/etc/update-motd.d</code>中的文件来自定义登录信息。</p>
+<pre><code>sudo nano /etc/update-motd.d/00-header  # 添加定制的 header
+sudo nano /etc/update-motd.d/10-sysinfo  # 定制系统信息</code></pre></li>
+<li><p><strong>添加自定义脚本</strong>：</p>
+<p>你可以创建和添加自定义脚本来显示系统健康信息。在<code>/etc/update-motd.d/</code>目录中添加一个新的脚本文件，如：</p>
+<pre><code>sudo nano /etc/update-motd.d/20-healthcheck</code></pre>
+<p>在这个脚本中添加你希望显示的信息。例如，下面是一个示例脚本，用于显示系统负载、磁盘使用情况和内存使用情况：</p>
+<pre><code>#!/bin/bash
+echo "System Load: $(uptime)"
+echo "Disk Usage:"
+df -h | grep '^/dev/'
+echo "Memory Usage:"
+free -h</code></pre>
+<p>确保脚本具有执行权限：</p>
+<pre><code>sudo chmod +x /etc/update-motd.d/20-healthcheck</code></pre></li>
+<li><p><strong>更新并查看效果</strong>：</p>
+<p>断开 SSH 会话并重新登录，查看新的 MOTD 信息。</p></li>
+</ol>
+</section>
+</section>
+<section id="方法二使用-screenfetch-或-neofetch" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="方法二使用-screenfetch-或-neofetch"><span class="header-section-number">3.2</span> <strong>方法二：使用 <code>screenfetch</code> 或 <code>neofetch</code></strong></h3>
+<p><code>screenfetch</code> 和 <code>neofetch</code> 是两个广受欢迎的工具，用于在登录时显示系统信息。</p>
+<section id="安装-neofetch" class="level4" data-number="3.2.1">
+<h4 data-number="3.2.1" class="anchored" data-anchor-id="安装-neofetch"><span class="header-section-number">3.2.1</span> <strong>安装 <code>neofetch</code></strong></h4>
+<ol type="1">
+<li><p><strong>安装 neofetch</strong>：</p>
+<pre><code>sudo apt update
+sudo apt install neofetch</code></pre></li>
+<li><p><strong>配置 Shell 配置文件</strong>：</p>
+<p>编辑对应的 shell 配置文件（如 <code>.bashrc</code> 或 <code>.zshrc</code>），使其在登录时自动运行 <code>neofetch</code>：</p>
+<pre><code>echo "neofetch" &gt;&gt; ~/.bashrc
+source ~/.bashrc</code></pre></li>
+</ol>
+</section>
+<section id="安装-screenfetch" class="level4" data-number="3.2.2">
+<h4 data-number="3.2.2" class="anchored" data-anchor-id="安装-screenfetch"><span class="header-section-number">3.2.2</span> <strong>安装 <code>screenfetch</code></strong></h4>
+<ol type="1">
+<li><p><strong>安装 screenfetch</strong>：</p>
+<pre><code>sudo apt update
+sudo apt install screenfetch</code></pre></li>
+<li><p><strong>配置 Shell 配置文件</strong>：</p>
+<p>编辑对应的 shell 配置文件（如 <code>.bashrc</code> 或 <code>.zshrc</code>），使其在登录时自动运行 <code>screenfetch</code>：</p>
+<pre><code>echo "screenfetch" &gt;&gt; ~/.bashrc
+source ~/.bashrc</code></pre></li>
+</ol>
+</section>
+</section>
+<section id="方法三使用-glances-实时监控" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="方法三使用-glances-实时监控"><span class="header-section-number">3.3</span> <strong>方法三：使用 <code>glances</code> 实时监控</strong></h3>
+<p><code>glances</code> 是一个多功能系统监控工具，支持查看多种系统性能指标。</p>
+<section id="安装-glances" class="level4" data-number="3.3.1">
+<h4 data-number="3.3.1" class="anchored" data-anchor-id="安装-glances"><span class="header-section-number">3.3.1</span> <strong>安装 <code>glances</code></strong></h4>
+<pre><code>sudo apt update
+sudo apt install glances</code></pre>
+</section>
+<section id="使用-glances" class="level4" data-number="3.3.2">
+<h4 data-number="3.3.2" class="anchored" data-anchor-id="使用-glances"><span class="header-section-number">3.3.2</span> <strong>使用 <code>glances</code></strong></h4>
+<p>安装完成后，可以通过以下命令启动 <code>glances</code>，实时显示系统状态：</p>
+<pre><code>glances</code></pre>
+</section>
+<section id="配置自动启动" class="level4" data-number="3.3.3">
+<h4 data-number="3.3.3" class="anchored" data-anchor-id="配置自动启动"><span class="header-section-number">3.3.3</span> <strong>配置自动启动</strong></h4>
+<p>可以在shell配置文件中添加命令来运行 <code>glances</code>，例如在 <code>.bashrc</code> 中：</p>
+<pre><code>echo "glances" &gt;&gt; ~/.bashrc
+source ~/.bashrc</code></pre>
+</section>
+</section>
+<section id="高级监控工具" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="高级监控工具"><span class="header-section-number">3.4</span> <strong>高级监控工具</strong></h3>
+<ol type="1">
+<li><strong>Prometheus + Grafana</strong>：</li>
+</ol>
+<p>如果需要更强大的监控解决方案，可以考虑使用 Prometheus 和 Grafana。这两个工具组合可以提供实时系统监控、告警和丰富的仪表盘功能。</p>
+<pre><code>- 安装 Prometheus 和 Grafana 的详细步骤可以参考官方文档。
+
+- 配置节点导出器（Node Exporter）来收集系统指标。</code></pre>
+<ol start="2" type="1">
+<li><p><strong>Netdata</strong>：</p>
+<p><code>Netdata</code> 也是一个强大的实时监控工具，支持详细的系统性能指标和告警功能。</p>
+<pre><code># 安装 netdata（需要在官方文档中确认推荐的安装方式）
+bash &lt;(curl -Ss https://my-netdata.io/kickstart.sh)</code></pre></li>
+</ol>
+<p>安装后的 <code>Netdata</code> 可以通过 Web 界面访问实时监控信息。</p>
+</section>
+</section>
+<section id="section" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="section"><span class="header-section-number">4</span> </h2>
+
+
+</section>
+
+ ]]></description>
+  <category>Linux</category>
+  <category>Server</category>
+  <category>Monitor</category>
+  <guid>https://adopapa.cc/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/</guid>
+  <pubDate>Sun, 30 Jun 2024 08:14:12 GMT</pubDate>
+</item>
+<item>
+  <title>自动化发布的初体验-本地发布</title>
+  <dc:creator>Adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/quarto/publish-website-localhost-with-nginx-/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="互联网平台的心思" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="互联网平台的心思"><span class="header-section-number">1</span> 互联网平台的心思</h2>
+<p>像微信公众号这样的大平台居然没有一个像样的自动发布工具，我只能如此狭隘地以小人度之了。看来看去的平台供应商大抵是是恨不得把你的整个身心都圈禁到他们的平台，所有每天劳苦工作到喘息，让你根本没有思考的机会。自动化发布这种工具大概是与这种相违背的 - 岂不是给你it’s 16 hours更多兼职的机会吗？自动化是有有的，那是给大佬们收割打工人的，打工人人只能被眼前的自动诱惑，手动模式满心欢喜地冲向这个永远到达不了的圣地。</p>
+<p>写公众号时断时续究竟还是自己的毛病，本就没有自己的内容，但是不能这样说啊，只能说每次枯燥的手动更新就让自己有一种作做奴隶的凄凉感，完全没有了新时代的自由人的感觉，要是你放弃了，就是自己自己的文章要拿回来也时间挺费事的事情，感觉比抄家还难受。</p>
+<p>搬过过几次家，那种感觉确实是太难受了，搬一次就是要扔掉好多东西。写作也是如此，东西还是要放在自己的地盘上，然后是想发哪里就发哪里，而且还是能自动的就不要手动了。于是编程这事就是要成了必须要解决的问题了。</p>
+</section>
+<section id="我的选型" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="我的选型"><span class="header-section-number">2</span> 我的选型</h2>
+<p>写作工具: Quarto 编辑器: Rstudio 部署工具: Docker，Ngnix，Ubuntu</p>
+</section>
+<section id="head2" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="head2"><span class="header-section-number">3</span> head2</h2>
+</section>
+<section id="head2-1" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="head2-1"><span class="header-section-number">4</span> head2</h2>
+
+
+</section>
+
+ ]]></description>
+  <category>publish</category>
+  <category>Quarto</category>
+  <category>nginx</category>
+  <category>docker</category>
+  <guid>https://adopapa.cc/posts/quarto/publish-website-localhost-with-nginx-/</guid>
+  <pubDate>Sun, 30 Jun 2024 07:39:40 GMT</pubDate>
+</item>
+<item>
+  <title>如何给服务器起一个简洁好记的名字</title>
+  <dc:creator>Adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：</p>
+<section id="一临时修改主机名" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="一临时修改主机名"><span class="header-section-number">0.1</span> <strong>一、临时修改主机名</strong></h3>
+<p>临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：</p>
+<pre><code>sudo hostnamectl set-hostname tclh01</code></pre>
+</section>
+<section id="二永久修改主机名" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="二永久修改主机名"><span class="header-section-number">0.2</span> <strong>二、永久修改主机名</strong></h3>
+<p>要确保重启后主机名依然被修改，我们需要修改两个文件：<code>/etc/hostname</code>&nbsp;和&nbsp;<code>/etc/hosts</code>。</p>
+<ol type="1">
+<li><p><strong>修改&nbsp;<code>/etc/hostname</code>&nbsp;文件</strong></p>
+<p>&nbsp;</p>
+<p>使用文本编辑器（如&nbsp;<code>nano</code>&nbsp;或&nbsp;<code>vi</code>）编辑该文件：</p>
+<pre><code>sudo nano /etc/hostname</code></pre>
+<p>将文件中的内容改为&nbsp;<code>tclh01</code>，保存并退出。</p></li>
+<li><p><strong>修改&nbsp;<code>/etc/hosts</code>&nbsp;文件</strong></p>
+<p>&nbsp;</p>
+<p>同样使用文本编辑器修改&nbsp;<code>/etc/hosts</code>&nbsp;文件：</p>
+<pre><code>sudo nano /etc/hosts</code></pre>
+<p>找到包含旧主机名的行，并将其修改为新主机名&nbsp;<code>tclh01</code>，类似如下：</p>
+<pre><code>127.0.0.1   localhost
+127.0.1.1   tclh01</code></pre>
+<p>请确保没有多余的空白行或格式错误，保存并退出。</p></li>
+</ol>
+</section>
+<section id="三重启系统" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="三重启系统"><span class="header-section-number">0.3</span> <strong>三、重启系统</strong></h3>
+<p>为了确保所有更改生效，建议重启系统：</p>
+<pre><code>sudo reboot</code></pre>
+</section>
+<section id="小结" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="小结"><span class="header-section-number">0.4</span> <strong>小结</strong></h3>
+<p>总结以上步骤，你可以按照如下命令序列操作：</p>
+<pre><code># 临时修改主机名
+sudo hostnamectl set-hostname tclh01
+
+# 编辑 /etc/hostname 文件
+sudo nano /etc/hostname
+# 将内容改为 tclh01，保存退出
+
+# 编辑 /etc/hosts 文件
+sudo nano /etc/hosts
+# 将相关行修改为 127.0.1.1   tclh01，保存退出
+
+# 重启系统
+sudo reboot</code></pre>
+<p>完成这些步骤后，你的服务器主机名应已修改为&nbsp;<code>tclh01</code>，并能在重启后保持不变。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>linux</category>
+  <category>ubuntu</category>
+  <guid>https://adopapa.cc/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/</guid>
+  <pubDate>Sat, 29 Jun 2024 00:28:40 GMT</pubDate>
+</item>
+<item>
+  <title>Excel函数之lookup, vlookup, xlookup</title>
+  <dc:creator>adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>前几天交流了一下自己经常用的vlookup,可以解决多个相关excel表的快速比对问题。</p>
+<p>今天朋友问lookup更简单啊，为什么要vlookup，我就傻了，赶紧问ai结，论就是lookup只能单行匹配，而是只能近似匹配，这个不能满足我们的业务场景需求。</p>
+<p>另外一个同事提出现在有了xlookup了，更加简单，结果大家找了一下，应该是比较新的版本里才有xlookup。和 vlookup想不比，xlookup可以查找行，获取任意列的返回，vlookup只能返回对比行右侧的行，一起的解决方案就是临时把查找行左侧的所需列复制插入查找行的右侧。</p>
+<p>做了一个测试表格，对比lookup，vlookup，xlookup的查找效果。</p>
+<p><img src="https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/images/excel-lookup-test-02.png" class="img-fluid"></p>
+<p><img src="https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/images/excel-lookup-test-01.png" class="img-fluid"></p>
+<p>excel的版本很多，每个人需要具体看看自己的版本里有这个公式没。用 起来吧，终于摆脱vlookup的限制和繁琐了。</p>
+
+
+
+ ]]></description>
+  <category>linux</category>
+  <category>ubuntu</category>
+  <guid>https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/</guid>
+  <pubDate>Fri, 28 Jun 2024 00:20:48 GMT</pubDate>
+</item>
+<item>
+  <title>一不留神，僵尸就这么跳将进来了</title>
+  <dc:creator>adopapa </dc:creator>
+  <link>https://adopapa.cc/posts/backend/how-to-clean-zombie-process/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>看到系统信息中提到的僵尸进程（zombie process），尽管听起来可能有些令人担忧，但它并不一定意味着系统存在危险。不过，了解什么是僵尸进程以及如何处理它们是很重要的。</p>
+<p><img src="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png" class="img-fluid"></p>
+<section id="什么是僵尸进程" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="什么是僵尸进程"><span class="header-section-number">1</span> <strong>什么是僵尸进程？</strong></h2>
+<p>僵尸进程是在其执行完成后仍保留在进程表中的进程。这些进程已经终止，但其父进程还没有读取其退出状态，因此这些进程的资源尚未完全释放。它们占用的系统资源非常少，但积累太多的僵尸进程可能会耗尽系统可用的进程表条目。</p>
+</section>
+<section id="如何查找僵尸进程" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="如何查找僵尸进程"><span class="header-section-number">2</span> <strong>如何查找僵尸进程？</strong></h2>
+<p>你可以使用&nbsp;<code>ps</code>&nbsp;命令来查找系统中的僵尸进程：</p>
+<pre><code>ps aux | grep Z</code></pre>
+<p><img src="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.21.22.png" class="img-fluid"></p>
+<p>在输出中，你会看到带有&nbsp;<code>Z</code>&nbsp;状态码的进程，这些就是僵尸进程。</p>
+</section>
+<section id="处理僵尸进程的方法" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="处理僵尸进程的方法"><span class="header-section-number">3</span> <strong>处理僵尸进程的方法</strong></h2>
+<section id="手动即时清理" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="手动即时清理"><span class="header-section-number">3.1</span> 手动即时清理</h3>
+<ol type="1">
+<li><p><strong>手动杀掉父进程</strong>： 找到僵尸进程的父进程ID (PPID)。你可以使用&nbsp;<code>ps</code>&nbsp;或&nbsp;<code>top</code>&nbsp;命令来查找其父进程。</p>
+<pre><code>ps -o ppid= -p &lt;zombie_pid&gt;</code></pre>
+<p>使用&nbsp;<code>kill</code>&nbsp;命令来结束该父进程：</p>
+<pre><code>sudo kill -HUP &lt;parent_pid&gt;</code></pre>
+<p>这会告诉父进程重新读取子进程的退出状态并释放僵尸进程。</p>
+<p><img src="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.21.51.png" class="img-fluid"></p></li>
+<li><p><strong>重启服务或系统</strong>： 如果僵尸进程是由某个服务引起的，重启该服务可能会解决问题。如果这个方法无效，重启系统通常会清理所有僵尸进程。</p>
+<pre><code>sudo systemctl restart your_service
+# 或者
+sudo reboot</code></pre>
+<h3 id="周期性监控和自动处理" data-number="3.2" class="anchored"><span class="header-section-number">3.2</span> <strong>周期性监控和自动处理</strong></h3>
+<p>对于需要持续监控并处理僵尸进程的系统，可以编写脚本定期检查并处理这些进程。</p>
+<ol type="1">
+<li><strong>示例脚本：</strong></li>
+</ol>
+<pre><code>#!/bin/bash
+zombies=$(ps aux | awk '{if ($8 ~ /Z/) print $2}')
+if [ -n "$zombies" ]; then
+    for pid in $zombies; do
+        parent_pid=$(ps -o ppid= -p $pid)
+        [ "$parent_pid" ] &amp;&amp; sudo kill -HUP $parent_pid
+    done
+fi</code></pre>
+<ol start="2" type="1">
+<li>设置定时任务: 将这个脚本设为定时任务，例如通过&nbsp;<code>crontab</code>&nbsp;设置定期运行。</li>
+</ol>
+<pre><code>crontab -e
+# 添加以下行每小时运行一次脚本
+0 * * * * /path/to/your/script.sh</code></pre></li>
+</ol>
+</section>
+</section>
+<section id="小结" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="小结"><span class="header-section-number">4</span> <strong>小结</strong></h2>
+<p>虽然僵尸进程本身并不会消耗大量资源，但它们积累过多可能会影响系统的稳健性。通过上面的步骤，你可以识别并处理僵尸进程，确保系统保持健康的运行状态。通常，出现一个僵尸进程并不危险，但在生产环境中应尽早处理以保持系统的清洁和高效运行。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>linux ubuntu process zombie</category>
+  <guid>https://adopapa.cc/posts/backend/how-to-clean-zombie-process/</guid>
+  <pubDate>Fri, 28 Jun 2024 00:20:48 GMT</pubDate>
+</item>
+</channel>
+</rss>
