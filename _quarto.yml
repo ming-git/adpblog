@@ -1,0 +1,25 @@
+project:
+  type: website       # 项目类型为网站 ("website", 也可选 "book" 或 "article")
+  output-dir: www # 指定渲染后的文件输出到 "rendered" 文件夹
+
+website:
+  title: "豆瓣坛"  # 网站标题
+  description: "留下些许还未遗忘的时光碎片"  # 网站描述
+  navbar:                     # 导航栏设置
+    left:
+      - text: "Home"
+        href: index.qmd       # 首页文件
+      - text: "About"
+        href: about.qmd       # 关于页面文件
+    right:
+      - icon: github          # 右侧导航的 GitHub 图标
+        href: https://github.com/ming-git
+
+format:
+  html:
+    theme: cosmo              # 使用的主题 (可选：cosmo, flatly, minty 等)
+    css: custom.css           # 自定义 CSS 文件
+    toc: true                 # 启用目录（Table of Contents）
+    toc-depth: 3              # TOC 最大深度为 3
+
+editor: visual                # 默认启用 Visual Editor 支持（所见即所得编辑器）

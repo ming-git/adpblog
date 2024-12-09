@@ -1,5 +1,6 @@
 # RStudio 用户文件
 .Rproj.user/      # 忽略目录加斜杠，保证规则一致
+.Rproj.user
 
 # R 历史文件
 .Rhistory         # 历史记录文件
@@ -59,10 +60,11 @@ Makefile
 
 # Quarto 和 R Markdown 项目专属规则
 .quarto/          # Quarto 配置目录
-*.qmd             # Quarto Markdown 脚本和记录文件
+!*.qmd             # Quarto Markdown 脚本和记录文件
 *.Rproj
 *.lua
-*.yaml
+!*.yaml
+!*.yml
 *.conf
 *.jpg
 *.css
@@ -73,7 +75,7 @@ Makefile
 # 临时与本地开发规则
 _adopapablog.scriv/
 _freeze/
-/posts/
+!/posts/
 renv/
 temp/
 templates/
@@ -83,4 +85,3 @@ scripts/
 /.quarto/
 !/www/
 !/www/**
-.Rproj.user
