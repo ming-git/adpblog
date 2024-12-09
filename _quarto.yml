@@ -1,25 +1,71 @@
 project:
-  type: website       # 项目类型为网站 ("website", 也可选 "book" 或 "article")
-  output-dir: www # 指定渲染后的文件输出到 "rendered" 文件夹
+  type: website
+  output-dir: "_site"
 
 website:
-  title: "豆瓣坛"  # 网站标题
-  description: "留下些许还未遗忘的时光碎片"  # 网站描述
-  navbar:                     # 导航栏设置
-    left:
-      - text: "Home"
-        href: index.qmd       # 首页文件
-      - text: "About"
-        href: about.qmd       # 关于页面文件
-    right:
-      - icon: github          # 右侧导航的 GitHub 图标
-        href: https://github.com/ming-git
+  site-url: "https://adopapa.cc"
+  title: 豆瓣坛
+
+  # 2024-09-01 07:45:28 神奇的隔离作用，防止标题上蹿到navbar；删除这段后
+  announcement:
+    type: info
+    icon: broadcast-fill
+    content: "2024-12-07 试试github自动化发布" # 必须有文字，否则报错
+    position: below-navbar
+
+  navbar:
+    pinned: true
+    collapse: false
+    # logo: images/logo.png #原来要加“” 2024-07-04 16:25:59 又不需要了
+    search: true
+
+    right: #TODO: 2024-07-04 10:40:24 想把这部分放到左侧，社交工具放到右侧但失败了
+      - icon: linkedin
+        href: https://linked.com/
+      - icon: github
+        href: https://github.com/
+
+  open-graph:
+    locale: zh_CN
+    site-name: "豆瓣坛"
+
+  twitter-card:
+    site: "@sitehandle"
+
+theme:
+      light: flatly
+      dark: darklyflatly
 
 format:
   html:
-    theme: cosmo              # 使用的主题 (可选：cosmo, flatly, minty 等)
-    css: custom.css           # 自定义 CSS 文件
-    toc: true                 # 启用目录（Table of Contents）
-    toc-depth: 3              # TOC 最大深度为 3
+    theme:
+      light: flatly
+      dark: darklyflatly
+    css:
+      - css/styles.css
+      - css/navbar-top-height.css
+      # - number-bs-font.css 字体设置无效
+    code-fold: true
+    toc: true
+    number-sections: true
+    # title-block-banner: true
+    toc-location: right
 
-editor: visual                # 默认启用 Visual Editor 支持（所见即所得编辑器）
+    toc-title: "内容提要"  # 设置右侧大纲的标题为中文
+    author-title: "作者"
+    published-title: "日期"
+    # categories-title: "分类标签" # TODO:无效
+
+    date-format: "YYYY/MM/DD,第ww周"
+editor: source
+
+editor_options:
+  markdown:
+    wrap: 72
+    references:
+      location: block
+    canonical: true
+
+output:
+  html_document:
+    toc: true

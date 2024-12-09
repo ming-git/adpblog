@@ -1,0 +1,26 @@
+---
+title: 留下些许还未遗忘的时光碎片
+subtitle: one man's treasure is other man's trash
+description: 唯有写字可以解忧
+listing:
+  id: homepage # 方便引用
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: cloud
+  fields: [image, date, title, categories,description,author]
+  sort-ui: [title, date]
+  filter-ui: true
+  feed: 
+    items: 10
+    type: full
+  max-description-length: 30
+  page-size: 9
+  image-height: 128px
+page-layout: full
+title-block-banner: true
+format:
+  html:
+    include-after-body:
+      - file: beian.html
+---
