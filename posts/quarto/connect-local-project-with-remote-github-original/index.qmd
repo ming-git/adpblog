@@ -1,0 +1,25 @@
+---
+title: "Connect Local Project with Remote GitHub"
+description: "A guide on connecting a local project with a GitHub repository."
+author: "ZHU Quanming"
+date: "2024-06-22"
+categories: [Tutorial, GitHub, Quarto]
+---
+
+如何把一个本地projcet同步到github里新建项目里？
+
+要将本地项目同步到GitHub中的新建项目，可以按照下面的步骤操作：
+
+### **步骤 1: 创建GitHub仓库**
+
+1.  登录到你的GitHub账户。
+
+2.  点击页面右上角的“+”图标，然后选择“New repository”。
+
+3.  填写仓库名称、描述（可选）和其它设置，然后点击“Create repository”。
+
+### **步骤 2: 初始化本地仓库**
+
+如果你还没有在本地项目中初始化Git仓库，打开终端并导航到你的
+
+![github](github.png)

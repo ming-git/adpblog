@@ -1,0 +1,51 @@
+---
+title: docker image的曲线安装法
+author: metacell
+description: 直接在服务器上拉取docker image总是超时怎么办？
+date: 2024-06-27 20:49:43
+categories: [linux,ubuntu,docker]
+---
+
+## 远端服务器安装nginx image
+
+docker pull nginx 超时 2024-07-02 22:36:39 今天有重新开始拉取，已经忘记了，试了试不成功，才想起这个
+
+## 本地拉取-以nginx为例
+
+docker pull nginx
+
+docker save nginx -o nginx.tar
+
+scp nginx.tar ubuntu\@remote-ip:\~
+
+## 服务器
+
+ssh servername
+
+sudo docker load -i nginx.tar
+
+顺利完成转运工作。
+
+## 更新镜像源
+
+echo '
+
+{
+
+"registry-mirrors": \[
+
+"[https://docker.m.daocloud.io",](https://docker.m.daocloud.io%22,)
+
+"[https://huecker.io",](https://huecker.io%22,)
+
+"[https://dockerhub.timeweb.cloud",](https://dockerhub.timeweb.cloud%22,)
+
+"[https://noohub.ru"](https://noohub.ru%22) \]
+
+}' \>
+
+/etc/docker/daemon.json
+
+sudo systemctl daemon-reload && sudo systemctl restart docker
+
+![更新镜像源后的表现](images/clipboard-2932358668.png)

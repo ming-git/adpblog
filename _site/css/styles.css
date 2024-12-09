@@ -1,0 +1,10 @@
+/* 隐藏显示keywords的元素 */
+.keywords {
+  display: none;
+}
+
+
+.thumbnail-img img {
+  width: auto; /* 改变此值以调整图片最大宽度 */
+  height: 40px;
+}

@@ -1,0 +1,50 @@
+---
+title: "tbd"
+subtitle: "tbd"
+description: "tbd"
+author: "Adopapa"
+date: 2024-12-09 07:59:57
+date-modified: 2024-12-09 07:59:57
+categories: [tbd, tbd, tbd, tbd]
+keywords: [tbd, tbd, tbd, tbd]
+tags: [tbd, tbd, tbd, tbd]
+draft: true
+---
+
+## 出现了一堆的问题
+
+![](images/clipboard-2898966472.png)
+
+\[ 1/18\] posts/post-with-code/index.qmd - The project is out-of-sync -- use `renv::status()` for details.
+
+processing file: index.qmd
+
+output file: index.knit.md
+
+WARN: Unable to resolve link target: index.qmd WARN: Unable to resolve link target: about.qmd
+
+```{r}
+# - Project '~/Documents/writer/adopapablog' loaded. [renv 1.0.7]
+# - The project is out-of-sync -- use `renv::status()` for details.
+
+renv::status()
+# This project does not contain a lockfile.
+# Use `renv::snapshot()` to create a lockfile.
+
+renv::snapshot()
+# The following package(s) will be updated in the lockfile:
+# 
+# # CRAN -----------------------------------------------------------------------
+# - renv   [* -> 1.0.7]
+# 
+# The version of R recorded in the lockfile will be updated:
+# - R      [* -> 4.4.2]
+# 
+# - Lockfile written to "~/Documents/writer/adopapablog/renv.lock".
+```
+
+## index文件被删除了，因为_quarto的问题
+
+## head2
+
+## head2

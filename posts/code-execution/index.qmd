@@ -1,0 +1,92 @@
+---
+title: "Code Executioin"
+author: "ZHU QUANMING"
+date: "2024-06-22 12:30:40"
+categories: [quarto,website,guide]
+---
+
+INSERT ANYTHING
+
+## 标题2
+
+### 标题-3季
+
+```         
+```
+
+::: panel-tabset
+## table1
+
+这个能显示处理啊吗
+
+## tab2
+
+## tab3
+:::
+
+term
+
+:   术语
+
+::: {#div1}
+this is div
+
+::: {#div12}
+this div in the div1
+:::
+:::
+
+| Col1dd | Col2dd | Col3dd |
+|--------|--------|--------|
+| 1      |        |        |
+| 2      |        |        |
+| 3      |        |        |
+| 4      |        |        |
+|        |        |        |
+
+: this is my first table
+
+## heading2
+
+this is paragraph
+
+too space 让我透不过气啦
+
+一个空的shortcode会让给你页面渲染不出来来效果我
+
+## 复制过来的表格
+
+下面复制过来的表格，第二行就错位了-safari。2024-06-22 17:52:12 chorme上显示正常，不知道如何在键盘外边加上一圈圆角矩形并设置底色。
+
+| Command | Keyboard Shortcut | Markdown Shortcut |
+|---------|:-----------------:|:-----------------:|
+| Bold    |        ⌘ B        |    `**bold**`     |
+
+\[ X \] LIST CHECK
+
+\[ - \] LIST CHECK
+
+term: this is definatoin
+
+termfkal
+
+:   dkafld: daja f
+
+:   aalafd: dak fa
+
+为什么显示不出来呢。
+
+::: {.callout-tip appearance="simple"}
+基于文件的editor设置
+
+---
+editor:
+  markdown:
+    wrap: 72
+    canonical: true
+---
+:::
+
+为什么要设置\`canonical: true\` - 保持协作中的一致性
+
+With `canonical: true`, edits in visual mode and source mode will result in identical markdown output. This is especially useful if you have multiple authors collaborating using version control, with a mixture of source and visual mode editing among the authors.

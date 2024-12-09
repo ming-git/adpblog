@@ -1,0 +1,84 @@
+---
+title: 如何给服务器起一个简洁好记的名字
+subtitle: How to change the hostname in Ubuntu 22 
+description: 看到随机分配的服务器名字，总是很不爽，干脆自己改改吧
+author: Adopapa
+date: 2024-06-29 08:28:40
+keywords: [server,linux,unbuntu,howto hostname]
+categories: [linux,ubuntu]
+---
+
+在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：
+
+### **一、临时修改主机名**
+
+临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：
+
+```         
+sudo hostnamectl set-hostname tclh01
+```
+
+### **二、永久修改主机名**
+
+要确保重启后主机名依然被修改，我们需要修改两个文件：`/etc/hostname` 和 `/etc/hosts`。
+
+1.  **修改 `/etc/hostname` 文件**
+
+     
+
+    使用文本编辑器（如 `nano` 或 `vi`）编辑该文件：
+
+    ```         
+    sudo nano /etc/hostname
+    ```
+
+    将文件中的内容改为 `tclh01`，保存并退出。
+
+2.  **修改 `/etc/hosts` 文件**
+
+     
+
+    同样使用文本编辑器修改 `/etc/hosts` 文件：
+
+    ```         
+    sudo nano /etc/hosts
+    ```
+
+    找到包含旧主机名的行，并将其修改为新主机名 `tclh01`，类似如下：
+
+    ```         
+    127.0.0.1   localhost
+    127.0.1.1   tclh01
+    ```
+
+    请确保没有多余的空白行或格式错误，保存并退出。
+
+### **三、重启系统**
+
+为了确保所有更改生效，建议重启系统：
+
+```         
+sudo reboot
+```
+
+### **小结**
+
+总结以上步骤，你可以按照如下命令序列操作：
+
+```         
+# 临时修改主机名
+sudo hostnamectl set-hostname tclh01
+
+# 编辑 /etc/hostname 文件
+sudo nano /etc/hostname
+# 将内容改为 tclh01，保存退出
+
+# 编辑 /etc/hosts 文件
+sudo nano /etc/hosts
+# 将相关行修改为 127.0.1.1   tclh01，保存退出
+
+# 重启系统
+sudo reboot
+```
+
+完成这些步骤后，你的服务器主机名应已修改为 `tclh01`，并能在重启后保持不变。

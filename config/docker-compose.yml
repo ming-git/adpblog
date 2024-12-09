@@ -1,0 +1,13 @@
+services:
+  web:
+    image: nginx:latest
+    container_name: adopapacc
+    restart: always
+    volumes:
+      - ./www:/usr/share/nginx/html:ro
+      - ./nginx:/etc/nginx/conf.d:ro
+      - ./ssl/adopapacc.crt:/etc/ssl/certs/adopapacc.crt:ro
+      - ./ssl/adopapacc.key:/etc/ssl/private/adopapacc.key:ro
+    ports:
+      - "80:80"
+      - "443:443"

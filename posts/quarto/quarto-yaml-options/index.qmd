@@ -1,0 +1,22 @@
+---
+titile: Quarto的Yaml设置选项
+author: adopapa
+date: 2024-06-30 16:45:28
+subtitle: How to select the correct options in Quarto Yaml setup
+description: 想让内容。如你所愿？这些魔法石你不得不了解
+keywords: [Quarto YAML]
+categories: [Quarto YAML]
+---
+
+## keywords和category有何不同？
+
+## 节外生枝
+
+`quarto render` 报错已大堆
+
+![render时的一大堆报错](images/render-erro.png)
+
+仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个
+`的` 贴到了yaml设置里了。
+
+![哪里来的的](images/why-error.png)

@@ -58,31 +58,32 @@ rsconnect/
 **/ssl/            # SSL 证书建议忽略 (私钥与证书信息避免泄露)
 Makefile
 
-# Quarto 和 R Markdown 项目专属规则
-.quarto/          # Quarto 配置目录
-!*.qmd             # Quarto Markdown 脚本和记录文件
-*.Rproj
-*.lua
-!*.yaml
-!*.yml
-*.conf
-*.jpg
-!*.css
-!/www/**/*.html
-!/www/**/*.png
-.Rprofile
-
-
-# 临时与本地开发规则
-_adopapablog.scriv/
+# 忽略 Quarto 配置目录和临时文件
+.quarto/            # 不跟踪 Quarto 配置目录本身
 _freeze/
-!/posts/
-renv/
-temp/
+_adopapablog.scriv/
 templates/
+!*.qmd              # 保留 .qmd 文件（Quarto Markdown 文件）
+*.lua
+.Rprofile           # 忽略用户 R 配置文件
+*.Rproj
+temp/
 scripts/
+
+# 忽略 renv 环境目录
+renv/
+
+# 忽略生成的动态文件
 /css/
-/adopapacc/
-/.quarto/
-!/www/
+adopapacc/
+
+# 忽略所有图像，但保留重要目录中的图像
+*.jpg
+*.png
+*.jpeg
+
+# 确保 www 文件夹被保留
+!/www/              # 保留 www 文件夹
 !/www/**
+!/www/**/*.*
+

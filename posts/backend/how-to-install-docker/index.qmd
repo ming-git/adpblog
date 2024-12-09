@@ -1,0 +1,39 @@
+---
+title: "Docker安装"
+author: iti
+description: "Docker作为最重要的部署工具，不可不安装，不可不更新啊" 
+date: 2024-06-27 19:03:54
+date-modified: 2024-12-08 22:08:45
+categories: [it,docker]
+keywords: [docker, ubuntu, macos] 
+tags: [突破, 基本工具]
+---
+
+## 服务器安装docker
+
+ssh tclh
+
+sudo apt update
+
+sudo apt install docker.io -y
+
+## 本地安装docker
+
+为什么要安装呢？d
+ocker pull nginx 无法连接 及时设置了镜像也无法
+
+改为本地科学拉取法
+
+brew install docker
+
+open /Applications/Docker.app
+
+docker --version Docker version 27.0.2, build 912c1ddf8a
+
+以下方法没有测试过，以后有机会试试 方法四：检查防火墙设置
+
+有时候防火墙设置可能会阻止 Docker 的网络连接。确
+保服务器的防火墙允许 Docker 使用必要的网络端口。你
+可以临时禁用防火墙以进行测试（请谨慎操作），或添加规则允许 Docker 的网络流量。
+
+sudo ufw allow 2375/tcp sudo ufw reload

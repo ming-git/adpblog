@@ -1,0 +1,70 @@
+---
+title: "学习笔记-Rstudio可视化编辑器之技术写作"
+subtitle: "Rstudio - Visual Editor"
+description: "理工男逃不开的技术写作，就从这里开始"
+author: "ZHU QUANMING"
+date: "2024-06-22 12:30:40"
+categories: [quarto,rstudio,学习笔记]
+keywords: [Quarto,Rstudio,Tips,Notes]
+---
+
+`公式`、`引用`、`交叉索引`、`脚注`、`内嵌代码`总是技术写作逃不过的东西。好好的理解以为写
+
+## 如何写公式
+
+技术写作背后的原理和支持技术其实就是`LaTex`, `Pandoc` `Markdown`。 在`Quarto 1.4`中引入了`Typst`, 号称比`LaTex`更好使用，希望可以早点用上去。
+
+### 内联的公式
+
+举例: $\sqrt x=26$ 的解就是$x=676$
+
+写这个公式的时候要注意：
+
+1.  sqrt后是空格后再写x, 而不是`\sqrt(x`, 那样的话就变成了 $\sqrt(x)$
+2.  其实，在输入美元符号\$的时候，连续输入三个\$，这样才会进入公式输入模式。如果只输入一个\$或两个美元符号，然后在中间加入符号，它不会变成类的公司。
+
+## 正式公式
+
+为什么写不出教程里红色的\$\$的样子？把公式latex代码直接显示处理啊反而有点难啊.。 TODO, 即使插入raw tex block (上面一个公式其实我是希望显示源代码的啊)
+
+2024-06-23 如果只是要显示源代码，不运算，请在将代码语言标记从`{lang}` 改为 `{=lang}` 即可
+
+```{=r}
+install.packages("test")
+```
+```{r eval=FALSE}
+install.packages("test")
+```
+
+```{=latex}
+$$
+P(E) = {n \choose k} p^k (2-p)^{n - k} 
+$$ 
+```
+$$
+P(E) = {n \choose k} p^k (2-p)^{n - k}
+$$
+
+## 交叉索引
+
+因为每个需要交叉索引的实体(如图片、公式、表格或者其中的某一段文字)，建立一个标签，给出一个唯一的标记，这样就可以在文章中随便引用了。
+
+`![Elephant](crossref-figure.png){#fig-elephant fig-alt="Altnative text" fig-align="center"}`
+
+![Elephant](crossref-figure.png){#fig-elephant fig-alt="Altnative text" fig-align="center"}
+
+在这种情况下，我们只要在其他地方引用`@fig-elephant`即可连接到这个实体了。
+
+See @fig-elephant for details
+
+## 两种编辑模式
+
+不知道为什么\`\`的使用不知道如何删除，有的时候你会发现，输入错误了，但是不知道如何在可视化编辑器里修改，只能切换到源代码模式里进行。所以两种方式是相辅相成的，需要结合使用才好。
+
+Here's some raw inline HTML: <a>html</a>
+
+实际上你需要在两种模式中来回的切换，尽量使用每一种模式中最熟悉的部分，这样也可以检查文件在两种模式中都显示正常，因为在某些时候你的合作者有的喜欢可视化模式，女的喜欢，源代码模式，无论哪种模式，最终的结果都要确保其正确。
+
+## bugs
+
+`CMD+S` 不能保存文件，，选择关闭文件提醒保存垫子保存后仍然无法保存。重新关闭后打开，恢复了，看来稳定性还是有些问题。
