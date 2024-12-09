@@ -4,6 +4,7 @@ project:
 
 execute:
   cache: true        # 启用代码缓存以配合增量渲染
+  freeze: auto
 
 website:
   site-url: "https://adopapa.cc"

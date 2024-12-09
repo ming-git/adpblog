@@ -67,7 +67,6 @@ Makefile
 
 # 忽略 Quarto 配置目录和临时文件
 .quarto/            # 不跟踪 Quarto 配置目录本身
-_freeze/
 _adopapablog.scriv/
 templates/
 !*.qmd              # 保留 .qmd 文件（Quarto Markdown 文件）

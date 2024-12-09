@@ -1,0 +1,15 @@
+{
+  "hash": "3d16e1a10a38d762a911fe77388c6463",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"tbd\"\nsubtitle: \"tbd\"\ndescription: \"tbd\"\nauthor: \"Adopapa\"\ndate: 2024-12-09 07:59:57\ndate-modified: 2024-12-09 07:59:57\ncategories: [tbd, tbd, tbd, tbd]\nkeywords: [tbd, tbd, tbd, tbd]\ntags: [tbd, tbd, tbd, tbd]\ndraft: true\n---\n\n\n\n## 出现了一堆的问题\n\n![](images/clipboard-2898966472.png)\n\n\\[ 1/18\\] posts/post-with-code/index.qmd - The project is out-of-sync -- use `renv::status()` for details.\n\nprocessing file: index.qmd\n\noutput file: index.knit.md\n\nWARN: Unable to resolve link target: index.qmd WARN: Unable to resolve link target: about.qmd\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# - Project '~/Documents/writer/adopapablog' loaded. [renv 1.0.7]\n# - The project is out-of-sync -- use `renv::status()` for details.\n\nrenv::status()\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nNo issues found -- the project is in a consistent state.\n```\n\n\n:::\n\n```{.r .cell-code}\n# This project does not contain a lockfile.\n# Use `renv::snapshot()` to create a lockfile.\n\nrenv::snapshot()\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n- The lockfile is already up to date.\n```\n\n\n:::\n\n```{.r .cell-code}\n# The following package(s) will be updated in the lockfile:\n# \n# # CRAN -----------------------------------------------------------------------\n# - renv   [* -> 1.0.7]\n# \n# The version of R recorded in the lockfile will be updated:\n# - R      [* -> 4.4.2]\n# \n# - Lockfile written to \"~/Documents/writer/adopapablog/renv.lock\".\n```\n:::\n\n\n\n## index文件被删除了，因为_quarto的问题\n\n## head2\n\n## head2\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

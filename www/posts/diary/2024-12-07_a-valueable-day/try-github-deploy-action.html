@@ -165,14 +165,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">内容提要</h2>
    
-  <ul class="incremental">
+  <ul>
   <li><a href="#step-1-创建-github-仓库" id="toc-step-1-创建-github-仓库" class="nav-link active" data-scroll-target="#step-1-创建-github-仓库"><strong>Step 1: 创建 GitHub 仓库</strong></a></li>
   <li><a href="#step-2-初始化本地-git-仓库并推送到-github" id="toc-step-2-初始化本地-git-仓库并推送到-github" class="nav-link" data-scroll-target="#step-2-初始化本地-git-仓库并推送到-github"><strong>Step 2: 初始化本地 Git 仓库并推送到 GitHub</strong></a></li>
   <li><a href="#step-3-设置服务器的-ssh-配置" id="toc-step-3-设置服务器的-ssh-配置" class="nav-link" data-scroll-target="#step-3-设置服务器的-ssh-配置"><strong>Step 3: 设置服务器的 SSH 配置</strong></a></li>
   <li><a href="#step-4-配置-github-actions-自动化部署" id="toc-step-4-配置-github-actions-自动化部署" class="nav-link" data-scroll-target="#step-4-配置-github-actions-自动化部署"><strong>Step 4: 配置 GitHub Actions 自动化部署</strong></a></li>
   <li><a href="#最大的坑就在这里-ai的拐点" id="toc-最大的坑就在这里-ai的拐点" class="nav-link" data-scroll-target="#最大的坑就在这里-ai的拐点">最大的坑就在这里-AI的拐点</a></li>
   <li><a href="#终于成功了" id="toc-终于成功了" class="nav-link" data-scroll-target="#终于成功了">终于成功了</a>
-  <ul class="incremental collapse">
+  <ul class="collapse">
   <li><a href="#step-5-测试工作流" id="toc-step-5-测试工作流" class="nav-link" data-scroll-target="#step-5-测试工作流"><strong>Step 5: 测试工作流</strong></a></li>
   <li><a href="#问题排查" id="toc-问题排查" class="nav-link" data-scroll-target="#问题排查"><strong>问题排查</strong></a></li>
   <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结"><strong>总结</strong></a></li>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>AI回答: 好的！以 下是如何将 Quarto 渲染生成的 publish 文件夹内容自动同步到 GitHub，并通过 GitHub 将内容部署到服务器的完整步骤。我 们将逐步指导您完成从 Git 到服务器的自动化流程。</p>
 <p>以下是实现目标的完整流程：</p>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p><strong>创建 GitHub 仓库并上传 <code>publish</code> 文件夹的内容</strong>。</p></li>
 <li><p><strong>本地初始化 Git 仓库并推送到 GitHub</strong>。</p></li>
 <li><p><strong>在服务器上设置 SSH 私钥/公钥，允许 GitHub 访问服务器。</strong></p></li>
@@ -265,10 +265,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="step-1-创建-github-仓库" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-创建-github-仓库"><strong>Step 1: 创建 GitHub 仓库</strong></h3>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>登陆 <a href="https://github.com/">GitHub</a>，在右上角点击 <strong>“+”</strong>，选择 <strong>“New repository”</strong>。</p></li>
 <li><p>创建一个新的仓库：</p>
-<ul class="incremental">
+<ul>
 <li><p><strong>Repository name</strong>: 输入仓库名称（例如 <code>my-quarto-site</code>）。</p></li>
 <li><p>确保仓库的 <strong>Visibility</strong> 选择为 Public 或 Private（根据需求）。</p></li>
 <li><p>不要初始化 <code>README</code> 文件或添加 <code>.gitignore</code> 文件。</p></li>
@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-2-初始化本地-git-仓库并推送到-github" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-初始化本地-git-仓库并推送到-github"><strong>Step 2: 初始化本地 Git 仓库并推送到 GitHub</strong></h3>
 <p>现在需要将您的 Quarto 项目的 <code>publish</code> 文件夹同步到 GitHub 仓库。</p>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>打开您的终端或 RStudio 的终端面板，并进入 Quarto 项目目录：</p>
 <pre><code>cd /path/to/your/project</code></pre></li>
 <li><p>进入渲染生成的 <code>publish</code> 文件夹：</p>
@@ -308,7 +308,7 @@ git push -u origin main</code></pre></li>
 <p>为了让 GitHub 可以自动将内容同步到您的服务器，需要设置 GitHub 的访问权限，通过 <strong>SSH 密钥</strong> 将 GitHub 和服务器连接。</p>
 <section id="配置服务器上的-ssh-密钥" class="level4">
 <h4 class="anchored" data-anchor-id="配置服务器上的-ssh-密钥"><strong>1. 配置服务器上的 SSH 密钥：</strong></h4>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>登陆服务器（通过 SSH 登录）。在 服务器终端执行以下命令，检查是否已存在 SSH 密钥：</p>
 <pre><code>ls ~/.ssh/id_rsa</code></pre></li>
 <li><p>如果不存在，创建一个新的单独的 SSH 密钥对：</p>
@@ -322,13 +322,13 @@ git push -u origin main</code></pre></li>
 </section>
 <section id="添加公钥到-github" class="level4">
 <h4 class="anchored" data-anchor-id="添加公钥到-github"><strong>2. 添加公钥到 GitHub：</strong></h4>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>登陆 GitHub，点击右上角头像，进入 <strong>Settings(账号settings)</strong>。</p></li>
 <li><p>找到左侧的 <strong>SSH and GPG keys</strong>，点击 <strong>New SSH key</strong>。</p></li>
 <li><p>添加 <code>.ssh/id_rsa_github.pub</code> 的内容到 GitHub，并点击保存。</p></li>
 <li><p>修改服务器ssh config file</p>
 <p>编辑或创建 SSH 配置文件，告诉 SSH 使用正确的密钥文件。</p>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>打开或创建文件&nbsp;<code>~/.ssh/config</code>：</p>
 <pre><code>vi ~/.ssh/config</code></pre></li>
 <li><p>添加以下内容（将&nbsp;<code>~/.ssh/id_rsa</code>&nbsp;替换为你添加到 GitHub 的密钥路径，例如&nbsp;<code>~/.ssh/id_rsa_github</code>）：</p>
@@ -355,7 +355,7 @@ git push -u origin main</code></pre></li>
 <p>GitHub Actions 是 GitHub 内置的一种工具，用来自动化工作流。在 我们配置后，GitHub 会在每次您推送内容到 <code>main</code> 分支时，自动将 <code>publish</code> 文件夹的内容同步到服务器的 <code>www</code> 目录。</p>
 <section id="在-github-仓库中创建-actions-配置文件" class="level4">
 <h4 class="anchored" data-anchor-id="在-github-仓库中创建-actions-配置文件"><strong>1. 在 GitHub 仓库中创建 Actions 配置文件：</strong></h4>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>在项目中创建一个 <code>.github/workflows</code> 文件夹（如果不存在）。</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -398,7 +398,7 @@ jobs:
 <section id="配置服务器访问的私钥" class="level4">
 <h4 class="anchored" data-anchor-id="配置服务器访问的私钥"><strong>2. 配置服务器访问的私钥：</strong></h4>
 <p>为了让 GitHub Actions 在服务器上使用 SSH，还需将服务器的 <strong>私钥</strong> 添加到 GitHub 仓库的 Secrets。</p>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>登录 GitHub 仓库，进入 <strong>Settings &gt; Secrets and variables &gt; Actions</strong>。</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -511,7 +511,7 @@ ai prompt
 <hr>
 <section id="step-5-测试工作流" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-测试工作流"><strong>Step 5: 测试工作流</strong></h3>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>回到本地终端，修改您的 <code>publish</code> 文件夹的内容（比如新建一个文件或修改现有内容）。</p></li>
 <li><p>提交新的内容到 GitHub 仓库：</p>
 <pre><code>git add .
@@ -524,7 +524,7 @@ git push origin main</code></pre></li>
 </section>
 <section id="问题排查" class="level3">
 <h3 class="anchored" data-anchor-id="问题排查"><strong>问题排查</strong></h3>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>如果同步失败，请检查服务器 <code>www</code> 目录的路径是否正确。</p></li>
 <li><p>测试 <code>rsync</code> 是否能够在服务器和 GitHub Actions 工作流中正常工作。</p></li>
 <li><p>确认 SSH 设置是否正确，<code>id_rsa</code> 可以正常授权访问服务器。</p></li>
@@ -534,7 +534,7 @@ git push origin main</code></pre></li>
 <section id="总结" class="level3">
 <h3 class="anchored" data-anchor-id="总结"><strong>总结</strong></h3>
 <p>通过上述步骤，您可以实现：</p>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p>本地 Quarto 渲染生成内容到 <code>publish</code> 文件夹。</p></li>
 <li><p>使用 Git 将 <code>publish</code> 文件夹内容上传到 GitHub。</p></li>
 <li><p>配置 GitHub Actions，让 <code>www</code> 的内容自动部署到服务器的 <code>www</code> 目录，完成发布的自动化。</p></li>

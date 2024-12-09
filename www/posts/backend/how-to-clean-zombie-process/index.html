@@ -131,11 +131,11 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">内容提要</h2>
    
-  <ul class="incremental">
+  <ul>
   <li><a href="#什么是僵尸进程" id="toc-什么是僵尸进程" class="nav-link active" data-scroll-target="#什么是僵尸进程"><strong>什么是僵尸进程？</strong></a></li>
   <li><a href="#如何查找僵尸进程" id="toc-如何查找僵尸进程" class="nav-link" data-scroll-target="#如何查找僵尸进程"><strong>如何查找僵尸进程？</strong></a></li>
   <li><a href="#处理僵尸进程的方法" id="toc-处理僵尸进程的方法" class="nav-link" data-scroll-target="#处理僵尸进程的方法"><strong>处理僵尸进程的方法</strong></a>
-  <ul class="incremental collapse">
+  <ul class="collapse">
   <li><a href="#手动即时清理" id="toc-手动即时清理" class="nav-link" data-scroll-target="#手动即时清理">手动即时清理</a></li>
   </ul></li>
   <li><a href="#小结" id="toc-小结" class="nav-link" data-scroll-target="#小结"><strong>小结</strong></a></li>
@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="处理僵尸进程的方法"><strong>处理僵尸进程的方法</strong></h2>
 <section id="手动即时清理" class="level3">
 <h3 class="anchored" data-anchor-id="手动即时清理">手动即时清理</h3>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><p><strong>手动杀掉父进程</strong>： 找到僵尸进程的父进程ID (PPID)。你可以使用&nbsp;<code>ps</code>&nbsp;或&nbsp;<code>top</code>&nbsp;命令来查找其父进程。</p>
 <pre><code>ps -o ppid= -p &lt;zombie_pid&gt;</code></pre>
 <p>使用&nbsp;<code>kill</code>&nbsp;命令来结束该父进程：</p>
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 sudo reboot</code></pre>
 <h3 id="周期性监控和自动处理" class="anchored"><strong>周期性监控和自动处理</strong></h3>
 <p>对于需要持续监控并处理僵尸进程的系统，可以编写脚本定期检查并处理这些进程。</p>
-<ol class="incremental" type="1">
+<ol type="1">
 <li><strong>示例脚本：</strong></li>
 </ol>
 <pre><code>#!/bin/bash
@@ -232,7 +232,7 @@ if [ -n "$zombies" ]; then
         [ "$parent_pid" ] &amp;&amp; sudo kill -HUP $parent_pid
     done
 fi</code></pre>
-<ol class="incremental" start="2" type="1">
+<ol start="2" type="1">
 <li>设置定时任务: 将这个脚本设为定时任务，例如通过&nbsp;<code>crontab</code>&nbsp;设置定期运行。</li>
 </ol>
 <pre><code>crontab -e
