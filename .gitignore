@@ -67,8 +67,9 @@ Makefile
 !*.yml
 *.conf
 *.jpg
-*.css
-*.html
+!*.css
+!/www/**/*.html
+!/www/**/*.png
 .Rprofile
 
 
