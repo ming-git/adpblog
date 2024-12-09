@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>豆瓣坛</title>
-<link>https://adopapa.cc/</link>
-<atom:link href="https://adopapa.cc/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://ming-git.github.io/adpblog/</link>
+<atom:link href="https://ming-git.github.io/adpblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>唯有写字可以解忧</description>
 <generator>quarto-1.6.39</generator>
 <lastBuildDate>Sun, 08 Dec 2024 23:04:15 GMT</lastBuildDate>
 <item>
   <title>文件去哪儿了</title>
   <dc:creator>Adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/quarto-installation.html</link>
+  <link>https://ming-git.github.io/adpblog/posts/quarto/quarto-1.6-installaltion/quarto-installation.html</link>
   <description><![CDATA[ 
 
 
@@ -22,9 +22,9 @@
 
 <section id="问题来了安装完成版本未变" class="level2">
 <h2 class="anchored" data-anchor-id="问题来了安装完成版本未变">问题来了：安装完成版本未变</h2>
-<p><img src="https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/images/clipboard-3892075654.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/quarto/quarto-1.6-installaltion/images/clipboard-3892075654.png" class="img-fluid"></p>
 <p>过来一下刚才的安装过程，以前选择的都是为这个电脑的所有用反转用，其实自己就是这台电脑的唯一用户，所以选择了仅为自己安全这句话平时装的不同之处吧。</p>
-<p><img src="https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/images/clipboard-1917237752.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/quarto/quarto-1.6-installaltion/images/clipboard-1917237752.png" class="img-fluid"></p>
 <p>在AI求证一下如何？</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -143,13 +143,13 @@ quarto --version
  ]]></description>
   <category>it</category>
   <category>thinking</category>
-  <guid>https://adopapa.cc/posts/quarto/quarto-1.6-installaltion/quarto-installation.html</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/quarto/quarto-1.6-installaltion/quarto-installation.html</guid>
   <pubDate>Sun, 08 Dec 2024 23:04:15 GMT</pubDate>
 </item>
 <item>
   <title>搞定博客的自动发布</title>
   <dc:creator>adp </dc:creator>
-  <link>https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html</link>
+  <link>https://ming-git.github.io/adpblog/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html</link>
   <description><![CDATA[ 
 
 
@@ -230,7 +230,7 @@ git push -u origin main</code></pre></li>
 <pre><code>ls ~/.ssh/id_rsa</code></pre></li>
 <li><p>如果不存在，创建一个新的单独的 SSH 密钥对：</p>
 <pre><code>ssh-keygen -t rsa -b 4096 -C "zhuquanming@gmail.com" -f ~/.ssh/id_rsa_github</code></pre>
-<p><img src="https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/images/ssh-keygen.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/diary/2024-12-07_a-valueable-day/images/ssh-keygen.png" class="img-fluid"></p>
 <p>按要求输入路径（或按 ENTER 直接使用默认路径），设置密码可选。</p></li>
 <li><p>将生成的公钥复制到剪贴板：</p>
 <pre><code>cat ~/.ssh/id_rsa_github.pub</code></pre>
@@ -369,7 +369,7 @@ jobs:
 <h2 class="anchored" data-anchor-id="终于成功了">终于成功了</h2>
 <p>微信里搜索“github action 部署文件到服务器” 看到提到了“easingthemes/ssh-deploy”，感觉这是一个突破点，再看看，是把ssh和rsync打包一起的，看来方向上解决了第一次里直接调用rsync的问题。</p>
 <p>马上让ai指令“github中还有哪些类似 easingthemes/ssh-deploy 的文件部署actions？” 。</p>
-<p><img src="https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/images/ai-lookuop-easingthemes:ssh-deploy.jpeg" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/diary/2024-12-07_a-valueable-day/images/ai-lookuop-easingthemes:ssh-deploy.jpeg" class="img-fluid"></p>
 <p>再接再厉，给她指令</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -666,13 +666,13 @@ git push origin main</code></pre></li>
   <category>github</category>
   <category>deploy</category>
   <category>action</category>
-  <guid>https://adopapa.cc/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html</guid>
   <pubDate>Sat, 07 Dec 2024 08:46:55 GMT</pubDate>
 </item>
 <item>
   <title>海棠果热成了红苹果</title>
   <dc:creator>Adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/diary/lastdayofaugust.html</link>
+  <link>https://ming-git.github.io/adpblog/posts/diary/lastdayofaugust.html</link>
   <description><![CDATA[ 
 
 
@@ -680,10 +680,10 @@ git push origin main</code></pre></li>
 
 <p>红扑扑的，如果不说，你会以为是苹果吧。</p>
 <p>这只是公司园区里的海棠果。三十多年了，其实我很难注意到他们，其一，它们往年的身材较小，比大枣也大不了多少，其二，每年他们都是被浓密的绿叶遮挡住了，不仔细看，很容易只见绿叶不见绿果。今年带劲的天气(42.4度)给了他们疯狂生长的信号，叶子也脱落殆尽，让你没法忽略那个庞大的果子存在。</p>
-<p><img src="https://adopapa.cc/posts/diary/images/IMG_4537.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/diary/images/IMG_4537.png" class="img-fluid"></p>
 <p>想起在新加坡的滨海花园(Garden by the Bay)的云雾森林(Clouds Forest)里一起看全球气候变化的电影(看样子是2010年拍的)。电影预测2100年全球的平均温度会上升5度左右。这是基于继续高排放情况下的预测，但我估计这是比较可能的结果，甚至是比较乐观的结果，毕竟人类的天性你懂的)。</p>
 <p>出了门，我半沉重半开玩笑地对儿子说，祝你2114的百岁身躯可以抵挡得住那股热浪吧，儿子大笑。</p>
-<p><img src="https://adopapa.cc/posts/diary/images/FA64D6FA-273E-48D8-B137-AA1AA8DDF3D0_1_105_c.jpeg" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/diary/images/FA64D6FA-273E-48D8-B137-AA1AA8DDF3D0_1_105_c.jpeg" class="img-fluid"></p>
 <p>2024-08-30 12:49:36</p>
 
 
@@ -692,13 +692,13 @@ git push origin main</code></pre></li>
   <category>随记</category>
   <category>气候</category>
   <category>植物</category>
-  <guid>https://adopapa.cc/posts/diary/lastdayofaugust.html</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/diary/lastdayofaugust.html</guid>
   <pubDate>Fri, 30 Aug 2024 04:25:25 GMT</pubDate>
 </item>
 <item>
   <title>Ubuntu上的Docker</title>
   <dc:creator>aiit </dc:creator>
-  <link>https://adopapa.cc/posts/backend/how-to-install-docker-in -ubuntu22/</link>
+  <link>https://ming-git.github.io/adpblog/posts/backend/how-to-install-docker-in -ubuntu22/</link>
   <description><![CDATA[ 
 
 
@@ -740,13 +740,13 @@ git push origin main</code></pre></li>
  ]]></description>
   <category>IT</category>
   <category>Docker</category>
-  <guid>https://adopapa.cc/posts/backend/how-to-install-docker-in -ubuntu22/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/backend/how-to-install-docker-in -ubuntu22/</guid>
   <pubDate>Mon, 01 Jul 2024 13:38:46 GMT</pubDate>
 </item>
 <item>
   <title></title>
   <dc:creator>adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/quarto/quarto-yaml-options/</link>
+  <link>https://ming-git.github.io/adpblog/posts/quarto/quarto-yaml-options/</link>
   <description><![CDATA[ 
 
 
@@ -760,14 +760,14 @@ git push origin main</code></pre></li>
 <p><code>quarto render</code> 报错已大堆</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://adopapa.cc/posts/quarto/quarto-yaml-options/images/render-erro.png" class="img-fluid figure-img"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/quarto/quarto-yaml-options/images/render-erro.png" class="img-fluid figure-img"></p>
 <figcaption>render时的一大堆报错</figcaption>
 </figure>
 </div>
 <p>仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个 <code>的</code> 贴到了yaml设置里了。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://adopapa.cc/posts/quarto/quarto-yaml-options/images/why-error.png" class="img-fluid figure-img"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/quarto/quarto-yaml-options/images/why-error.png" class="img-fluid figure-img"></p>
 <figcaption>哪里来的的</figcaption>
 </figure>
 </div>
@@ -777,13 +777,13 @@ git push origin main</code></pre></li>
 
  ]]></description>
   <category>Quarto YAML</category>
-  <guid>https://adopapa.cc/posts/quarto/quarto-yaml-options/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/quarto/quarto-yaml-options/</guid>
   <pubDate>Sun, 30 Jun 2024 08:45:28 GMT</pubDate>
 </item>
 <item>
   <title>自己的地盘，自己看着点</title>
   <dc:creator>Adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/</link>
+  <link>https://ming-git.github.io/adpblog/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/</link>
   <description><![CDATA[ 
 
 
@@ -796,7 +796,7 @@ git push origin main</code></pre></li>
 <section id="先来一个-neofetch" class="level2">
 <h2 class="anchored" data-anchor-id="先来一个-neofetch">先来一个 neofetch</h2>
 <p>有事问AI, 尽管其会胡说八道，但是确实一个线索的重要提供者，在于计算机类的信息还是以个蛮不错的开始。爱</p>
-<p><img src="https://adopapa.cc/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/images/neofetch.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/images/neofetch.png" class="img-fluid"></p>
 </section>
 <section id="ai的推荐-存档" class="level2">
 <h2 class="anchored" data-anchor-id="ai的推荐-存档">AI的推荐-存档</h2>
@@ -904,13 +904,13 @@ bash &lt;(curl -Ss https://my-netdata.io/kickstart.sh)</code></pre></li>
   <category>Linux</category>
   <category>Server</category>
   <category>Monitor</category>
-  <guid>https://adopapa.cc/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/ubuntu22/how-to-monitor-linux-server-ubuntu/</guid>
   <pubDate>Sun, 30 Jun 2024 08:14:12 GMT</pubDate>
 </item>
 <item>
   <title>自动化发布的初体验-本地发布</title>
   <dc:creator>Adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/quarto/publish-website-localhost-with-nginx-/</link>
+  <link>https://ming-git.github.io/adpblog/posts/quarto/publish-website-localhost-with-nginx-/</link>
   <description><![CDATA[ 
 
 
@@ -940,13 +940,13 @@ bash &lt;(curl -Ss https://my-netdata.io/kickstart.sh)</code></pre></li>
   <category>Quarto</category>
   <category>nginx</category>
   <category>docker</category>
-  <guid>https://adopapa.cc/posts/quarto/publish-website-localhost-with-nginx-/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/quarto/publish-website-localhost-with-nginx-/</guid>
   <pubDate>Sun, 30 Jun 2024 07:39:40 GMT</pubDate>
 </item>
 <item>
   <title>如何给服务器起一个简洁好记的名字</title>
   <dc:creator>Adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/</link>
+  <link>https://ming-git.github.io/adpblog/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/</link>
   <description><![CDATA[ 
 
 
@@ -1006,13 +1006,13 @@ sudo reboot</code></pre>
  ]]></description>
   <category>linux</category>
   <category>ubuntu</category>
-  <guid>https://adopapa.cc/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/</guid>
   <pubDate>Sat, 29 Jun 2024 00:28:40 GMT</pubDate>
 </item>
 <item>
   <title>Excel函数之lookup, vlookup, xlookup</title>
   <dc:creator>adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/</link>
+  <link>https://ming-git.github.io/adpblog/posts/excel/lookup-vlookup-xlookup/</link>
   <description><![CDATA[ 
 
 
@@ -1022,8 +1022,8 @@ sudo reboot</code></pre>
 <p>今天朋友问lookup更简单啊，为什么要vlookup，我就傻了，赶紧问ai结，论就是lookup只能单行匹配，而是只能近似匹配，这个不能满足我们的业务场景需求。</p>
 <p>另外一个同事提出现在有了xlookup了，更加简单，结果大家找了一下，应该是比较新的版本里才有xlookup。和 vlookup想不比，xlookup可以查找行，获取任意列的返回，vlookup只能返回对比行右侧的行，一起的解决方案就是临时把查找行左侧的所需列复制插入查找行的右侧。</p>
 <p>做了一个测试表格，对比lookup，vlookup，xlookup的查找效果。</p>
-<p><img src="https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/images/excel-lookup-test-02.png" class="img-fluid"></p>
-<p><img src="https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/images/excel-lookup-test-01.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/excel/lookup-vlookup-xlookup/images/excel-lookup-test-02.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/excel/lookup-vlookup-xlookup/images/excel-lookup-test-01.png" class="img-fluid"></p>
 <p>excel的版本很多，每个人需要具体看看自己的版本里有这个公式没。用 起来吧，终于摆脱vlookup的限制和繁琐了。</p>
 
 
@@ -1031,20 +1031,20 @@ sudo reboot</code></pre>
  ]]></description>
   <category>linux</category>
   <category>ubuntu</category>
-  <guid>https://adopapa.cc/posts/excel/lookup-vlookup-xlookup/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/excel/lookup-vlookup-xlookup/</guid>
   <pubDate>Fri, 28 Jun 2024 00:20:48 GMT</pubDate>
 </item>
 <item>
   <title>一不留神，僵尸就这么跳将进来了</title>
   <dc:creator>adopapa </dc:creator>
-  <link>https://adopapa.cc/posts/backend/how-to-clean-zombie-process/</link>
+  <link>https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/</link>
   <description><![CDATA[ 
 
 
 
 
 <p>看到系统信息中提到的僵尸进程（zombie process），尽管听起来可能有些令人担忧，但它并不一定意味着系统存在危险。不过，了解什么是僵尸进程以及如何处理它们是很重要的。</p>
-<p><img src="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png" class="img-fluid"></p>
 <section id="什么是僵尸进程" class="level2">
 <h2 class="anchored" data-anchor-id="什么是僵尸进程"><strong>什么是僵尸进程？</strong></h2>
 <p>僵尸进程是在其执行完成后仍保留在进程表中的进程。这些进程已经终止，但其父进程还没有读取其退出状态，因此这些进程的资源尚未完全释放。它们占用的系统资源非常少，但积累太多的僵尸进程可能会耗尽系统可用的进程表条目。</p>
@@ -1053,7 +1053,7 @@ sudo reboot</code></pre>
 <h2 class="anchored" data-anchor-id="如何查找僵尸进程"><strong>如何查找僵尸进程？</strong></h2>
 <p>你可以使用&nbsp;<code>ps</code>&nbsp;命令来查找系统中的僵尸进程：</p>
 <pre><code>ps aux | grep Z</code></pre>
-<p><img src="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.21.22.png" class="img-fluid"></p>
+<p><img src="https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.21.22.png" class="img-fluid"></p>
 <p>在输出中，你会看到带有&nbsp;<code>Z</code>&nbsp;状态码的进程，这些就是僵尸进程。</p>
 </section>
 <section id="处理僵尸进程的方法" class="level2">
@@ -1066,7 +1066,7 @@ sudo reboot</code></pre>
 <p>使用&nbsp;<code>kill</code>&nbsp;命令来结束该父进程：</p>
 <pre><code>sudo kill -HUP &lt;parent_pid&gt;</code></pre>
 <p>这会告诉父进程重新读取子进程的退出状态并释放僵尸进程。</p>
-<p><img src="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.21.51.png" class="img-fluid"></p></li>
+<p><img src="https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.21.51.png" class="img-fluid"></p></li>
 <li><p><strong>重启服务或系统</strong>： 如果僵尸进程是由某个服务引起的，重启该服务可能会解决问题。如果这个方法无效，重启系统通常会清理所有僵尸进程。</p>
 <pre><code>sudo systemctl restart your_service
 # 或者
@@ -1102,7 +1102,7 @@ fi</code></pre>
 
  ]]></description>
   <category>linux ubuntu process zombie</category>
-  <guid>https://adopapa.cc/posts/backend/how-to-clean-zombie-process/</guid>
+  <guid>https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/</guid>
   <pubDate>Fri, 28 Jun 2024 00:20:48 GMT</pubDate>
 </item>
 </channel>

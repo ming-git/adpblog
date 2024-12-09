@@ -1,1 +1,1 @@
-Sitemap: https://adopapa.cc/sitemap.xml
+Sitemap: https://ming-git.github.io/adpblog/sitemap.xml

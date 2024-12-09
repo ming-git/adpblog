@@ -76,14 +76,14 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../../css/navbar-top-height.css">
 <meta property="og:title" content="一不留神，僵尸就这么跳将进来了 – 豆瓣坛">
 <meta property="og:description" content="远程登录服务器，突然看到一个信息，你有一个僵尸进程，吓坏了😓">
-<meta property="og:image" content="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png">
+<meta property="og:image" content="https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png">
 <meta property="og:site_name" content="豆瓣坛">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image:height" content="278">
 <meta property="og:image:width" content="558">
 <meta name="twitter:title" content="一不留神，僵尸就这么跳将进来了 – 豆瓣坛">
 <meta name="twitter:description" content="远程登录服务器，突然看到一个信息，你有一个僵尸进程，吓坏了😓">
-<meta name="twitter:image" content="https://adopapa.cc/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png">
+<meta name="twitter:image" content="https://ming-git.github.io/adpblog/posts/backend/how-to-clean-zombie-process/images/Screenshot 2024-06-28 at 08.17.31.png">
 <meta name="twitter:site" content="@sitehandle">
 <meta name="twitter:image-height" content="278">
 <meta name="twitter:image-width" content="558">
@@ -483,7 +483,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/adopapa\.cc");
+      var filterRegex = new RegExp("https:\/\/ming-git\.github\.io\/adpblog\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
