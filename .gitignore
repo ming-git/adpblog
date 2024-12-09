@@ -84,11 +84,6 @@ renv/
 /css/
 adopapacc/
 
-# 忽略所有图像，但保留重要目录中的图像
-*.jpg
-*.png
-*.jpeg
-
 # 确保 www 文件夹被保留
 !/www/              # 保留 www 文件夹
 !/www/**
