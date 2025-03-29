@@ -1,0 +1,604 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "博主和博客的那些事",
+    "section": "",
+    "text": "西人之Blog，国人之博客，大抵已入末流，而偶却才跌跌撞撞地赶到此站。心 里一直想要留下些许文字,断断续续流浪于各大平台，厌烦了被圈养的样子。于 是想要自己的一方净土，卸了大佬们的订制模版，折腾了几回，终于自己都会了https配置，感觉自己都高大起来。\n然此等莫名其妙的折腾，十个亿起步的大佬们是不屑的，下里巴人也是不屑的，大概只有留给AI了，我猜它的总结会是：离题万里，当是此君，于是我预备作一个空白墓碑的页面，等着机器人的评价吧。\n写些什么呢？我 一直没有想清楚这事。儿 子到来我成了豆爸，既然对于这个世界上最具挑战性的职业，就叫豆爸谈吧，j，想想自己这个杂家，也许豆瓣坛是自己内容的最好注解-麻辣鲜香或许没有，五味杂陈却是可以的。\n2024-07-04"
+  },
+  {
+    "objectID": "about.html#关于博客",
+    "href": "about.html#关于博客",
+    "title": "博主和博客的那些事",
+    "section": "",
+    "text": "西人之Blog，国人之博客，大抵已入末流，而偶却才跌跌撞撞地赶到此站。心 里一直想要留下些许文字,断断续续流浪于各大平台，厌烦了被圈养的样子。于 是想要自己的一方净土，卸了大佬们的订制模版，折腾了几回，终于自己都会了https配置，感觉自己都高大起来。\n然此等莫名其妙的折腾，十个亿起步的大佬们是不屑的，下里巴人也是不屑的，大概只有留给AI了，我猜它的总结会是：离题万里，当是此君，于是我预备作一个空白墓碑的页面，等着机器人的评价吧。\n写些什么呢？我 一直没有想清楚这事。儿 子到来我成了豆爸，既然对于这个世界上最具挑战性的职业，就叫豆爸谈吧，j，想想自己这个杂家，也许豆瓣坛是自己内容的最好注解-麻辣鲜香或许没有，五味杂陈却是可以的。\n2024-07-04"
+  },
+  {
+    "objectID": "about.html#关于博主",
+    "href": "about.html#关于博主",
+    "title": "博主和博客的那些事",
+    "section": "关于博主",
+    "text": "关于博主\n一个朱熹的后人\n一个差点嗝屁的农家老四\n一个父亲\n一个写不出什么东西，却也还在折腾的人\n为了消除AI偏见，大抵每个都要奋笔疾书才好"
+  },
+  {
+    "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html",
+    "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html",
+    "title": "学习笔记-Rstudio可视化编辑器之技术写作",
+    "section": "",
+    "text": "如何写公式\n  \n  内联的公式\n  \n  正式公式\n  交叉索引\n  两种编辑模式\n  bugs\n公式、引用、交叉索引、脚注、内嵌代码总是技术写作逃不过的东西。好 好的理解以为写"
+  },
+  {
+    "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#如何写公式",
+    "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#如何写公式",
+    "title": "学习笔记-Rstudio可视化编辑器之技术写作",
+    "section": "如何写公式",
+    "text": "如何写公式\n技术写作背后的原理和支持技术其实就是LaTex, Pandoc Markdown。 在Quarto 1.4中引入了Typst, 号称比LaTex更好使用，希望可以早点用上去。\n\n内联的公式\n举例: \\(\\sqrt x=26\\) 的解就是\\(x=676\\)\n写这个公式的时候要注意：\n\nsqrt后是空格后再写x, 而不是\\sqrt(x, 那样的话就变成了 \\(\\sqrt(x)\\)\n其实，在输入美元符号$的时候，连续输入三个$，这样才会进入公式输入模式。如果只输入一个$或两个美元符号，然后在中间加入符号，它不会变成类的公司。"
+  },
+  {
+    "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#正式公式",
+    "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#正式公式",
+    "title": "学习笔记-Rstudio可视化编辑器之技术写作",
+    "section": "正式公式",
+    "text": "正式公式\n为什么写不出教程里红色的$$的样子？把 公式latex代码直接显示处理啊反而有点难啊.。 TODO, 即使插入raw tex block (上面一个公式其实我是希望显示源代码的啊)\n2024-06-23 如果只是要显示源代码，不运算，请在将代码语言标记从{lang} 改为 {=lang} 即可\n\n\nCode\ninstall.packages(\"test\")\n\n\n\\[\nP(E) = {n \\choose k} p^k (2-p)^{n - k}\n\\]"
+  },
+  {
+    "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#交叉索引",
+    "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#交叉索引",
+    "title": "学习笔记-Rstudio可视化编辑器之技术写作",
+    "section": "交叉索引",
+    "text": "交叉索引\n因为每个需要交叉索引的实体(如图片、公式、表格或者其中的某一段文字)，建立一个标签，给出一个唯一的标记，这样就可以在文章中随便引用了。\n![Elephant](crossref-figure.png){#fig-elephant fig-alt=\"Altnative text\" fig-align=\"center\"}\n\n\n\n\n\n\nFigure 1: Elephant\n\n\n\n在这种情况下，我们只要在其他地方引用@fig-elephant即可连接到这个实体了。\nSee Figure 1 for details"
+  },
+  {
+    "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#两种编辑模式",
+    "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#两种编辑模式",
+    "title": "学习笔记-Rstudio可视化编辑器之技术写作",
+    "section": "两种编辑模式",
+    "text": "两种编辑模式\n不知道为什么``的使用不知道如何删除，有的时候你会发现，输入错误了，但是不知道如何在可视化编辑器里修改，只能切换到源代码模式里进行。所 以两种方式是相辅相成的，需要结合使用才好。\nHere’s some raw inline HTML: html\n实际上你需要在两种模式中来回的切换，尽量使用每一种模式中最熟悉的部分，这样也可以检查文件在两种模式中都显示正常，因为在某些时候你的合作者有的喜欢可视化模式，女的喜欢，源代码模式，无论哪种模式，最终的结果都要确保其正确。"
+  },
+  {
+    "objectID": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#bugs",
+    "href": "posts/quarto/rstudio-visual-editor-techincal-writing/index.html#bugs",
+    "title": "学习笔记-Rstudio可视化编辑器之技术写作",
+    "section": "bugs",
+    "text": "bugs\nCMD+S 不能保存文件，，选择关闭文件提醒保存垫子保存后仍然无法保存。重 新关闭后打开，恢复了，看来稳定性还是有些问题。"
+  },
+  {
+    "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html",
+    "href": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html",
+    "title": "文件去哪儿了",
+    "section": "",
+    "text": "问题来了：安装完成版本未变\n  AI的回复\n  \n  理解问题的原因\n  解决方法\n  \n  新问题：如何删除只为我安装的版本\n  \n  定位文件的几个方案\n  总结"
+  },
+  {
+    "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#问题来了安装完成版本未变",
+    "href": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#问题来了安装完成版本未变",
+    "title": "文件去哪儿了",
+    "section": "问题来了：安装完成版本未变",
+    "text": "问题来了：安装完成版本未变\n\n过来一下刚才的安装过程，以前选择的都是为这个电脑的所有用反转用，其实自己就是这台电脑的唯一用户，所以选择了仅为自己安全这句话平时装的不同之处吧。\n\n在AI求证一下如何？\n\n\n\n\n\n\n问题\n\n\n\nquarto安装前版本1.5.57， 在quarto下载安装1.6.39后，quarto —version显示的版本仍然是1.5.57.。之 前的quarto安装，我选择了 为这台电脑上的所有用户安装，本次安装选择仅为我安装，这是问题所在吗？"
+  },
+  {
+    "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#ai的回复",
+    "href": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#ai的回复",
+    "title": "文件去哪儿了",
+    "section": "AI的回复",
+    "text": "AI的回复\n是的！这 个问题很可能是由于你之前选择“为这台电脑上的所有用户安装”，而此次安装选择了“仅为我安装”。两 种安装方式会导致 Quarto 被安装到不同的路径，并且系统的 PATH 环境变量 仍然指向旧版本的 Quarto，可执行文件的位置优先级没有更新，从而导致新版本的 Quarto 没有被正确应用。\n\n\n理解问题的原因\n\n为所有用户安装\n\n如果之前安装时选择了“为所有用户安装”，Quarto 通常会安装到系统范围的路径中，例如：\n\nWindows: C:\\Program Files\\Quarto\\bin\\quarto.exe\nmacOS/Linux: /usr/local/bin/quarto\n\n系统环境变量（PATH）会被更新，使系统始终可以找到这路径的 Quarto。\n\n仅为我安装\n\n如果本次安装选择 “仅为我安装”，Quarto 可能会安装到用户级别的路径中，例如：\n\nWindows: %LOCALAPPDATA%\\Programs\\Quarto\\bin\\quarto.exe\nmacOS/Linux: ~/.local/bin/quarto （没有这个目录）\n\n用户级别的安装不会覆盖系统范围内的 PATH 路径，导致仍然调用旧版 Quarto。\n\n因此，系统仍然找到的是之前为所有用户安装的旧版本 quarto，而不是你刚刚安装的新版本。\n\n\n\n\n解决方法\noption 1: 重新全局安装，删除只为我安装的版本 （我的选择）\noption 2: 将只为我安装的版本加入PATH变量。。。"
+  },
+  {
+    "objectID": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#新问题如何删除只为我安装的版本",
+    "href": "posts/quarto/quarto-1.6-installaltion/quarto-installation.html#新问题如何删除只为我安装的版本",
+    "title": "文件去哪儿了",
+    "section": "新问题：如何删除只为我安装的版本",
+    "text": "新问题：如何删除只为我安装的版本\n\n\n定位文件的几个方案\n\n#|label: findfile\nwhereis quarto\n# quarto: /usr/local/bin/quarto\n\nwhich quarto\n#/usr/local/bin/quarto\n# 这两个命令器只显示为所有人安装的路径，不显示只为我安装的路径\n\nfind ~ -name \"quarto\" 2&gt;/dev/null\n\n# ～/Library/Application Support/quarto\n# ~/Library/Application Support/quarto\n# \n# ~/Library/Caches/deno/gen/file/Applications/quarto\n# ~/Library/Caches/quarto\n# ~/Applications/quarto\n# ~/Applications/quarto/bin/quarto\n# ~/Applications/quarto/share/formats/typst/pandoc/quarto\n# ~/Applications/quarto/share/lua-types/quarto\n# ~/Applications/quarto/share/extensions/quarto\n# ~/Documents/writer/adopapablog/posts/quarto\n# ~/Documents/writer/adopapablog/www/posts/quarto\n# ~/Documents/writer/adopapablog/_freeze/posts/quarto\n# ~/Documents/writer/adopapablog/.quarto/idx/posts/quarto\n# ~/Documents/writer/adopapablog/.quarto/_freeze/posts/quarto\n# ~/Documents/coder/rlang/quarto\n# 跳出了一个文件就卡在哪里了，我另外开了窗口使用其它命名.\n# 2024-12-09 07:43:39 终于结束了查找，结果可比locate 简洁了，确实也太慢了。\n\nlocate quarto\n# .....\n# /Applications/quarto\n# /Applications/quarto/bin\n# /Applications/quarto/bin/quarto\n# /Applications/quarto/bin/quarto.js\n# /Applications/quarto/bin/tools\n# /Applications/quarto/bin/tools/aarch64\n# .....\n# 返回也太多了啊哈，确实强大\n折腾到最后发现其实应该先到Application里面去看一下了，所以这是个问题，搜索源用多了传统的方法却丢掉很多，这不于邯郸学步了，这个要警惕，虽然是个小问题则是我们在这个变化中的患得患失。\nfinder里直接删除了/Applications/quarto,出问题了\n#|label: checkafterdelete\nquarto --version\n# zsh: command not found: quarto --version\n# 看来pkg是安装到application，然后关联到/usr/local/bin/quarto\n找回垃圾堆里的安装文件，重新安装pkg\n#|label: checkaftinstl\n#|eval: false\nquarto --version\n#1.6.39\n\n\n\n总结\n通过文件到哪里去了？通 过寻找文件的过程，你会发现习惯依赖的微小变动也会导致的很多的麻烦。不 要说AI, 就是一片普通的电脑，对我们来说真的是一个巨大的黑箱.人类从来都是在黑箱的下前形的谁又真正搞懂了火呢？\n就是一个折腾，如果一开始你就选择默认的按钮，哪有这一个多小时的折腾呢？"
+  },
+  {
+    "objectID": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html",
+    "href": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html",
+    "title": "搞定博客的自动发布",
+    "section": "",
+    "text": "Step 1: 创建 GitHub 仓库\n  Step 2: 初始化本地 Git 仓库并推送到 GitHub\n  Step 3: 设置服务器的 SSH 配置\n  Step 4: 配置 GitHub Actions 自动化部署\n  最大的坑就在这里-AI的拐点\n  终于成功了\n  \n  Step 5: 测试工作流\n  问题排查\n  总结\n2024-12-09 17:18:00 test\n手动发布台辛苦了，今天就在AI的加持下，迈向自动发布吧。\n问: 我已经配置号服务器，只要发布内容放入服务器www文件夹即可正常浏览。我 也配置号了quarto，每次渲染好的发布内容都放在本地项目文件夹publish中。我 已有GitHub账号。现 在请指导我将publish同步到github中，然后让github自动管理和同步内容到我的服务器发布目录www。如 果需要我提供相关的信息和设置，请详细说明。\nAI回答: 好的！以 下是如何将 Quarto 渲染生成的 publish 文件夹内容自动同步到 GitHub，并通过 GitHub 将内容部署到服务器的完整步骤。我 们将逐步指导您完成从 Git 到服务器的自动化流程。\n以下是实现目标的完整流程：\n如果需要任何具体信息（如服务器 SSH 配置等），请根据提示提供相关信息。"
+  },
+  {
+    "objectID": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html#终于成功了",
+    "href": "posts/diary/2024-12-07_a-valueable-day/try-github-deploy-action.html#终于成功了",
+    "title": "搞定博客的自动发布",
+    "section": "终于成功了",
+    "text": "终于成功了\n微信里搜索“github action 部署文件到服务器” 看到提到了“easingthemes/ssh-deploy”，感觉这是一个突破点，再看看，是把ssh和rsync打包一起的，看来方向上解决了第一次里直接调用rsync的问题。\n马上让ai指令“github中还有哪些类似 easingthemes/ssh-deploy 的文件部署actions？” 。\n\n再接再厉，给她指令\n\n\n\n\n\n\nai prompt\n\n\n\nhttps://github.com/marketplace/actions/ssh-deploy 请参考，重新编写部署代码\n\n\nname: Deploy to Tencent Lighthouse Server\n\non:\n  push:\n    branches:\n      - main  # 当推送到 main 分支时触发\n    paths:\n      - www/**     # 仅当 www 文件夹及其子目录或文件发生更改时触发\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n\n    steps:\n      # Step 1: 检出代码\n      - name: Checkout Code\n        uses: actions/checkout@v3\n\n      # Step 2: 执行 SSH Deploy Action\n      - name: SSH Deploy to Server\n        uses: easingthemes/ssh-deploy@main\n        env:\n          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}\n          ARGS: ${{ secrets.RSYNC_ARGS }} # rsync 的参数，确保文件更新同步\n          SOURCE: ${{ secrets.SOURCE }} # 本地需要同步的文件夹\n          REMOTE_HOST: ${{ secrets.HOST }} # 目标服务器的 IP 地址\n          REMOTE_USER: ${{ secrets.USER }} # 用于连接服务器的用户名\n          TARGET: ${{ secrets.TARGET }} # 服务器上的目标路径\n\n\n\n\n\n\n补充说明\n\n\n\nAI给吃的hard code - ARGS，SOURCE， REMOTE_HOST， REMOTE_USER， TARGET是直接天上了敏感数据。最 佳实践是在github action的screts里设置再通过${{ secrets.《SECRETS.NAME》 }} 的方式来引用。\n\n\n\n\nStep 5: 测试工作流\n\n回到本地终端，修改您的 publish 文件夹的内容（比如新建一个文件或修改现有内容）。\n提交新的内容到 GitHub 仓库：\ngit add .\ngit commit -m \"Update content\"\ngit push origin main\n到 GitHub 仓库的 Actions 页面，您应该可以看到 Deploy to Server 工作流被触发。\n如果配置正确，内容将自动同步到您服务器的 www 目录。\n\n\n\n\n问题排查\n\n如果同步失败，请检查服务器 www 目录的路径是否正确。\n测试 rsync 是否能够在服务器和 GitHub Actions 工作流中正常工作。\n确认 SSH 设置是否正确，id_rsa 可以正常授权访问服务器。\n\n\n\n\n总结\n通过上述步骤，您可以实现：\n\n本地 Quarto 渲染生成内容到 publish 文件夹。\n使用 Git 将 publish 文件夹内容上传到 GitHub。\n配置 GitHub Actions，让 www 的内容自动部署到服务器的 www 目录，完成发布的自动化。\n关于.gitigore的的设置也费了大力气，总是感觉自己理解和实际的输出不一致，以后再聊聊。"
+  },
+  {
+    "objectID": "posts/code-execution/index.html",
+    "href": "posts/code-execution/index.html",
+    "title": "Code Executioin",
+    "section": "",
+    "text": "标题2\n  \n  标题-3季\n  \n  heading2\n  复制过来的表格\nINSERT ANYTHING"
+  },
+  {
+    "objectID": "posts/code-execution/index.html#标题2",
+    "href": "posts/code-execution/index.html#标题2",
+    "title": "Code Executioin",
+    "section": "标题2",
+    "text": "标题2\n\n标题-3季\n\n\ntable1tab2tab3\n\n\n这个能显示处理啊吗\n\n\n\n\n\n\n\n\n\n\nterm\n\n术语\n\n\n\nthis is div\n\nthis div in the div1\n\n\n\nthis is my first table\n\n\nCol1dd\nCol2dd\nCol3dd\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4"
+  },
+  {
+    "objectID": "posts/code-execution/index.html#heading2",
+    "href": "posts/code-execution/index.html#heading2",
+    "title": "Code Executioin",
+    "section": "heading2",
+    "text": "heading2\nthis is paragraph\ntoo space 让我透不过气啦\n一个空的shortcode会让给你页面渲染不出来来效果我"
+  },
+  {
+    "objectID": "posts/code-execution/index.html#复制过来的表格",
+    "href": "posts/code-execution/index.html#复制过来的表格",
+    "title": "Code Executioin",
+    "section": "复制过来的表格",
+    "text": "复制过来的表格\n下面复制过来的表格，第二行就错位了-safari。2024-06-22 17:52:12 chorme上显示正常，不知道如何在键盘外边加上一圈圆角矩形并设置底色。\n\n\n\nCommand\nKeyboard Shortcut\nMarkdown Shortcut\n\n\n\n\nBold\n⌘ B\n**bold**\n\n\n\n[ X ] LIST CHECK\n[ - ] LIST CHECK\nterm: this is definatoin\n\ntermfkal\n\ndkafld: daja f\n\n\naalafd: dak fa\n\n\n为什么显示不出来呢。\n\n\n\n\n\n\n基于文件的editor设置\n\n\n\n为什么要设置`canonical: true` - 保持协作中的一致性\nWith canonical: true, edits in visual mode and source mode will result in identical markdown output. This is especially useful if you have multiple authors collaborating using version control, with a mixture of source and visual mode editing among the authors."
+  },
+  {
+    "objectID": "posts/postgres/install-postgress17.4-with-docker-on-macos15.html",
+    "href": "posts/postgres/install-postgress17.4-with-docker-on-macos15.html",
+    "title": "install-postgress17.4-with-docker-on-macos15",
+    "section": "",
+    "text": "内容提要\n   \n  \n  postgres\n  Quick reference\n  Supported tags and respective Dockerfile links\n  Quick reference (cont.)\n  What is PostgreSQL?\n  \n\nNote: the description for this image is longer than the Hub length limit of 25000, so has been trimmed. The full description can be found at\nREADME\n高质量帮助源头\n\nthe PostgreSQL Docker Community\nthe Docker Community Slack,\nServer Fault,\nUnix & Linux,\nStack Overflow\n\n\nWhere to file issues:\nhttps://github.com/docker-library/postgres/issues\n\nSupported architectures: (more info)\namd64, arm32v5, arm32v6, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x\nPublished image artifact details:\nrepo-info repo’s repos/postgres/ directory (history)\n(image metadata, transfer size, etc)\nImage updates:\nofficial-images repo’s library/postgres label\nofficial-images repo’s library/postgres file (history)\nSource of this description:\ndocs repo’s postgres/ directory (history)\n\n\npostgres\nDocker Official Image\nThe PostgreSQL object-relational database system provides reliability and data integrity.\nDatabases & Storage\n10K+\n1B+\nTag\nlatest\nTag\nPullRun\nOverviewTags\nNote: the description for this image is longer than the Hub length limit of 25000, so has been trimmed. The full description can be found at https://github.com/docker-library/docs/tree/master/postgres/README.md. See also docker/hub-feedback#238 and docker/roadmap#475.\n\n\nQuick reference\n\nMaintained by:\nthe PostgreSQL Docker Community\nWhere to get help:\nthe Docker Community Slack, Server Fault, Unix & Linux, or Stack Overflow\n\n\n\nSupported tags and respective Dockerfile links\n\n17.4, 17, latest, 17.4-bookworm, 17-bookworm, bookworm\n17.4-bullseye, 17-bullseye, bullseye\n17.4-alpine3.21, 17-alpine3.21, alpine3.21, 17.4-alpine, 17-alpine, alpine\n17.4-alpine3.20, 17-alpine3.20, alpine3.20\n16.8, 16, 16.8-bookworm, 16-bookworm\n16.8-bullseye, 16-bullseye\n16.8-alpine3.21, 16-alpine3.21, 16.8-alpine, 16-alpine\n16.8-alpine3.20, 16-alpine3.20\n15.12, 15, 15.12-bookworm, 15-bookworm\n15.12-bullseye, 15-bullseye\n15.12-alpine3.21, 15-alpine3.21, 15.12-alpine, 15-alpine\n15.12-alpine3.20, 15-alpine3.20\n14.17, 14, 14.17-bookworm, 14-bookworm\n14.17-bullseye, 14-bullseye\n14.17-alpine3.21, 14-alpine3.21, 14.17-alpine, 14-alpine\n14.17-alpine3.20, 14-alpine3.20\n13.20, 13, 13.20-bookworm, 13-bookworm\n13.20-bullseye, 13-bullseye\n13.20-alpine3.21, 13-alpine3.21, 13.20-alpine, 13-alpine\n13.20-alpine3.20, 13-alpine3.20\n\n\n\nQuick reference (cont.)\n\nWhere to file issues:\nhttps://github.com/docker-library/postgres/issues\nSupported architectures: (more info)\namd64, arm32v5, arm32v6, arm32v7, arm64v8, i386, mips64le, ppc64le, riscv64, s390x\nPublished image artifact details:\nrepo-info repo’s repos/postgres/ directory (history)\n(image metadata, transfer size, etc)\nImage updates:\nofficial-images repo’s library/postgres label\nofficial-images repo’s library/postgres file (history)\nSource of this description:\ndocs repo’s postgres/ directory (history)\n\n\n\nWhat is PostgreSQL?\nPostgreSQL, often simply “Postgres”, is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance. As a database server, its primary function is to store data, securely and supporting best practices, and retrieve it later, as requested by other software applications, be it those on the same computer or those running on another computer across a network (including the Internet). It can handle workloads ranging from small single-machine applications to large Internet-facing applications with many concurrent users. Recent versions also provide replication of the database itself for security and scalability.\nPostgreSQL implements the majority of the SQL:2011 standard, is ACID-compliant and transactional (including most DDL statements) avoiding locking issues using multiversion concurrency control (MVCC), provides immunity to dirty reads and full serializability; handles complex SQL queries using many indexing methods that are not available in other databases; has updateable views and materialized views, triggers, foreign keys; supports functions and stored procedures, and other expandability, and has a large number of extensions written by third parties. In addition to the possibility of working with the major proprietary and open source databases, PostgreSQL supports migration from them, by its extensive standard SQL support and available migration tools. And if proprietary extensions had been used, by its extensibility that can emulate many through some built-in and third-party open source compatibility extensions, such as for Oracle.\n$ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres"
+  },
+  {
+    "objectID": "posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.html",
+    "href": "posts/ubuntu22/how-to-change-the-hostname-in-ubuntu22/index.html",
+    "title": "如何给服务器起一个简洁好记的名字",
+    "section": "",
+    "text": "内容提要\n   \n  \n  一、临时修改主机名\n  二、永久修改主机名\n  三、重启系统\n  小结\n  \n\n在Ubuntu中，修改服务器的主机名分为两部分：临时修改和永久修改。以下是如何进行这两种修改的具体步骤：\n\n一、临时修改主机名\n临时修改主机名是不需要重启系统的，但该修改在重启后会失效。使用如下命令：\nsudo hostnamectl set-hostname tclh01\n\n\n二、永久修改主机名\n要确保重启后主机名依然被修改，我们需要修改两个文件：/etc/hostname 和 /etc/hosts。\n\n修改 /etc/hostname 文件\n \n使用文本编辑器（如 nano 或 vi）编辑该文件：\nsudo nano /etc/hostname\n将文件中的内容改为 tclh01，保存并退出。\n修改 /etc/hosts 文件\n \n同样使用文本编辑器修改 /etc/hosts 文件：\nsudo nano /etc/hosts\n找到包含旧主机名的行，并将其修改为新主机名 tclh01，类似如下：\n127.0.0.1   localhost\n127.0.1.1   tclh01\n请确保没有多余的空白行或格式错误，保存并退出。\n\n\n\n三、重启系统\n为了确保所有更改生效，建议重启系统：\nsudo reboot\n\n\n小结\n总结以上步骤，你可以按照如下命令序列操作：\n# 临时修改主机名\nsudo hostnamectl set-hostname tclh01\n\n# 编辑 /etc/hostname 文件\nsudo nano /etc/hostname\n# 将内容改为 tclh01，保存退出\n\n# 编辑 /etc/hosts 文件\nsudo nano /etc/hosts\n# 将相关行修改为 127.0.1.1   tclh01，保存退出\n\n# 重启系统\nsudo reboot\n完成这些步骤后，你的服务器主机名应已修改为 tclh01，并能在重启后保持不变。"
+  },
+  {
+    "objectID": "posts/backend/how-install-nginx/index.html",
+    "href": "posts/backend/how-install-nginx/index.html",
+    "title": "docker image的曲线安装法",
+    "section": "",
+    "text": "远端服务器安装nginx image\n  本地拉取-以nginx为例\n  服务器\n  更新镜像源"
+  },
+  {
+    "objectID": "posts/backend/how-install-nginx/index.html#远端服务器安装nginx-image",
+    "href": "posts/backend/how-install-nginx/index.html#远端服务器安装nginx-image",
+    "title": "docker image的曲线安装法",
+    "section": "远端服务器安装nginx image",
+    "text": "远端服务器安装nginx image\ndocker pull nginx 超时 2024-07-02 22:36:39 今天有重新开始拉取，已经忘记了，试了试不成功，才想起这个"
+  },
+  {
+    "objectID": "posts/backend/how-install-nginx/index.html#本地拉取-以nginx为例",
+    "href": "posts/backend/how-install-nginx/index.html#本地拉取-以nginx为例",
+    "title": "docker image的曲线安装法",
+    "section": "本地拉取-以nginx为例",
+    "text": "本地拉取-以nginx为例\ndocker pull nginx\ndocker save nginx -o nginx.tar\nscp nginx.tar ubuntu@remote-ip:~"
+  },
+  {
+    "objectID": "posts/backend/how-install-nginx/index.html#服务器",
+    "href": "posts/backend/how-install-nginx/index.html#服务器",
+    "title": "docker image的曲线安装法",
+    "section": "服务器",
+    "text": "服务器\nssh servername\nsudo docker load -i nginx.tar\n顺利完成转运工作。"
+  },
+  {
+    "objectID": "posts/backend/how-install-nginx/index.html#更新镜像源",
+    "href": "posts/backend/how-install-nginx/index.html#更新镜像源",
+    "title": "docker image的曲线安装法",
+    "section": "更新镜像源",
+    "text": "更新镜像源\necho ’\n{\n“registry-mirrors”: [\n“https://docker.m.daocloud.io”,\n“https://huecker.io”,\n“https://dockerhub.timeweb.cloud”,\n“https://noohub.ru” ]\n}’ &gt;\n/etc/docker/daemon.json\nsudo systemctl daemon-reload && sudo systemctl restart docker\n\n\n\n更新镜像源后的表现"
+  },
+  {
+    "objectID": "posts/backend/how-to-setup-nginx-with-docker/index.html",
+    "href": "posts/backend/how-to-setup-nginx-with-docker/index.html",
+    "title": "nginx docker 初体验",
+    "section": "",
+    "text": "上回书\n  本地测试一下"
+  },
+  {
+    "objectID": "posts/backend/how-to-setup-nginx-with-docker/index.html#上回书",
+    "href": "posts/backend/how-to-setup-nginx-with-docker/index.html#上回书",
+    "title": "nginx docker 初体验",
+    "section": "上回书",
+    "text": "上回书\nubuntu 安装了\nssh设置好了\ndocker安装了了\nnginx的镜像拉取了\n是时候把"
+  },
+  {
+    "objectID": "posts/backend/how-to-setup-nginx-with-docker/index.html#本地测试一下",
+    "href": "posts/backend/how-to-setup-nginx-with-docker/index.html#本地测试一下",
+    "title": "nginx docker 初体验",
+    "section": "本地测试一下",
+    "text": "本地测试一下\n文本内容都在本地，刚后docker也不得不安装了，就测试一下好了。\nlocalwww &lt;- “~/Projects/adopapablog/_site”\ndocker run –name myblodg -v /~/Projects/adopapablog/_site:/usr/share/nginx/html:ro -d nginx\n\n1a91bd54593599aadb15ae8c04ce4446e151ba930da365eea338e07a06618d22 docker: Error response from daemon: Mounts denied: The path /~/Projects/adopapablog/_site is not shared from the host and is not known to Docker. You can configure shared paths from Docker -&gt; Preferences… -&gt; Resources -&gt; File Sharing. See https://docs.docker.com/desktop/mac for more info.\n\n看来没有设置共享文件夹，按提示设置吧。\n\n\n\n设置页面\n\n\n居然把这个目录都设置为共享了，太过了，删除掉，但是不明白为什么这个设置了还是无法访问，可能是出在～上，\n节外生枝的发现\nquarto render 必须在项目目录下运行才有效\n文件必须保存了才会被render否则还是上一版内容 图片的文件路径为什么要放在一起\n扯得太远了，赶紧收回来，继续命令，不过把～替换掉\ndocker run –name myblodg -v /Users/yourname/Projects/myblogsite/_site:/usr/share/nginx/html:ro -d nginx\n新的问题继续出现了\n\ndocker: Error response from daemon: Conflict. The container name “/myblodg” is already in use by container “1a91bd54593599aadb15ae8c04ce4446e151ba930da365eea338e07a06618d22”. You have to remove (or rename) that container to be able to reuse that name. See ‘docker run –help’.\n\n在docker里删除即可，继续，还是上面的老问题，可能`_site`这个文件夹太诡异了，于是把它复制到～/public/myblog下\ndocker.app却像抽风了，怎么也打不开了。原来\n\n\n\ndocker-shortcuts-menu\n\n\n 图片也可以直接拖入，然后被设置到images文件夹里了。\n修正了文件名的大小写users -&gt; Users, public -&gt; Public\n如何去访问呢？\nhttp://localhost:8080/ 显示无法访问。\ndocker exec -it myblog sh\ncd /usr/share/nginx/html\nls\n\n看来文件确实别正确地挂载上去了哈。\n再翻回来试试\ndocker run –name myblodg -v /Users/yourname/Projects/myblogsite/_site:/usr/share/nginx/html:ro -d nginx\n结果ok，file sharing的折腾搞一段路了。\nd ## Dockerfiles\n这个文件夹该放哪里呢，项目文件夹下，终于又回到了项目里了\n在项目文件夹下运行\ndocker build -t myblog-nginx .\n出现了一堆问题，扔给ai，它认为是Dockerfile里使用了绝对路径导致的。Docker 构建过程中，COPY 指令只能访问构建上下文中的相对路径。\n\ndocker build -t myblog-nginx .` 继续构建自己的第一个订制nginx docker image，果然OK了。\n成功构建镜像后，运行容器：\n\ndocker run –name myblog -d myblog-nginx\n\n\n虽然什么都没有，还是感觉尽头十足啊。\n接下来该暴露端口了，\ndocker run --name myblogsite -d -p 8080:80 myblog-nginx\nopen http://localhost:8080\n网站如约出现了，怎么刚写的文字没有出现呢，赶紧保存后用quarto render一下，看看页面还是没有更新，看来要在docker里重启一下myblogsite？ 重启后还是依然故我，看来这个不像quarto preview那么有及时预览的功能。真正的原因是之前的版本被固化到了镜像里，它完全不知道我的开发目录里发生的新变化。\n明天继续吧，通过实战把一些长久以来都比较混淆的概念夯实了一下，当人没有ai帮助，确实是无法实现这个目标的。"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker/index.html",
+    "href": "posts/backend/how-to-install-docker/index.html",
+    "title": "Docker安装",
+    "section": "",
+    "text": "服务器安装docker\n  本地安装docker"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker/index.html#服务器安装docker",
+    "href": "posts/backend/how-to-install-docker/index.html#服务器安装docker",
+    "title": "Docker安装",
+    "section": "服务器安装docker",
+    "text": "服务器安装docker\nssh tclh\nsudo apt update\nsudo apt install docker.io -y"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker/index.html#本地安装docker",
+    "href": "posts/backend/how-to-install-docker/index.html#本地安装docker",
+    "title": "Docker安装",
+    "section": "本地安装docker",
+    "text": "本地安装docker\n为什么要安装呢？d ocker pull nginx 无法连接 及时设置了镜像也无法\n改为本地科学拉取法\nbrew install docker\nopen /Applications/Docker.app\ndocker –version Docker version 27.0.2, build 912c1ddf8a\n以下方法没有测试过，以后有机会试试 方法四：检查防火墙设置\n有时候防火墙设置可能会阻止 Docker 的网络连接。确 保服务器的防火墙允许 Docker 使用必要的网络端口。你 可以临时禁用防火墙以进行测试（请谨慎操作），或添加规则允许 Docker 的网络流量。\nsudo ufw allow 2375/tcp sudo ufw reload"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html",
+    "href": "posts/python/dev_venv/poetry_init_install.html",
+    "title": "Python开发-poetry的初始化",
+    "section": "",
+    "text": "poetry重置\n  配置典型的开发环境\n  poetry初始配置中的选择\n  如何正确运行poetry add\n  readme问题\n  典型配置\n  开发期间的运维\n  \n  一键安装package\n  常用命令\n  进阶管理操作：\n  最佳实践建议：\n  \n  分组实践"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#poetry重置",
+    "href": "posts/python/dev_venv/poetry_init_install.html#poetry重置",
+    "title": "Python开发-poetry的初始化",
+    "section": "poetry重置",
+    "text": "poetry重置\n1) 背景\npython开发使用cookiecutter建立列项目文件夹，使用poetry inti初始化了项目，使用poetry install进行了安装，但是发现poetry install把虚拟环境安装在了项目文件夹之外。\n2) 用户需求\n现在请删除poetry inti， poetry install生成的文件和虚拟环境，重新开始potry的的init和install流程，确保虚拟项目在项目文件夹之内。方 便后续维护。\n3) 输出要求\n1. 输出带注释的shell脚本，方便后期维护更新，2.输出用&&连接的一行命令，方便本次复制粘贴到终端运行。3 . 确保输出的简洁明了，不要啰嗦，不要总结，不要重复说明。\n4) 解决方案"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#配置典型的开发环境",
+    "href": "posts/python/dev_venv/poetry_init_install.html#配置典型的开发环境",
+    "title": "Python开发-poetry的初始化",
+    "section": "配置典型的开发环境",
+    "text": "配置典型的开发环境\n1) 背景\n计划通过poetry进行项目的管理，需要了解在poetry init，install中如何把典型的常用开发工具如black，flake8，pytest提前安装好，避免后期单独安装。\n2) 用户需求\n把python开发中典型的现代开发工具安装设置到poetry init，install流程中。\n3) 输出要求\n1. 输出带注释的shell脚本，方便后期维护更新，2.输出用&&连接的一行命令，方便本次复制粘贴到终端运行。3 . 确保输出的简洁明了，不要啰嗦，不要总结，不要重复说明。\n4) 输出要求\n\n\nCode\n#!/bin/bash\n# 强制配置虚拟环境到项目目录\npoetry config virtualenvs.in-project true --local\n# 交互式初始化项目（手动确认基本信息）\npoetry init\n# 安装常用开发工具到dev依赖组\npoetry add --group dev black flake8 pytest"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#poetry初始配置中的选择",
+    "href": "posts/python/dev_venv/poetry_init_install.html#poetry初始配置中的选择",
+    "title": "Python开发-poetry的初始化",
+    "section": "poetry初始配置中的选择",
+    "text": "poetry初始配置中的选择\n1) 背景:\npoetry初始配置中提示用户配置相关的main dependencies\nWould you like to define your main dependencies interactively? (yes/no) [yes] yes You can specify a package in the following forms: - A single name (requests): this will search for matches on PyPI - A name and a constraint (requests@^2.23.0) - A git url (git+https://github.com/python-poetry/poetry.git) - A git url with a revision (git+https://github.com/python-poetry/poetry.git#develop) - A file path (../my-package/my-package.whl) - A directory (../my-package/) - A url (https://example.com/packages/my-package-0.1.0.tar.gz)\n2) 用户需求:\n请按main dependencies配置的最佳实践，推荐最低配置和典型配置\n3) 输出要求:\n输出要求：1.按poetry要求的输出回复。2 . 输出带注释的shell脚本，方便后期cli配置，3. 确保输出的简洁明了，不要啰嗦，不要总结，不要重复说明。\n4) 典型解决方案：\n\n\nCode\n#!/bin/bash\n# 最低配置（跳过所有主依赖配置）\npoetry init --no-interaction  # 使用默认值并跳过依赖配置\n\n# 典型配置（常用基础依赖）\npoetry init --no-interaction \\\n  --dependency \"requests@^2.31.0\" \\    # HTTP客户端\n  --dependency \"loguru@^0.7.2\" \\       # 结构化日志\n  --dependency \"python-dotenv@^1.0.0\"  # 环境变量加载\n\n\n# 典型配置-oneline cli\npoetry init --no-interaction --dependency \"requests@^2.31.0\" --dependency \"loguru@^0.7.2\" --dependency \"python-dotenv@^1.0.0\""
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#如何正确运行poetry-add",
+    "href": "posts/python/dev_venv/poetry_init_install.html#如何正确运行poetry-add",
+    "title": "Python开发-poetry的初始化",
+    "section": "如何正确运行poetry add",
+    "text": "如何正确运行poetry add\n1) 背景\n运行poetry init后，继续运行poetry add --group dev black flake8 pytest, 终端出现错误提示:\nPoetry could not find a pyproject.toml file in /Users/zhuquanming/Documents/pythondev/ai_helper or its parents\n2) 用户需求\n请确认poetry init ,poetry add ,poetry install 之间正确的关系\n3) 输出要求\n输出要求：1.按终端错误提示，给出正确的后续步骤。2 . 输出带注释的shell脚本，方便后期cli配置，3. 确保输出的简洁明了，不要啰嗦，不要总结，不要重复说明。\n4) 典型解决方案\n\n\nCode\n# poetry add --group dev black flake8 pytest\n\n# Poetry could not find a pyproject.toml file in /Users/zhuquanming/Documents/pythondev/ai_helper or its parents\n# 确保poetry init正常运行后生成\n# 或者先完成非初始init在进行题啊见\npoetry init --no-interaction && poetry add --group dev black flake8 pytest"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#readme问题",
+    "href": "posts/python/dev_venv/poetry_init_install.html#readme问题",
+    "title": "Python开发-poetry的初始化",
+    "section": "readme问题",
+    "text": "readme问题\n当使用其它的工具建立项目文件夹结构时可能出现这个问题：\npyproject.toml中配置了readme，指向实际的README, 这就是配置开发的强大之处。\n修改pyproject.toml\n---\n[project]\nreadme=\"README.rst\"\n---\n运行成功"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#典型配置",
+    "href": "posts/python/dev_venv/poetry_init_install.html#典型配置",
+    "title": "Python开发-poetry的初始化",
+    "section": "典型配置",
+    "text": "典型配置\n“poetry config的最佳实践，给出典型的常用的命令”\n\n\nCode\n#!/bin/bash\n# poetry 核心配置最佳实践命令集\n\n# 强制虚拟环境创建在项目目录内（推荐项目级配置）\npoetry config virtualenvs.in-project true --local\n\n# 设置全局PyPI镜像源（示例使用清华源）\npoetry config repositories.pypi https://pypi.tuna.tsinghua.edu.cn/simple/\n\n# 启用并行安装加速（默认已开启，可显式配置）\npoetry config installer.parallel true\n\n# 配置私有仓库认证（替换your-repo-name和token）\npoetry config http-basic.your-repo-name username your-token\n\n# 显示当前配置\npoetry config --list\n\n\n\n\nCode\n❯ poetry env info --path\n~/Documents/pythondev/ai_helper/.venv"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#开发期间的运维",
+    "href": "posts/python/dev_venv/poetry_init_install.html#开发期间的运维",
+    "title": "Python开发-poetry的初始化",
+    "section": "开发期间的运维",
+    "text": "开发期间的运维\n\n一键安装package\n\n\nCode\n# 常用单行命令集合\nPACKAGE=\"package@^1.2.3\" && poetry add $PACKAGE && poetry update && poetry show --tree\n\n\n\n\n常用命令\n\n\nCode\n#!/bin/bash\n# Poetry 依赖运维管理最佳实践命令集\n\n# 添加生产依赖（带版本约束）\npoetry add \"package@^1.2.3\"  # ^表示允许次版本和补丁版本更新\n\n# 添加开发依赖到独立分组\npoetry add --group dev pytest-coverage  # 新增测试覆盖率工具\n\n# 更新全部依赖到最新兼容版本\npoetry update  # 更新所有依赖并刷新lock文件\n\n# 更新指定依赖包\npoetry update requests numpy  # 仅更新指定包\n\n# 移除依赖包\npoetry remove deprecated-pkg  # 从项目配置中移除\n\n# 列出已安装依赖树\npoetry show --tree  # 查看依赖层级关系\n\n# 检查过时依赖\npoetry show --outdated  # 列出可升级的依赖\n\n# 安装时排除开发依赖（生产环境）\npoetry install --no-dev  # 仅安装运行时依赖\n\n# 导出requirements.txt（兼容其他工具）\npoetry self add poetry-plugin-export # 必须首先执行此命令一次，亲测\npoetry export -f requirements.txt --output requirements.txt --without-hashes\n\n\n\n\n进阶管理操作：\n\n依赖版本锁定管理\n\n\n\nCode\n# 仅刷新lock文件不安装（适用于CI/CD）\npoetry lock --no-update\n\n# 同步依赖到lock文件版本\npoetry install --sync\n\n\n\n多环境配置\n\n\n\nCode\n# 添加可选依赖组\npoetry add --group docs mkdocs  # 文档相关依赖\n\n# 按组安装依赖\npoetry install --with docs  # 安装主依赖+文档组依赖\n\n\n\n依赖冲突解决\n\n\n\nCode\n# 强制保留当前版本（谨慎使用）\npoetry add \"conflict-pkg==1.2.3\"  # 固定特定版本\n\n# 依赖降级操作\npoetry add \"problematic-pkg@&lt;=2.0.0\"  # 设置版本上限\n\n\n\n\n最佳实践建议：\n\n使用语义化版本控制符：\n\n^1.2.3 = 1.x.x (x &gt;=2.3)\n~1.2.3 = 1.2.x (x &gt;=3)\n&gt;=1.2.3,&lt;2.0.0 = 明确版本范围\n\n依赖组分类建议：\n# 典型分组结构\npoetry add --group dev pytest   # 开发工具\npoetry add --group test selenium  # 测试专用\npoetry add --group docs sphinx  # 文档生成\n定期维护操作：\nbash\nCopy\n# 每周执行依赖健康检查\npoetry update --dry-run  # 预览更新\npoetry show --outdated  # 列出过时依赖\npoetry check  # 验证项目配置有效性"
+  },
+  {
+    "objectID": "posts/python/dev_venv/poetry_init_install.html#分组实践",
+    "href": "posts/python/dev_venv/poetry_init_install.html#分组实践",
+    "title": "Python开发-poetry的初始化",
+    "section": "分组实践",
+    "text": "分组实践\n环境分组添加\n\n\nCode\n#!/bin/bash\n# Poetry 依赖分组最佳实践命令集\n\n# 1. 核心分组配置（必需组）\npoetry add --group dev black flake8  # 开发工具（代码格式化/lint）\npoetry add --group test pytest coverage  # 测试框架及覆盖率\npoetry add --group types mypy types-requests  # 类型检查工具\n\n# 2. 可选功能分组（按需安装）\npoetry add --group docs (--optional) mkdocs mkdocs-material  # 文档系统\n    # You can only add optional dependencies to the main group\n    \npoetry add --group notebooks --optional jupyter ipykernel  # Jupyter支持\npoetry add --group aws --optional boto3 aws-lambda-powertools  # 云服务扩展\n\n# 使用精确语义化版本控制\npoetry add --group security \"cryptography@&gt;=3.4.7,&lt;4.0.0\"\n\n\n\n\nCode\n# 3. 生产环境安装（仅主依赖）\npoetry install --no-dev  # 部署时使用\n\n# 4. 按需安装组合\npoetry install --with docs,notebooks  # 开发+文档+notebook环境\n\n# CI/CD 典型安装命令\npoetry install --with test --sync  # 仅安装主依赖+测试组，同步lock文件\n\n# 查看特定组的依赖关系\npoetry show --tree --only docs\n\n\npyproject.toml的典型设置"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n\nCode\n1 + 1"
+  },
+  {
+    "objectID": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html",
+    "href": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html",
+    "title": "if-docker-desktop-is-necessary-on-macos15",
+    "section": "",
+    "text": "缘起\n  macOS vs Docker\n  \n  为什么 Docker Desktop 更方便？\n  Docker Desktop 是否是macOS上必须的？\n  brew install docker 是否足够？\n  \n  替代方案-推荐\n  \n  安装colima\n  启动服务\n  优化colima\n  \n  意外-命令卡壳了\n  \n  5. 总结"
+  },
+  {
+    "objectID": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#缘起",
+    "href": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#缘起",
+    "title": "if-docker-desktop-is-necessary-on-macos15",
+    "section": "缘起",
+    "text": "缘起\ngui go, cli come的时代，word要干掉，docker desktop感觉有点尾大不掉，总是要登录，然后对国内又不友好吧。"
+  },
+  {
+    "objectID": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#macos-vs-docker",
+    "href": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#macos-vs-docker",
+    "title": "if-docker-desktop-is-necessary-on-macos15",
+    "section": "macOS vs Docker",
+    "text": "macOS vs Docker\n\n为什么 Docker Desktop 更方便？\n\n自动管理虚拟机、网络和存储。\n集成 Kubernetes、镜像构建等高级功能。\n适合不想折腾命令行的用户。\n\n\n\nDocker Desktop 是否是macOS上必须的？\n\n官方推荐：Docker Desktop 是 macOS 上最直接的解决方案，它集成了完整的 Docker 环境（包括 Docker Engine、CLI、Compose 等），并提供图形界面管理。\n非必须：如果你希望避免安装 Docker Desktop（例如因资源占用、许可证问题），可以通过其他工具（如 colima、docker-machine 等）运行 Docker Daemon。\n\n\n\nbrew install docker 是否足够？\n\n不足：仅执行 brew install docker 只会安装 Docker 客户端工具（CLI），但缺少核心的 Docker Daemon（服务端），直接运行会报错 Cannot connect to the Docker daemon。\n需要额外步骤：必须通过虚拟机或容器运行时启动 Docker Daemon，常见方案如下："
+  },
+  {
+    "objectID": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#替代方案-推荐",
+    "href": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#替代方案-推荐",
+    "title": "if-docker-desktop-is-necessary-on-macos15",
+    "section": "替代方案-推荐",
+    "text": "替代方案-推荐\n\n安装colima\n\nwaiting installation 2025-03-13 07:14:44\n\n\n\nCode\n# 方案 1：使用 Colima（推荐）\n# 安装 Docker CLI 和 Colima\nbrew install docker colima\n\n\n\n意外-运行卡壳了怎么办\n\n\nCode\n# 扫掉卡壳的命令\n# lsof | grep lima    # macOS上不行\nps aux | grep brew  #\nkill -9 &lt;PID&gt;   # 通常会显示至少两个命令，其中一个是由上面命令产生的\n\n\n\n\n\n启动服务\n\ndownload image\n\n安装程序提供的启动服务\n\n\nCode\n# To start colima now and restart at login:\n$ brew services start colima # 启动第一会下载镜像，网络链接不稳定会出错。\n# Or, if you don't want/need a background service you can just run:\n$ /opt/homebrew/opt/colima/bin/colima start -f\n\n\n\n验证成功\n\n\n\nCode\n\ncolima start # ai给的方案，需要看安装后的提示，如下\n\n# 验证 Docker 是否正常工作\ndocker ps\n\n\n\n\n优化colima\n\nwaiting for installation\nsetup\n\n\n\nCode\n# 优先使用 VirtioFS：\n# 启动 Colima 时启用 VirtioFS\n# 如果你的容器镜像已经支持 ARM 架构（大多数现代镜像都支持），建议使用\ncolima start --vm-type=qemu --mount-type=virtiofs\n\n# 仅在需要时启用 Rosetta：\n# 启动时启用 Rosetta 转译（仅 Apple Silicon）\n# 如果你需要运行基于 x86_64 架构的容器镜像，才启用 Rosetta。\ncolima start --vm-type=qemu --rosetta\n\n# 可以同时启动，会有更多的资源消耗\n# 如果你既需要高性能的文件共享，又需要运行 x86_64 架构的容器，可以同时启用 VirtioFS 和 Rosetta：\ncolima start --vm-type=qemu --mount-type=virtiofs --rosetta\n\n# 调整虚拟机资源分配\n# 分配更多 CPU 和内存\ncolima start --cpu 4 --memory 8\n\n## apple m3 pro 的分配建议\n# 轻量级开发环境（少量容器，低资源需求）：\ncolima start --cpu 4 --memory 8\n# 中等负载开发环境（多个容器，适度资源需求）：\ncolima start --cpu 6 --memory 12\n# 高性能开发环境（大量容器或高性能需求）： 如果你的 Mac 配备 32GB 或更多内存，可以分配更多资源：\ncolima start --cpu 8 --memory 16\n\n\n完整的启动命令\n\n\nCode\n# 原始的教程由问题，解决了\ncolima start --vm-type=vz --mount-type=virtiofs --cpu 6 --memory 12\n\n\n\nBKJZ-CSPV"
+  },
+  {
+    "objectID": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#意外-命令卡壳了",
+    "href": "posts/docker/if-docker-desktop-is-necessary-on-macos15.html#意外-命令卡壳了",
+    "title": "if-docker-desktop-is-necessary-on-macos15",
+    "section": "意外-命令卡壳了",
+    "text": "意外-命令卡壳了\n\n\nCode\n\n\n\n\n5. 总结\n\n必须安装 Docker Desktop？ 否，但它是官方最简化的选择。\n仅 brew install docker 是否够用？ 不够，需额外配置 Daemon。\n替代方案：使用 colima 或 docker-machine + 虚拟机工具。\ncolima启用 VirtioFS 后，Colima 与 Docker Desktop 性能接近；默认配置下，Docker Desktop 文件系统更快。"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html",
+    "title": "ellmer_readme",
+    "section": "",
+    "text": "Learning more\n  ellmer: 使用 R 语言调用大型语言模型\n  \n  项目概览 / Overview\n  核心功能 / Key Features\n  \n  支持的模型提供商 / Supported Providers\n  模型选择的现在\n  特色功能 / Features\n  \n  认证配置 / Authentication\n  \n  API密钥管理 / API Keys\n  云服务认证 / Cloud Providers\n  \n  使用示例 / Usage Examples\n  \n  交互式控制台 / Interactive Console\n  编程式调用 / Programmatic Usage\n  多轮对话 / Multi-turn Chat\n  \n  部署建议 / Deployment\n  \n  本地模型优化 / Local Models\n  性能参数 / Performance Tuning\n  \n  资源链接 / Resources\nhttps://github.com/tidyverse/ellmer\nhttps://ellmer.tidyverse.org\nA hacker’s guide to open source LLMs"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#learning-more",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#learning-more",
+    "title": "ellmer_readme",
+    "section": "Learning more",
+    "text": "Learning more\nellmer comes with a bunch of vignettes to help you learn more:\n\nLearn key vocabulary and see example use cases in vignette(\"ellmer\").\nLearn how to design your prompt in vignette(\"prompt-design\").\nLearn about tool/function calling in vignette(\"tool-calling\").\nLearn how to extract structured data in vignette(\"structured-data\").\nLearn about streaming and async APIs in vignette(\"streaming-async\")."
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#项目概览-overview",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#项目概览-overview",
+    "title": "ellmer_readme",
+    "section": "项目概览 / Overview",
+    "text": "项目概览 / Overview\n\n\n\n属性\n值\n\n\n\n\n仓库地址\ntidyverse/ellmer\n\n\n版本\n0.1.1 (Latest)\n\n\n许可证\nMIT\n\n\n语言\nR 100%\n\n\n\n\n\n\nCode\n#------------------------------------------------------------r20250226110634\ninstall.packages(\"ellmer\")  # 从CRAN安装 / Install from CRAN"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#核心功能-key-features",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#核心功能-key-features",
+    "title": "ellmer_readme",
+    "section": "核心功能 / Key Features",
+    "text": "核心功能 / Key Features\n\n支持的模型提供商 / Supported Providers\n\nAnthropic’s Claude: chat_claude().\nAWS Bedrock: chat_bedrock().\nAzure OpenAI: chat_azure().\nDatabricks: chat_databricks().\nDeepSeek: chat_deepseek().\nGitHub model marketplace: chat_github().\nGoogle Gemini: chat_gemini().\nGroq: chat_groq().\nOllama: chat_ollama().\nOpenAI: chat_openai().\nOpenRouter: chat_openrouter().\nperplexity.ai: chat_perplexity().\nSnowflake Cortex: chat_snowflake() and chat_cortex_analyst().\nVLLM: chat_vllm().\n\n\n\n模型选择的现在\n对于组织，有很多的限制到云上的api\n\n\nCode\n#------------------------------------------------------------r20250226111421\nlibrary(ellmer)\n\n\n\n\nCode\n#------------------------------------------------------------r20250226122533\n\n# 本地Ollama调用示例 / Local Ollama example\nlibrary(ellmer)\nchat &lt;- chat_ollama(model = \"deepseek-r1:32b\")\n\n\n\n\n特色功能 / Features\n\n流式输出响应 / Streaming outputs\n工具函数调用 / Tool/function calling\n结构化数据提取 / Structured data extraction\n多模态支持（图像分析） / Multimodal inputs"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#认证配置-authentication",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#认证配置-authentication",
+    "title": "ellmer_readme",
+    "section": "认证配置 / Authentication",
+    "text": "认证配置 / Authentication\n\nAPI密钥管理 / API Keys\n# 推荐使用环境变量存储密钥 / Store keys in environment variables\nSys.setenv(\n  ANTHROPIC_API_KEY = \"your_key\",\n  OPENAI_API_KEY = \"your_key\"\n)\n\n\n云服务认证 / Cloud Providers\n\nAzure/Bedrock/Databricks 自动检测IAM凭证\n\nPosit Workbench/Connect 集成支持"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#使用示例-usage-examples",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#使用示例-usage-examples",
+    "title": "ellmer_readme",
+    "section": "使用示例 / Usage Examples",
+    "text": "使用示例 / Usage Examples\n\n交互式控制台 / Interactive Console\nlive_console(chat)  # 启动命令行交互 / Start CLI chat\n#&gt; Entering chat console. Use\"\"\" for multi-line input.\n#&gt; Press Ctrl+C to quit.\n\n\n编程式调用 / Programmatic Usage\n# 基础问答 / Basic QA\nresponse &lt;- chat$chat(\"R语言的主要创造者是谁？\")\nprint(response)\n#&gt; Ross Ihaka和Robert Gentleman于1993年创建\n\n# 图像分析 / Image Analysis\nchat$chat(\n  content_image_url(\"https://example.com/logo.png\"),\n  \"请描述这个logo的设计特点\"\n)\n\n\n多轮对话 / Multi-turn Chat\nchat$chat(\"量子纠缠的基本原理是什么？\")      # 第一轮提问 / First query\nchat$chat(\"这对量子计算有什么影响？\")        # 延续对话 / Follow-up"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#部署建议-deployment",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#部署建议-deployment",
+    "title": "ellmer_readme",
+    "section": "部署建议 / Deployment",
+    "text": "部署建议 / Deployment\n\n本地模型优化 / Local Models\n# 启动Ollama服务器 / Start Ollama server\nOLLAMA_MODEL=deepseek-r1:32b ollama serve\n\n\n性能参数 / Performance Tuning\nchat_ollama(\n  model = \"deepseek-r1:32b\",\n  temperature = 0.7,        # 控制创造性 / Creativity control\n  max_tokens = 1000,        # 最大输出长度 / Max output length\n  top_p = 0.9               # 核心采样率 / Nucleus sampling\n)"
+  },
+  {
+    "objectID": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#资源链接-resources",
+    "href": "posts/rlang/llm/ellmer_readme/ellmer_readme.html#资源链接-resources",
+    "title": "ellmer_readme",
+    "section": "资源链接 / Resources",
+    "text": "资源链接 / Resources\n\n官方文档\nPython替代方案 chatlas\nOllama部署指南"
+  },
+  {
+    "objectID": "posts/rlang/ggplot2/munsell_basic/first_eys_munsell.html",
+    "href": "posts/rlang/ggplot2/munsell_basic/first_eys_munsell.html",
+    "title": "first_eys_munsell",
+    "section": "",
+    "text": "links\n  \n  1. 分解代码 5PB 5/10 的含义\n  2. 如何用孟塞尔系统描述你需要的颜色？\n  3. 示例：描述一个“柔和的浅薄荷绿”\n  4. 工具辅助：使用 munsell 包验证颜色\n  \n  检查颜色是否有效\n  修正无效颜色\n  \n  5. 注意事项\n  1. R 基础颜色函数\n  2. 孟塞尔颜色系统与 munsell 包\n  3. 常见问题与解决\n  4. 扩展工具与资源\n  5. 实践建议\n在研究ggplot2的layer时看到了一个新的的颜色系统关于颜色，我可以说真的是一个色盲吗？关 于颜色的基本概念其实是毫无兴趣去了解，但是当看到这里的时候却想去真正的理解，这三个概念到底所表达的是什么意思？大 概这就是缘分吧。\nCode\n#------------------------------------------------------------r20250226064947\n# install.packages(\"munsell\")\nlibrary(munsell)"
+  },
+  {
+    "objectID": "posts/rlang/ggplot2/munsell_basic/first_eys_munsell.html#links",
+    "href": "posts/rlang/ggplot2/munsell_basic/first_eys_munsell.html#links",
+    "title": "first_eys_munsell",
+    "section": "links",
+    "text": "links\n手册链接; cran url; Github URL url\n\n\nCode\n#------------------------------------------------------------r20250226065757\nlibrary(ggplot2)\nfixedvue &lt;- fix_mnsl(\"7PB\")\nhue_slice(\"7.5B\")\n\n\nWarning: Removed 25 rows containing missing values or values outside the scale range\n(`geom_text()`).\n\n\n\n\n\n\n\n\n\n\n\nCode\n#------------------------------------------------------------r20250226070400\nhue_slice(\"10PB\")\n\n\nWarning: Removed 33 rows containing missing values or values outside the scale range\n(`geom_text()`).\n\n\n\n\n\n\n\n\n\n孟塞尔颜色系统（Munsell Color System）通过三个维度精确描述颜色：色相（Hue）、明度（Value）、色度（Chroma）。以 颜色代码 5PB 5/10 为例，以下是其含义和如何用它描述你需要的颜色：\n\n\n1. 分解代码 5PB 5/10 的含义\n\n(1) 色相（Hue）：5PB\n\n字母部分：PB 是 Purplish Blue（带紫色的蓝） 的缩写，表示色相环上的主色调。孟 塞尔系统将色相分为 10 种基础色，例如：\n\nR（Red）、YR（Yellow-Red）、Y（Yellow）、GY（Green-Yellow）、G（Green）、BG（Blue-Green）、B（Blue）、PB（Purple-Blue）、P（Purple）、RP（Red-Purple）。\n\n数字部分：5 表示在 PB 色相区间内的细分位置，范围是 0 到 10。例 如：\n\n0PB 接近相邻色相（如 B 或 P），而 10PB 会与下一个色相（如 P）循环衔接。\n\n\n\n\n(2) 明度（Value）：5\n\n明度表示颜色的 亮度，范围是 0（纯黑）到 10（纯白）。\n\n5 代表中等明度，类似于中性灰的亮度。\n例如：3 是深灰色，7 是浅灰色。\n\n\n\n\n(3) 色度（Chroma）：10\n\n色度表示颜色的 饱和度或纯度，范围从 0（完全中性灰）到理论上的无限大（实际受显示设备限制）。\n\n10 代表较高的饱和度，颜色鲜艳；2 则接近灰色。\n常见颜色的色度范围：自然色（如肤色）通常在 1-6，荧光色可达 12+。\n\n\n\n\n\n\n2. 如何用孟塞尔系统描述你需要的颜色？\n\n步骤 1：确定色相（Hue）\n\n观察主色调：判断颜色属于哪个基础色相（如蓝、红、绿等）。\n细化位置：若颜色介于两种基础色之间，用数字进一步调整（如 5PB 比 2.5PB 更接近紫色）。\n\n\n\n步骤 2：调整明度（Value）\n\n亮度需求：\n\n深色（如墨蓝）：明度 3 以下。\n中等亮度（如天空蓝）：明度 5 左右。\n浅色（如浅粉）：明度 7 以上。\n\n\n\n\n步骤 3：调整色度（Chroma）\n\n饱和度需求：\n\n柔和色（莫兰迪色系）：色度 1-4。\n鲜艳色（广告色）：色度 8+。\n自然色（如树叶绿）：色度 4-8。\n\n\n\n\n\n\n3. 示例：描述一个“柔和的浅薄荷绿”\n\n色相：绿色（G）带蓝调 → 选择 5G（主色绿）或 2.5BG（蓝绿色）。\n明度：浅色 → 设定为 7。\n色度：柔和 → 设定为 4。\n\n最终代码：5G 7/4 或 2.5BG 7/4。\n\n\n\n\n\n4. 工具辅助：使用 munsell 包验证颜色\nR\n`library(munsell)"
+  },
+  {
+    "objectID": "posts/excel/lookup-vlookup-xlookup/index.html",
+    "href": "posts/excel/lookup-vlookup-xlookup/index.html",
+    "title": "Excel函数之lookup, vlookup, xlookup",
+    "section": "",
+    "text": "前几天交流了一下自己经常用的vlookup,可以解决多个相关excel表的快速比对问题。\n今天朋友问lookup更简单啊，为什么要vlookup，我就傻了，赶紧问ai结，论就是lookup只能单行匹配，而是只能近似匹配，这个不能满足我们的业务场景需求。\n另外一个同事提出现在有了xlookup了，更加简单，结果大家找了一下，应该是比较新的版本里才有xlookup。和 vlookup想不比，xlookup可以查找行，获取任意列的返回，vlookup只能返回对比行右侧的行，一起的解决方案就是临时把查找行左侧的所需列复制插入查找行的右侧。\n做了一个测试表格，对比lookup，vlookup，xlookup的查找效果。\n\n\nexcel的版本很多，每个人需要具体看看自己的版本里有这个公式没。用 起来吧，终于摆脱vlookup的限制和繁琐了。"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker-in -ubuntu22/index.html",
+    "href": "posts/backend/how-to-install-docker-in -ubuntu22/index.html",
+    "title": "Ubuntu上的Docker",
+    "section": "",
+    "text": "缘起\n  docker-desktop or docker engine\n  kimi ref"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#缘起",
+    "href": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#缘起",
+    "title": "Ubuntu上的Docker",
+    "section": "缘起",
+    "text": "缘起\n博客通过docker+nginx部署上了，但是只能内网访问，ufw检查了没问题，于是怀疑ubuntu上的docker可能版本不对\nkimi看了十篇网文，于是给我提供了docker安装的最佳实践"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#docker-desktop-or-docker-engine",
+    "href": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#docker-desktop-or-docker-engine",
+    "title": "Ubuntu上的Docker",
+    "section": "docker-desktop or docker engine",
+    "text": "docker-desktop or docker engine\ndocker-enginge，所以docker-desktop并不需要"
+  },
+  {
+    "objectID": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#kimi-ref",
+    "href": "posts/backend/how-to-install-docker-in -ubuntu22/index.html#kimi-ref",
+    "title": "Ubuntu上的Docker",
+    "section": "kimi ref",
+    "text": "kimi ref\n在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践通常包括以下步骤：\n\n更新系统包：首先，确保你的Ubuntu系统是最新的。可 以通过执行以下命令来更新： sudo apt update sudo apt upgrade\n卸载旧版本的Docker（如果已安装）：在安装新版本的Docker之前，需要先卸载旧版本的Docker。可 以使用以下命令： sudo apt-get remove docker docker-engine docker.io containerd runc\n安装依赖项：安装Docker所需的依赖项，包括HTTPS传输、CA证书、curl、软件属性通用包、GnuPG等： sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release\n添加Docker的官方GPG密钥：这将确保你能够从Docker的官方源安装Docker。 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg\n设置Docker的APT源：添加Docker的官方APT源，以便安装最新版本的Docker。 echo \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null\n再次更新APT源：更新本地APT源列表，确保可以安装最新版本的Docker。 sudo apt update\n安装Docker Engine和Docker Compose：安装Docker Engine和Docker Compose。从 Ubuntu 22.04开始，Docker Compose作为Docker Engine的一部分被包含在内，所以只需安装Docker Engine即可。 sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin\n验证安装：验证Docker和Docker Compose是否正确安装并运行： sudo docker version docker-compose --version\n配置镜像加速（可选）：如果你在中国大陆使用Docker，可能需要配置镜像加速以提高拉取镜像的速度。可 以编辑/etc/docker/daemon.json文件，添加以下内容：\n{\n  \"registry-mirrors\": [\"https://registry.docker-cn.com\"]\n}\n然后重启Docker服务： sudo systemctl daemon-reload sudo systemctl restart docker[^9]\n运行Docker Hello World测试：运行Docker的Hello World测试，以确保Docker正确安装并运行： sudo docker run hello-world\n\n这些步骤提供了一个基本的指南，以确保在Ubuntu 22.04上安装Docker和Docker Compose的最佳实践。记 得在执行这些步骤之前，你有足够的权限（通常是root权限或使用sudo）。"
+  },
+  {
+    "objectID": "posts/backend/how-to-clean-zombie-process/index.html",
+    "href": "posts/backend/how-to-clean-zombie-process/index.html",
+    "title": "一不留神，僵尸就这么跳将进来了",
+    "section": "",
+    "text": "什么是僵尸进程？\n  如何查找僵尸进程？\n  处理僵尸进程的方法\n  \n  手动即时清理\n  \n  小结\n看到系统信息中提到的僵尸进程（zombie process），尽管听起来可能有些令人担忧，但它并不一定意味着系统存在危险。不过，了解什么是僵尸进程以及如何处理它们是很重要的。"
+  },
+  {
+    "objectID": "posts/backend/how-to-clean-zombie-process/index.html#什么是僵尸进程",
+    "href": "posts/backend/how-to-clean-zombie-process/index.html#什么是僵尸进程",
+    "title": "一不留神，僵尸就这么跳将进来了",
+    "section": "什么是僵尸进程？",
+    "text": "什么是僵尸进程？\n僵尸进程是在其执行完成后仍保留在进程表中的进程。这些进程已经终止，但其父进程还没有读取其退出状态，因此这些进程的资源尚未完全释放。它们占用的系统资源非常少，但积累太多的僵尸进程可能会耗尽系统可用的进程表条目。"
+  },
+  {
+    "objectID": "posts/backend/how-to-clean-zombie-process/index.html#如何查找僵尸进程",
+    "href": "posts/backend/how-to-clean-zombie-process/index.html#如何查找僵尸进程",
+    "title": "一不留神，僵尸就这么跳将进来了",
+    "section": "如何查找僵尸进程？",
+    "text": "如何查找僵尸进程？\n你可以使用 ps 命令来查找系统中的僵尸进程：\nps aux | grep Z\n\n在输出中，你会看到带有 Z 状态码的进程，这些就是僵尸进程。"
+  },
+  {
+    "objectID": "posts/backend/how-to-clean-zombie-process/index.html#处理僵尸进程的方法",
+    "href": "posts/backend/how-to-clean-zombie-process/index.html#处理僵尸进程的方法",
+    "title": "一不留神，僵尸就这么跳将进来了",
+    "section": "处理僵尸进程的方法",
+    "text": "处理僵尸进程的方法\n\n手动即时清理\n\n手动杀掉父进程： 找到僵尸进程的父进程ID (PPID)。你可以使用 ps 或 top 命令来查找其父进程。\nps -o ppid= -p &lt;zombie_pid&gt;\n使用 kill 命令来结束该父进程：\nsudo kill -HUP &lt;parent_pid&gt;\n这会告诉父进程重新读取子进程的退出状态并释放僵尸进程。\n\n重启服务或系统： 如果僵尸进程是由某个服务引起的，重启该服务可能会解决问题。如果这个方法无效，重启系统通常会清理所有僵尸进程。\nsudo systemctl restart your_service\n# 或者\nsudo reboot\n周期性监控和自动处理\n对于需要持续监控并处理僵尸进程的系统，可以编写脚本定期检查并处理这些进程。\n\n示例脚本：\n\n#!/bin/bash\nzombies=$(ps aux | awk '{if ($8 ~ /Z/) print $2}')\nif [ -n \"$zombies\" ]; then\n    for pid in $zombies; do\n        parent_pid=$(ps -o ppid= -p $pid)\n        [ \"$parent_pid\" ] && sudo kill -HUP $parent_pid\n    done\nfi\n\n设置定时任务: 将这个脚本设为定时任务，例如通过 crontab 设置定期运行。\n\ncrontab -e\n# 添加以下行每小时运行一次脚本\n0 * * * * /path/to/your/script.sh"
+  },
+  {
+    "objectID": "posts/backend/how-to-clean-zombie-process/index.html#小结",
+    "href": "posts/backend/how-to-clean-zombie-process/index.html#小结",
+    "title": "一不留神，僵尸就这么跳将进来了",
+    "section": "小结",
+    "text": "小结\n虽然僵尸进程本身并不会消耗大量资源，但它们积累过多可能会影响系统的稳健性。通过上面的步骤，你可以识别并处理僵尸进程，确保系统保持健康的运行状态。通常，出现一个僵尸进程并不危险，但在生产环境中应尽早处理以保持系统的清洁和高效运行。"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\n2024-06-30 11:18:07 还以为这边quart render，那边就可以看到修改了了呢。测试中。"
+  },
+  {
+    "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html",
+    "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html",
+    "title": "自己的地盘，自己看着点",
+    "section": "",
+    "text": "起子\n  先来一个 neofetch\n  AI的推荐-存档\n  \n  方法一：修改 MOTD（Message of the Day）\n  方法二：使用 screenfetch 或 neofetch\n  方法三：使用 glances 实时监控\n  高级监控工具"
+  },
+  {
+    "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#起子",
+    "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#起子",
+    "title": "自己的地盘，自己看着点",
+    "section": "起子",
+    "text": "起子\n习惯登录之后看一下系统显示提醒信息，这不前两天的一个僵尸进程可吓了我一跳(参见僵尸进程的处理。于是觉得提升一点监控级别还是有必要的。大厂让人眼花缭乱的监控，可不还是各种开源软件的组合吗？自己也可以动起来。"
+  },
+  {
+    "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#先来一个-neofetch",
+    "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#先来一个-neofetch",
+    "title": "自己的地盘，自己看着点",
+    "section": "先来一个 neofetch",
+    "text": "先来一个 neofetch\n有事问AI, 尽管其会胡说八道，但是确实一个线索的重要提供者，在于计算机类的信息还是以个蛮不错的开始。爱"
+  },
+  {
+    "objectID": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#ai的推荐-存档",
+    "href": "posts/ubuntu22/how-to-monitor-linux-server-ubuntu/index.html#ai的推荐-存档",
+    "title": "自己的地盘，自己看着点",
+    "section": "AI的推荐-存档",
+    "text": "AI的推荐-存档\n在 Ubuntu 服务器上，通过 SSH 登录后显示更多的健康监控指标，可以帮助管理员快速了解系统状态。以下是几种配置方法和工具，可用于增强服务器健康监控：\n\n方法一：修改 MOTD（Message of the Day）\nUbuntu 在用户登录时显示 MOTD（消息每日通告），可以通过配置 MOTD 来显示系统健康监控指标。\n\n配置 MOTD\n\n通过 Landscape 提供的 MOTD（默认）：\n默认情况下，Ubuntu 服务器使用 landscape-sysinfo 生成 MOTD 信息。你可以通过编辑/etc/update-motd.d中的文件来自定义登录信息。\nsudo nano /etc/update-motd.d/00-header  # 添加定制的 header\nsudo nano /etc/update-motd.d/10-sysinfo  # 定制系统信息\n添加自定义脚本：\n你可以创建和添加自定义脚本来显示系统健康信息。在/etc/update-motd.d/目录中添加一个新的脚本文件，如：\nsudo nano /etc/update-motd.d/20-healthcheck\n在这个脚本中添加你希望显示的信息。例如，下面是一个示例脚本，用于显示系统负载、磁盘使用情况和内存使用情况：\n#!/bin/bash\necho \"System Load: $(uptime)\"\necho \"Disk Usage:\"\ndf -h | grep '^/dev/'\necho \"Memory Usage:\"\nfree -h\n确保脚本具有执行权限：\nsudo chmod +x /etc/update-motd.d/20-healthcheck\n更新并查看效果：\n断开 SSH 会话并重新登录，查看新的 MOTD 信息。\n\n\n\n\n方法二：使用 screenfetch 或 neofetch\nscreenfetch 和 neofetch 是两个广受欢迎的工具，用于在登录时显示系统信息。\n\n安装 neofetch\n\n安装 neofetch：\nsudo apt update\nsudo apt install neofetch\n配置 Shell 配置文件：\n编辑对应的 shell 配置文件（如 .bashrc 或 .zshrc），使其在登录时自动运行 neofetch：\necho \"neofetch\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n安装 screenfetch\n\n安装 screenfetch：\nsudo apt update\nsudo apt install screenfetch\n配置 Shell 配置文件：\n编辑对应的 shell 配置文件（如 .bashrc 或 .zshrc），使其在登录时自动运行 screenfetch：\necho \"screenfetch\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n\n方法三：使用 glances 实时监控\nglances 是一个多功能系统监控工具，支持查看多种系统性能指标。\n\n安装 glances\nsudo apt update\nsudo apt install glances\n\n\n使用 glances\n安装完成后，可以通过以下命令启动 glances，实时显示系统状态：\nglances\n\n\n配置自动启动\n可以在shell配置文件中添加命令来运行 glances，例如在 .bashrc 中：\necho \"glances\" &gt;&gt; ~/.bashrc\nsource ~/.bashrc\n\n\n\n高级监控工具\n\nPrometheus + Grafana：\n\n如果需要更强大的监控解决方案，可以考虑使用 Prometheus 和 Grafana。这两个工具组合可以提供实时系统监控、告警和丰富的仪表盘功能。\n- 安装 Prometheus 和 Grafana 的详细步骤可以参考官方文档。\n\n- 配置节点导出器（Node Exporter）来收集系统指标。\n\nNetdata：\nNetdata 也是一个强大的实时监控工具，支持详细的系统性能指标和告警功能。\n# 安装 netdata（需要在官方文档中确认推荐的安装方式）\nbash &lt;(curl -Ss https://my-netdata.io/kickstart.sh)\n\n安装后的 Netdata 可以通过 Web 界面访问实时监控信息。"
+  },
+  {
+    "objectID": "posts/postgres/use_postgres_in_terminal.html",
+    "href": "posts/postgres/use_postgres_in_terminal.html",
+    "title": "如何在终端使用postgres",
+    "section": "",
+    "text": "前提\n  如何进入终端"
+  },
+  {
+    "objectID": "posts/postgres/use_postgres_in_terminal.html#前提",
+    "href": "posts/postgres/use_postgres_in_terminal.html#前提",
+    "title": "如何在终端使用postgres",
+    "section": "前提",
+    "text": "前提\n已经在docker安装好了postgres 已经通过docker-compose up -d启动了postges"
+  },
+  {
+    "objectID": "posts/postgres/use_postgres_in_terminal.html#如何进入终端",
+    "href": "posts/postgres/use_postgres_in_terminal.html#如何进入终端",
+    "title": "如何在终端使用postgres",
+    "section": "如何进入终端",
+    "text": "如何进入终端\n\n\n\n\n\n\n问AI\n\n\n\n我已经在docker上启动了Postgres，如何通过终端进入？\n\n\n\n\nCode\ndocker ps # 找到PostgreSQL容器的ID或名称\n# CONTAINER ID   IMAGE                   COMMAND                  CREATED        STATUS                  PORTS                           NAMES\n# 276f4adc0266   dpage/pgadmin4:latest   \"/entrypoint.sh\"         12 hours ago   Up 12 hours             443/tcp, 0.0.0.0:5050-&gt;80/tcp   project_config-pgadmin-1\n# 29e8b3716457   postgres:latest         \"docker-entrypoint.s…\"   12 hours ago   Up 12 hours (healthy)   0.0.0.0:5432-&gt;5432/tcp          project_config-postgres-1\ndocker exec -it project_config-postgres-1 bash # 进入PG交互式终端\n# root@29e8b3716457:/#"
+  },
+  {
+    "objectID": "posts/diary/lastdayofaugust.html",
+    "href": "posts/diary/lastdayofaugust.html",
+    "title": "海棠果热成了红苹果",
+    "section": "",
+    "text": "红扑扑的，如果不说，你会以为是苹果吧。\n这只是公司园区里的海棠果。三十多年了，其实我很难注意到他们，其一，它们往年的身材较小，比大枣也大不了多少，其二，每年他们都是被浓密的绿叶遮挡住了，不仔细看，很容易只见绿叶不见绿果。今年带劲的天气(42.4度)给了他们疯狂生长的信号，叶子也脱落殆尽，让你没法忽略那个庞大的果子存在。\n\n想起在新加坡的滨海花园(Garden by the Bay)的云雾森林(Clouds Forest)里一起看全球气候变化的电影(看样子是2010年拍的)。电影预测2100年全球的平均温度会上升5度左右。这是基于继续高排放情况下的预测，但我估计这是比较可能的结果，甚至是比较乐观的结果，毕竟人类的天性你懂的)。\n出了门，我半沉重半开玩笑地对儿子说，祝你2114的百岁身躯可以抵挡得住那股热浪吧，儿子大笑。\n\n2024-08-30 12:49:36"
+  },
+  {
+    "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html",
+    "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html",
+    "title": "自动化发布的初体验-本地发布",
+    "section": "",
+    "text": "互联网平台的心思\n  我的选型\n  head2\n  head2"
+  },
+  {
+    "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#互联网平台的心思",
+    "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#互联网平台的心思",
+    "title": "自动化发布的初体验-本地发布",
+    "section": "互联网平台的心思",
+    "text": "互联网平台的心思\n像微信公众号这样的大平台居然没有一个像样的自动发布工具，我只能如此狭隘地以小人度之了。看来看去的平台供应商大抵是是恨不得把你的整个身心都圈禁到他们的平台，所有每天劳苦工作到喘息，让你根本没有思考的机会。自动化发布这种工具大概是与这种相违背的 - 岂不是给你it’s 16 hours更多兼职的机会吗？自动化是有有的，那是给大佬们收割打工人的，打工人人只能被眼前的自动诱惑，手动模式满心欢喜地冲向这个永远到达不了的圣地。\n写公众号时断时续究竟还是自己的毛病，本就没有自己的内容，但是不能这样说啊，只能说每次枯燥的手动更新就让自己有一种作做奴隶的凄凉感，完全没有了新时代的自由人的感觉，要是你放弃了，就是自己自己的文章要拿回来也时间挺费事的事情，感觉比抄家还难受。\n搬过过几次家，那种感觉确实是太难受了，搬一次就是要扔掉好多东西。写作也是如此，东西还是要放在自己的地盘上，然后是想发哪里就发哪里，而且还是能自动的就不要手动了。于是编程这事就是要成了必须要解决的问题了。"
+  },
+  {
+    "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#我的选型",
+    "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#我的选型",
+    "title": "自动化发布的初体验-本地发布",
+    "section": "我的选型",
+    "text": "我的选型\n写作工具: Quarto 编辑器: Rstudio 部署工具: Docker，Ngnix，Ubuntu"
+  },
+  {
+    "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2",
+    "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2",
+    "title": "自动化发布的初体验-本地发布",
+    "section": "head2",
+    "text": "head2"
+  },
+  {
+    "objectID": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2-1",
+    "href": "posts/quarto/publish-website-localhost-with-nginx-/index.html#head2-1",
+    "title": "自动化发布的初体验-本地发布",
+    "section": "head2",
+    "text": "head2"
+  },
+  {
+    "objectID": "posts/quarto/connect-local-project-with-remote-github-original/index.html",
+    "href": "posts/quarto/connect-local-project-with-remote-github-original/index.html",
+    "title": "Connect Local Project with Remote GitHub",
+    "section": "",
+    "text": "内容提要\n   \n  \n  步骤 1: 创建GitHub仓库\n  步骤 2: 初始化本地仓库\n  \n\n如何把一个本地projcet同步到github里新建项目里？\n要将本地项目同步到GitHub中的新建项目，可以按照下面的步骤操作：\n\n步骤 1: 创建GitHub仓库\n\n登录到你的GitHub账户。\n点击页面右上角的“+”图标，然后选择“New repository”。\n填写仓库名称、描述（可选）和其它设置，然后点击“Create repository”。\n\n\n\n步骤 2: 初始化本地仓库\n如果你还没有在本地项目中初始化Git仓库，打开终端并导航到你的\n\n\n\ngithub"
+  },
+  {
+    "objectID": "posts/quarto/quarto-yaml-options/index.html",
+    "href": "posts/quarto/quarto-yaml-options/index.html",
+    "title": "豆瓣坛",
+    "section": "",
+    "text": "keywords和category有何不同？\n  节外生枝"
+  },
+  {
+    "objectID": "posts/quarto/quarto-yaml-options/index.html#keywords和category有何不同",
+    "href": "posts/quarto/quarto-yaml-options/index.html#keywords和category有何不同",
+    "title": "豆瓣坛",
+    "section": "keywords和category有何不同？",
+    "text": "keywords和category有何不同？"
+  },
+  {
+    "objectID": "posts/quarto/quarto-yaml-options/index.html#节外生枝",
+    "href": "posts/quarto/quarto-yaml-options/index.html#节外生枝",
+    "title": "豆瓣坛",
+    "section": "节外生枝",
+    "text": "节外生枝\nquarto render 报错已大堆\n\n\n\nrender时的一大堆报错\n\n\n仔细一看源文件，讯飞鼠标神不知鬼不觉地把我的呼吸变成了一个 的 贴到了yaml设置里了。\n\n\n\n哪里来的的"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "留下些许还未遗忘的时光碎片",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nellmer_readme\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2_layer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfirst_eys_munsell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ninstall-postgress17.4-with-docker-on-macos15\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n如何在终端使用postgres\n\n\n\ndatabase\n\n\n\n远离gui,多用cli,postgres练习，熟悉命令行操…\n\n\n\nAdopapa\n\n\n2025/03/15,第11周\n\n\n\n\n\n\n\n\n\n\n\n\nif-docker-desktop-is-necessary-on-macos15\n\n\n\ndevops\n\n\nit\n\n\n\ncli回归第二波，烦gui久已\n\n\n\nAdopapa\n\n\n2025/03/12,第11周\n\n\n\n\n\n\n\n\n\n\n\n\nPython开发-poetry的初始化\n\n\n\ncode\n\n\n\n让AI提供一个合适的开发流程\n\n\n\nAdopa\n\n\n2025/03/09,第11周\n\n\n\n\n\n\n\n\n\n\n\n\n文件去哪儿了\n\n\n\nit\n\n\nthinking\n\n\n\n总会新问题，人生的意义在不不搞懂什么😄\n\n\n\nAdopapa\n\n\n2024/12/09,第50周\n\n\n\n\n\n\n\n\n\n\n\n\n搞定博客的自动发布\n\n\n\ngithub\n\n\ndeploy\n\n\naction\n\n\n\n自己突破一下\n\n\n\nadp\n\n\n2024/12/07,第49周\n\n\n\n\n\n\n\n\n\n\n\n\n海棠果热成了红苹果\n\n\n\n随记\n\n\n气候\n\n\n植物\n\n\n\n今年的海棠果很特别吧，以前小小青青的可爱样，今年却是情非得…\n\n\n\nAdopapa\n\n\n2024/08/30,第35周\n\n\n\n\n\n\n\n\n\n\n\n\nUbuntu上的Docker\n\n\n\nIT\n\n\nDocker\n\n\n\nit基本工具\n\n\n\naiit\n\n\n2024/07/01,第27周\n\n\n\n\n\n\n\n\n\n\n\n\nkeywords和category有何不同？\n\n\n\nQuarto YAML\n\n\n\n想让内容。如你所愿？这些魔法石你不得不了解\n\n\n\nadopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n自己的地盘，自己看着点\n\n\n\nLinux\n\n\nServer\n\n\nMonitor\n\n\n\n大厂的监控重视让人眼花缭乱，无处入手，何不自己慢慢地搜罗一…\n\n\n\nAdopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n自动化发布的初体验-本地发布\n\n\n\npublish\n\n\nQuarto\n\n\nnginx\n\n\ndocker\n\n\n\n手动发布实在太累，以至于丧失了写作的乐趣，必须搞定自动发布\n\n\n\nAdopapa\n\n\n2024/06/30,第27周\n\n\n\n\n\n\n\n\n\n\n\n\n如何给服务器起一个简洁好记的名字\n\n\n\nlinux\n\n\nubuntu\n\n\n\n看到随机分配的服务器名字，总是很不爽，干脆自己改改吧\n\n\n\nAdopapa\n\n\n2024/06/29,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nExcel函数之lookup, vlookup, xlookup\n\n\n\nlinux\n\n\nubuntu\n\n\n\nlookup看起来更简单啊，为什么要用vlookup呢？有…\n\n\n\nadopapa\n\n\n2024/06/28,第26周\n\n\n\n\n\n\n\n\n\n\n\n\n一不留神，僵尸就这么跳将进来了\n\n\n\nlinux ubuntu process zombie\n\n\n\n远程登录服务器，突然看到一个信息，你有一个僵尸进程，吓坏了…\n\n\n\nadopapa\n\n\n2024/06/28,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nnginx docker 初体验\n\n\n\nlinux\n\n\nubuntu\n\n\ndocker\n\n\n\n直接在服务器上拉取docker image总是超时怎么办？\n\n\n\nmetacell\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\ndocker image的曲线安装法\n\n\n\nlinux\n\n\nubuntu\n\n\ndocker\n\n\n\n直接在服务器上拉取docker image总是超时怎么办？\n\n\n\nmetacell\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nDocker安装\n\n\n\nit\n\n\ndocker\n\n\n\nDocker作为最重要的部署工具，不可不安装，不可不更新啊\n\n\n\niti\n\n\n2024/06/27,第26周\n\n\n\n\n\n\n\n\n\n\n\n\nCode Executioin\n\n\n\nquarto\n\n\nwebsite\n\n\nguide\n\n\n\n\n\n\n\nZHU QUANMING\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\n学习笔记-Rstudio可视化编辑器之技术写作\n\n\n\nquarto\n\n\nrstudio\n\n\n学习笔记\n\n\n\n理工男逃不开的技术写作，就从这里开始\n\n\n\nZHU QUANMING\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\nConnect Local Project with Remote GitHub\n\n\n\nTutorial\n\n\nGitHub\n\n\nQuarto\n\n\n\nA guide on connecting a…\n\n\n\nZHU Quanming\n\n\n2024/06/22,第25周\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nHarlow Malloc\n\n\n2024/06/21,第25周\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\nTristan O’Malley\n\n\n2024/06/18,第25周\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]
